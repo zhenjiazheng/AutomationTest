@@ -1,0 +1,42 @@
+{
+  "input": {
+    "method": "get",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/v1/boss/setting/storeinfo",
+    "headers": {
+      "token": "{{key.token_boss}}",
+      "storeNo": "{{key.store_id}}"
+    }
+  },
+  "output":{
+    "statusCode":{"EQ":0},
+    "data":{"type":"dict"},
+    "businessDay": {"type":"str"},
+    "deliverTime": {"type":"str"},
+    "deliverFee": {"type":"str"},
+    "deliverType": {"type":"int"},
+    "districtsDistance": {"type":"str"},
+    "serviceTel": {"type":"str"},
+    "storeLogo": {"type":"str"},
+    "storeName": {"type":"str"},
+    "storeQrcode": {"type":"str"},
+    "supportNegstockSale": {"type":"bool"},
+    "province": {"type":"str"},
+    "storeStatus": {"type":"int"},
+    "telephone": {"type":"str"},
+    "storeNo": {"type":"str"},
+    "contactName": {"type":"str"},
+    "id": {"type":"int"},
+    "city": {"type":"str"},
+    "storeCategory": {"eq":0},
+    "storekeeper": {"type":"str"},
+    "supportNetsale": {"type":"bool"},
+    "cell": {"type":"str"},
+    "longitude": {"type":"float"},
+    "latitude": {"type":"float"},
+    "storeType": {"type":"int"},
+    "supportCash": {"type":"bool"},
+    "idCard":{"type":"list"},
+    "businessLicense": {"type":"list"}
+    }
+}

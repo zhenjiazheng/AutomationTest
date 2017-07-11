@@ -1,0 +1,15 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/purchase/points/record/list/",
+			"param":{"supplierId":{{key.new_store_id}}, "recordType":1}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data.data":{"type":"list"}
+	}
+}

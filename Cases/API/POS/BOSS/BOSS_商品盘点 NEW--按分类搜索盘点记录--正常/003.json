@@ -1,0 +1,32 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "post",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/operation/inventory",
+			"param": {
+				"afterStock":110,
+				"beforeStock": 100,
+				"barcode":"{{key.barcode}}",
+				"category":{{key.categoryId}},
+				"category_display":"test",
+				"productId":"{{key.pid}}",
+				"image":"",
+				"inventoryId":"{{key.inventId}}",
+				"name":"test",
+				"stock":100,
+				"unit_display":"test"
+			}},
+	"output":{
+		"statusCode":{"EQ":0},
+		"id":{"type":"int"},
+		"beforeStock":{"eq": "100"},
+		"afterStock":{"eq":"110"},
+		"barcode":{"eq":"{{key.barcode}}"},
+		"specId":{"eq":{{key.specId}}},
+		"inventoryStatus": {"eq":true}
+	},
+	"key":{"inventId":"data.inventoryId"}
+
+}

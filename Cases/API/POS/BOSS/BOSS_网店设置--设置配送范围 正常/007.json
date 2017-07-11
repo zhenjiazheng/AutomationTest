@@ -1,0 +1,29 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/storeinfo",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+
+    "output":{
+      "statusCode":{"EQ":0},
+      "msg":{"EQ":"成功"},
+      "data": {"TYPE":"dict"},
+      "deliverDistricts":{"TYPE":"list"},
+      "data.deliverDistricts.0.cell": {"TYPE":"str","EQ":"洪福雅苑"},
+      "data.deliverDistricts.0.city": {"TYPE":"str","EQ":"深圳市"},
+      "district": {"TYPE":"str"},
+      "data.deliverDistricts.0.latitude": {"TYPE":"float","EQ":22.5668},
+      "data.deliverDistricts.0.longitude": {"TYPE":"float","EQ":113.9},
+      "province": {"TYPE":"str"},
+      "deliverFee": {"TYPE":"str"},
+      "deliverTime":{"TYPE":"str"},
+      "deliverType": {"TYPE":"int"},
+      "serviceTel": {"TYPE":"str"},
+      "storeLogo": {"TYPE":"str"},
+      "storeName": {"TYPE":"str"},
+      "storeQrcode": {"TYPE":"str"},
+      "supportNegstockSale": {"TYPE":"bool"}
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "author": "lancy",
+  "input": {
+        "method": "POST",
+        "url": "{{pre.jh_url}}",
+        "rest": "ja/v1/invest/tender",
+        "headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+        "param": {
+              "tenderId": "{{key.id1}}",
+              "investMoney": 100,
+              "payPassword": 111112
+            }
+  },
+  "output": {
+        "code": {"EQ": 3},
+        "msg": {
+          "TYPE": "str",
+          "EQ":"请输入正确的支付密码"
+        },
+        "data":{"EQ":null}
+    }
+  }

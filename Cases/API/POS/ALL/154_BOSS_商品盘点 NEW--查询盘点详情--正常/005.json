@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/operation/inventory/detail/{{key.inventId}}"
+	},
+	"output":{
+		"statusCode":{"EQ":0},
+		"data":{"type":"dict"},
+		"id":{"type":"int"},
+		"afterStock":{"EQ":110},
+		"barcode":{"EQ":"{{key.barcode}}"},
+		"category":{"EQ":{{key.categoryId}}},
+		"category_display":{"type":"str"},
+		"productId":{"EQ":{{key.pid}}},
+		"image":{"type":"str"},
+		"stock":{"EQ":"110"}
+
+	}
+}

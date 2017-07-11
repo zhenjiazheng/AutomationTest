@@ -1,0 +1,23 @@
+{
+  "input":{
+			"method": "POST",
+			"url":"{{pre.zzkg_merchant_url}}",
+			"rest": "/py/v4/admin/member/balance-import-records/excel_data/",
+            "headers":{"token":"{{key.token}}"},
+             "files":"C:\\Users\\Administrator\\Desktop\\会员宝导入报表.xlsx"
+	},
+        "output":{
+		"msg": {"type":"str"},
+		"data": {"type":"list"},
+	  	"tel": {"EQ":15814982521},
+		"name": {"EQ":"李俊平"},
+		"pay_way": {"EQ":4},
+		"comments": {"EQ":"5"},
+		"amount": {"EQ":100.0},
+		"user_id": {"type":"int"},
+		"statusCode": {"EQ":0}
+		}
+
+}
+
+

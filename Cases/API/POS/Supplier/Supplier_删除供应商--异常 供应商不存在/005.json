@@ -1,0 +1,12 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "DELETE",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}","Content-Type":"application/json"},
+			"rest": "py/supplier/v1/store/suppliers/1000000/"
+	},
+	"output":{
+		"EQ":"Cannot find the page, 404"
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "input": {
+     "author": "lifang",
+     "method": "POST",
+     "url": "{{pre.jh_url}}",
+     "rest": "/ja/v1/user/avatars",
+     "headers": {
+       "client": "3",
+       "Content-Type": "application/json",
+       "token": "{{key.token}}"
+     },
+     "param":{"url":""
+
+     }
+   },
+  "output":{
+    "msg":{"TYPE":"str","eq":"请上传头像"},"code":{"EQ":1}
+  }
+}

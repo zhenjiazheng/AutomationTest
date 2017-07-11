@@ -1,0 +1,30 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.zzsh_url}}",
+			"rest": "py/water-user/v1/public/user/login/",
+			"param":{
+				"phoneNumber":"{{pre.User1}}", "code": "{{key.code}}"
+			}
+	},
+  "output":{
+	  			"statusCode": {"EQ":0},
+			  "msg":{"EQ":"成功"},
+			  "token":{"TYPE":"str"},
+			  "id":{"type":"int"},
+			  "user_type":{"type":"str"} },
+	"mock":{
+			"data": {
+				"head_img": "测试内容rgjp",
+				"id": 71616,
+				"nickname": "李乐弦",
+				"sex": "男",
+				"token": "b10bfb7c-2b1c-42cc-bdef-1b9a92d8158f",
+				"user_type": "测试内容wq0v",
+				"username": "15507554489"
+			},
+			"msg": "成功",
+			"statusCode": 0
+		},
+	"key":["token","id"]
+}

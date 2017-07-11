@@ -1,0 +1,23 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/product/products/",
+			"param":{"category_id":{{key.category_id}},
+						"limit":50,
+						"page":1,
+						"search":"This is test"
+					}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"count":{"TYPE":"int","EQ":0},
+        "hasNext":{"TYPE":"bool"},
+        "data.data":{"TYPE":"list","LL":0},
+        "totalPage":{"TYPE":"int"},
+        "total":{"TYPE":"int"}
+    }
+}

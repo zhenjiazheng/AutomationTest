@@ -1,0 +1,10 @@
+{
+	"input":{
+			"method": "delete",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/employee/del/111111",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+
+    "output":{"statusCode":{"EQ":1}}
+}

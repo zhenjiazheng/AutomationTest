@@ -1,0 +1,18 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.hyb_url}}",
+			"rest": "ja/memberbao/v1/idcard",
+			"headers":{"Content-Type": "application/json","appId":"{{pre.appId_ZhuZhuJiShi}}",
+				"token":"{{key.token}}"
+			},
+      "param": {
+       "name":"李兰珍", "identity": "420983199310242822"
+     }
+
+	},
+
+  "output":{"msg":{"EQ":"已认证用户, 认证成功"}, "statusCode":{"EQ":0}}
+
+}

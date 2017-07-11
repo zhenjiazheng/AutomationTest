@@ -1,0 +1,26 @@
+{
+  "input":{
+			"method": "POST",
+			"url":"{{pre.zzkg_merchant_url}}",
+			"rest": "/py/v4/admin/member/balance-import-records/",
+            "headers":{"token":"{{key.token}}"},
+			"param":{
+                "excel":[{
+            "tel": 15814982521,
+            "name": "李俊平",
+            "pay_way": 4,
+            "comments": "5",
+            "amount": 100.0,
+            "user_id": 74024
+        }],
+                "comments":"测试",
+				"password":"e10adc3949ba59abbe56e057f20f883e"
+			}
+	},
+  "output":{
+              "msg":{"TYPE":"str"},
+              "statusCode":{"EQ":0},
+              "data":{"TYPE":"dict"}
+
+  }
+}

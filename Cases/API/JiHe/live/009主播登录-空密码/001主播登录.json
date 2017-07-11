@@ -1,0 +1,13 @@
+{
+  "input":{
+    "method":"POST",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/live/user/login",
+    "param":{"name":"weidong"}
+  },
+  "output":{
+    "msg":{"eq":"请输入您的密码"},
+    "code":{"eq":1},
+    "data":{"eq":null}
+  }
+}

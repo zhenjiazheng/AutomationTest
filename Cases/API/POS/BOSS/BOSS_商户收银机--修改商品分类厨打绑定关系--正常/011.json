@@ -1,0 +1,16 @@
+{
+	"input":{
+			"method": "put",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/pos/printer/binding/{{key.bid}}/",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+            "param":{
+				"printerId":"{{key.printerId2}}",
+				"printerName":"Printer222"
+			}
+	},
+    "output":{
+      "statusCode":{"EQ":0},
+      "msg":{"EQ":"成功"}
+    }
+}

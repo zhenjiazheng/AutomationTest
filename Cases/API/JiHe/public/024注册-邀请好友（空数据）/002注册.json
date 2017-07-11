@@ -1,0 +1,24 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/regist",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+     "param": {
+       "name":"{{pre.User6}}", "password":"a1234567","code":"{{key.id}}","couponId":"10"
+     }
+    },
+  "output":{
+    "msg":{"EQ":"注册成功"},"code":{"eq":0},"data":{"type":"dict"},"username":{"eq":"{{pre.User6}}"},
+    "openid":{"eq":null},"uid":{"type":"int"},"addtime":{"type":"str"},"skip_new_friend":{"eq":true},
+    "idcard":{"eq":false},"bankcard":{"eq":false},"avatars":{"type":"str"},"phone":{"eq":"{{pre.User6}}"},
+    "token":{"type":"str"},"idcard_status":{"eq":1},"is_borrow":{"eq":false},"pay_password":{"eq":false},
+    "name":{"type":"str"}
+  },
+  "key":["uid"]
+}

@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/market/ads/default/",
+			"param":{
+				"banner_type": 1,
+                "img_url": "http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg",
+                "position":1,
+				"redirect":"www.baidu.com",
+				"title":"默认广告"}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+		},
+	"key":{"adsId":"data.id"}
+}
+
+

@@ -1,0 +1,30 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/overview",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+    "output":{
+      "statusCode":{"EQ":0},
+      "msg":{"EQ":"成功"},
+      "data": {"TYPE":"dict"},
+      "address":{"TYPE":"str"},
+      "cell": {"TYPE":"str"},
+      "city": {"TYPE":"str"},
+      "contactName": {"TYPE":"str"},
+      "contactSex": {"TYPE":"int"},
+      "contactTel": {"TYPE":"str"},
+      "houseNumber": {"TYPE":"str"},
+      "latitude":{"TYPE":"float"},
+      "longitude": {"TYPE":"float"},
+      "picUrl": {"TYPE":"str"},
+      "posNum": {"TYPE":"int"},
+      "productCategory":{"TYPE":"list"},
+      "province": {"TYPE":"str"},
+      "storeCategoryId": {"TYPE":"int"},
+      "storeCategoryName": {"TYPE":"str"},
+      "storeKeeperName": {"TYPE":"str"},
+      "telephone": {"EQ":"{{key.tel}}"}
+    }
+}

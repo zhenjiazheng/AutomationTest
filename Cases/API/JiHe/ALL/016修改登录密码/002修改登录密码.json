@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "PUT",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/modifyLoginPwd",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+       "param": {
+       "oldPwd":"a1234567","newPwd":"a1234567","confirmNewPwd":"a1234567"
+     }
+    },
+
+    "output":{"code":{"EQ":0},"msg":{"EQ":"修改成功"}}
+
+}

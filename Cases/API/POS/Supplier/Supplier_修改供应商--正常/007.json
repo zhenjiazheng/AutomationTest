@@ -1,0 +1,25 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "PUT",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}","Content-Type":"application/json"},
+			"rest": "py/supplier/v1/store/suppliers/{{key.new_store_id}}/",
+			"param":{
+				"address":"Testadd",
+				"contact_name":"testName77",
+				"contact_sex":0,
+				"contact_tel":"13212345369",
+				"store_name":"test_Store77"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"address":{"EQ":"Testadd"},
+		"contact_name":{"EQ":"testName77"},
+		"contact_sex":{"EQ":0},
+		"contact_tel":{"EQ":"13212345369"},
+		"store_name":{"EQ":"test_Store77"}
+    }
+}

@@ -1,0 +1,26 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/pos/v1/sync/heartbeat",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_pos}}"},
+		    "param":{
+				"sync_data":[{"key":"product","values":[{
+				"brcode": "6924743915848",
+				"img_url": "https://release-image.thy360.com/images/deal/deal20151125/D101652.jpg",
+				"product_id": 62,
+				"product_name": "乐事无限清新黄瓜味薯片104G",
+				"sale_price": "9.68",
+				"spec": "104G",
+				"status": 0
+			}]}],"sync_server_time":1486978972214
+			}
+
+
+
+	},
+
+    "output":{"status_code":{"EQ":0},"msg":{"EQ":"同步数据获取成功"},"data":{"TYPE":"dict"},
+              "sync_data":{"TYPE":"dict"},"key":{"TYPE":"str"}, "sync_server_time":{"TYPEIN":["int","long"]},
+	          "category_id":{"TYPE":"int"},"category_name":{"TYPE":"str"}, "status":{"TYPE":"int"}}
+}

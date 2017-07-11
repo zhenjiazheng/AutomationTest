@@ -1,0 +1,26 @@
+{
+  "input":{
+    	"author":"anso",
+ 			"method": "GET",
+ 			"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/friend/reward/2?page=1&limit=200",
+ 			"headers": {
+               "client": "3",
+               "Content-Type": "application/json",
+               "token": "{{key.token}}"
+  }
+},
+  "output":{
+    "msg":{"type":"str","eq":""},
+    "code":{"eq":0},
+    "data":{"type":"dict"},
+    "count":{"type":"int"},
+    "totalpage":{"type":"int","eq":1},
+    "hasNext":{"type":"bool"},
+    "currPage":{"type":"int"},
+    "total":{"type":"int"},
+    "data.data":{"type":"dict"},
+    "money":{"type":"str"},
+    "time":{"type":"str"}
+  }
+}

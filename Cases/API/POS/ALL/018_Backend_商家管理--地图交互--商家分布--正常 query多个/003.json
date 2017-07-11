@@ -1,0 +1,34 @@
+{
+	"input": {
+		"author": "test",
+		"method": "get",
+		"url": "{{pre.pos_url}}",
+		"headers": {
+			"token": "{{key.token}}"
+		},
+		"rest": "py/backend/v1/store/mapping/",
+		"param": {
+			"city": "深圳市",
+			"latitude_start": 22.56,
+			"latitude_stop": 22.766,
+			"longitude_start": 113.800,
+			"longitude_stop": 113.900,
+			"query": "STORE,TIER1,TIER2"
+		}
+	},
+  	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+        "store": {"type":"list"},
+		"data.store.0.id":{"type":"int"},
+		"data.store.0.latitude":{"type":"float"},
+		"data.store.0.longitude":{"type":"float"},
+		"data.store.0.sales_monitor":{"type":"dict"},
+		"data.store.0.sales_monitor.order_count":{"type":"int"},
+		"data.store.0.sales_monitor.sales_amount":{"type":"str"},
+		"data.tier1": {"type":"list","GE":0},
+		"data.tier2": {"type":"list","ge":0}
+	}
+}
+
+

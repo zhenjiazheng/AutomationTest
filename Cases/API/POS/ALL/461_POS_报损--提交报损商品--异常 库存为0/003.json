@@ -1,0 +1,7 @@
+{
+	"sql":
+      {
+      "command": "update product_spec set stock = 0 where product_id = {{key.pid1}}",
+      "db": "posdb"
+    }
+}

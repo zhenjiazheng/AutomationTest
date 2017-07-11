@@ -1,0 +1,19 @@
+{ 
+  "public":  
+  [
+	  {  "class": "PublicModule.RunPublic", 
+    "function": "backendLogin" 
+    } ,
+	  {  "class": "PublicModule.RunPublic", 
+    "function": "getSupplierIdFromList" 
+    } ,
+	  {
+      "class": "PublicModule.RunPublic",
+      "function": "setPassword"
+    },
+    {
+      "class": "PublicModule.RunPublic",
+      "function": "supplierLogin"
+    }
+  ]
+}

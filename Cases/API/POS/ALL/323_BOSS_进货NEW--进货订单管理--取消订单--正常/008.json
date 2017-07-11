@@ -1,0 +1,8 @@
+{
+	"sql":{
+		    "command":"select order_status from pos_order WHERE id = {{key.orderId}}",
+			"db": "posorder"
+	},
+	"key":["order_status"],
+	"output":{"order_status":{"eq":5}}
+}

@@ -1,0 +1,13 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "delete",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/operation/modusoperandi/11111111"
+	},
+	"output":{
+		"statusCode":{"EQ":1},
+		"msg":{"type":"str"}}
+
+}

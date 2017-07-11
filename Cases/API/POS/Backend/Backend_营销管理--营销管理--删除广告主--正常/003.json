@@ -1,0 +1,15 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "delete",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/market/advertisers/{{key.ad_holder_id}}/"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+		}
+}
+
+

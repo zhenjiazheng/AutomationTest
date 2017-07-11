@@ -1,0 +1,28 @@
+{
+  "input": {
+    "method": "POST",
+    "url": "{{pre.pos_url}}",
+    "rest": "/ja/user/v1/order/commit",
+    "headers": {
+      "token": "{{key.user_token}}"
+    },
+    "param": {
+      "addressId": "{{key.addressId}}",
+      "deliverTimes": "2017-06-05",
+      "desc": "delivery description",
+      "storeId": "{{key.store_id}}",
+      "useBalance": false,
+      "saleType": 1
+    }
+  },
+    "output": {
+      "msg": {
+        "type": "str",
+        "eq": "请选择要购买的商品"
+      },
+      "statusCode": {
+        "eq": 1
+      }
+    }
+  }
+

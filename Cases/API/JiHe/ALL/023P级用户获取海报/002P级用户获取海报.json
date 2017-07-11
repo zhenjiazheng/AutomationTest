@@ -1,0 +1,20 @@
+
+{
+  "input":{
+ 			"author":"Alice",
+ 			"method": "GET",
+ 			"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/share/poster",
+ 			"headers": {
+               "client": "3",
+               "Content-Type": "application/json",
+               "token": "{{key.token}}"
+                 }
+  },
+ "output":{
+   "msg":{"EQ":"您无此权限","TYPE":"str"},
+   "code":{"EQ":1},
+   "data":{"EQ":null}
+   }
+ }
+

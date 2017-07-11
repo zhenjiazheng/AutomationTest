@@ -1,0 +1,37 @@
+{
+	"input":{
+			"method": "PUT",
+			"url":"{{pre.zzsh_url}}",
+			"rest": "py/water-supplier/v1/boss/shop/{{shop_id}}/",
+			"headers":{"token":"{{key.token}}"},
+			"param": {
+				"address": "深圳市南山区",
+				"contacts": "测试2",
+				"detail": "卫星大厦",
+				"description": "this is test",
+				"invoice": true,
+				"full_aviod_expfee": "60",
+				"end_time": "23:00",
+				"start_time": "9:00",
+				"longitude": 113.9463043212892,
+				"latitude": 22.53082466125482,
+				"logo_url": "http://test2",
+				"name": "测试店铺2",
+				"range": 12,
+				"tel": 17712345678
+				}
+	},
+  "output": {
+	  "statusCode": {
+		  "EQ": 0
+	  },
+	  "msg": {
+		  "EQ": "成功"
+	  }
+  },
+	"mock":{
+			"data": {},
+			"msg": "成功",
+			"statusCode": 0
+		}
+}

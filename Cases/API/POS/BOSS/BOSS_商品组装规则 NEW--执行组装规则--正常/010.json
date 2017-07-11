@@ -1,0 +1,22 @@
+{
+  "input":{
+    "method": "GET",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/packageRule/{{key.ruleId}}/10",
+    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"},
+    "largeProductBarcode": {"EQ":"12345678909876"},
+    "largeProductNum": {"TYPE":"int"},
+    "largeProductName": {"TYPE":"str"},
+    "largeProductSpec": {"TYPE":"str"},
+    "largeProductStock": {"EQ":"40"},
+    "smallProductBarcode":{"EQ":"12345687454213"},
+    "smallProductNum": {"TYPE":"int"},
+    "smallProductName": {"TYPE":"str"},
+    "smallProductSpec": {"TYPE":"str"},
+    "smallProductStock": {"EQ":"0"}
+    }
+}

@@ -1,0 +1,16 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/store/employees/resetpassword/",
+			"param":{
+				"password":"12345678"
+			}
+	},
+	"output":{
+		"statusCode":{"EQ":1}
+
+    }
+}

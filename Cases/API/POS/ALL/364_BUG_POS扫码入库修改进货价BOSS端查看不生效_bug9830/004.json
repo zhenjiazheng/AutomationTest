@@ -1,0 +1,26 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/storage/barcode",
+		    "param":{
+				"operator_id":"15000000000",
+				"operator_name":"1",
+				"products": [{
+					"price": "15.00",
+					"purchase_price": "9",
+					"sale_price": "15.00",
+					"product_id": {{key.pid}},
+					"stock": 5
+				}],
+				"supplier_id":"{{key.supplier_id}}",
+				"supplier_name":"test"
+			}
+
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"}}
+}

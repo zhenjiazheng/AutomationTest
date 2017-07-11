@@ -1,0 +1,27 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.zzkg_admin_url}}",
+			"rest": "py/dealer/backend/supplier/list/",
+			"headers": {"token":"{{key.token}}"},
+			"param":{
+				"page":1, "limit":50
+			}
+	},
+  "output":{
+	  "msg": {"EQ":"【成功】"},
+	  "count": {"TYPE":"int"},
+		"currPage": {"EQ":1},
+		"totalPage": {"TYPE":"int"},
+		"hasNext": {"TYPE": "bool","EQ":true},
+		"total": {"TYPE":"int"},
+		"status": {"TYPE":"dict"},
+	  	"id": {"TYPE":"int"},
+	  	"ctime": {"TYPE":"str"},
+	  	"icon_url": {"TYPE":"str"},
+		"contact_tel": {"RE":"[0-9]{11}","TYPE":"str"},
+		"contact": {"TYPE":"str","EQ":"adf"},
+		"mtime": {"TYPE":"str"}
+  },
+	"key":["id"]
+}

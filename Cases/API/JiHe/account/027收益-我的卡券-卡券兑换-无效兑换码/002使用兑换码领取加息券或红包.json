@@ -1,0 +1,17 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "/ja/v1/account/exchange/coupon",
+			"headers":{"client":"3","token":"{{key.token}}"},
+			"param":{
+				"exchangeCode":"C01736AD7601H"
+			}
+	},
+  "output":{
+    "code":{"EQ":1},
+    "msg":{"TYPE":"str","EQ":"兑换码无效！"}
+  },
+
+  "key":["uid","token"]
+}

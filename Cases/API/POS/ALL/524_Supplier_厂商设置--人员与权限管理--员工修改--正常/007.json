@@ -1,0 +1,23 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "put",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/store/employees/{{key.employeeId1}}/",
+			"param":{
+				"employee_name":"TestEmployee22",
+				"employeerole":"{{key.roleId}}",
+				"login_tel":"{{pre.MUser2}}"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data.employee_name":{"eq":"TestEmployee22"},
+		"data.employeerole.id":{"eq":{{key.roleId}}},
+		"data.id":{"eq":{{key.employeeId1}}},
+		"data.login_tel":{"eq":"{{pre.MUser2}}"},
+		"data.store":{"eq":{{key.supplier_id}}}
+}
+}

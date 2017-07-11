@@ -1,0 +1,14 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/refund?page=1&limit=20"
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"},
+		"data.count":{"ge":1}
+    }
+}

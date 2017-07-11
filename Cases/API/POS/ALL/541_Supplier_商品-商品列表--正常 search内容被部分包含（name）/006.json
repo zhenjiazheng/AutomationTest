@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/product/products/",
+			"param":{"category_id":{{key.category_id}},
+						"limit":50,
+						"page":1,
+						"search":"屈臣氏"
+					}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"count":{"TYPE":"int","GE":0},
+        "hasNext":{"TYPE":"bool"},
+        "totalPage":{"TYPE":"int"},
+        "total":{"TYPE":"int"}
+    }
+}

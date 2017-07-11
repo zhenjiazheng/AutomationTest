@@ -1,0 +1,27 @@
+{
+  "author": "test",
+  "caseStep": {
+    "1": {
+      "operation": "页面标题",
+      "expectText": "用户登录 | 大掌柜运营平台"
+    },
+    "2":{
+      "operation": "文本输入",
+      "by": "id",
+      "value": "username",
+      "text": "root"
+    },
+    "3": {
+      "operation": "文本输入",
+      "by": "id",
+      "value": "password",
+      "text": "root1234"
+    },
+     "4": {
+      "operation": "点击控件",
+      "by": "id",
+      "value": "log",
+       "sleep": 2
+    }
+  }
+}

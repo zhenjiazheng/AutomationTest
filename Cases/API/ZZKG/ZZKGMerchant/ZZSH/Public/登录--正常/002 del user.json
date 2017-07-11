@@ -1,0 +1,11 @@
+{
+	"sql":["select id from user where mobile = {{pre.User1}}",
+		"delete from user where id = {{key.id}}"],
+	"mock":{
+			"id2": {{key.id}}
+		},
+	"key":["id2"],
+	"output":{
+			"id2":{"eq":{{key.id}} }
+		}
+}

@@ -1,0 +1,14 @@
+{
+  "input":{
+			"method": "GET",
+			"url":"{{pre.zzkg_merchant_url}}",
+			"rest": "/py/v4/admin/member/statistics/",
+            "headers":{"token":"{{key.token}}"}
+   },
+  "output":{
+    "msg":{"TYPE":"str"},
+    "statusCode": {"EQ":0},
+    "data":{"TYPE":"dict"}
+  }
+
+}

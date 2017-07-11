@@ -1,0 +1,7 @@
+{
+	"sql":
+      {
+      "command": "update pos_order set delivery_status=2, order_status=2 where id = {{key.orderId}}",
+      "db": "posorder"
+    }
+}

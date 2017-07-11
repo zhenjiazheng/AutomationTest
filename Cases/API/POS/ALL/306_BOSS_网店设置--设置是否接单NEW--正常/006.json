@@ -1,0 +1,15 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/store/netsale",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{"supportNetsale":true}
+	},
+
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+        "storeName": {"TYPE":"str"}
+    }
+}

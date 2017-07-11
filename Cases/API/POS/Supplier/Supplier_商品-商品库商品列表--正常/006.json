@@ -1,0 +1,46 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/product/deals/",
+			"param":{
+						"limit":50,
+						"page":1,
+						"search":""
+					}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"count":{"TYPE":"int"},
+		"barcode":{"TYPE":"str"},
+		"category_desc":{"TYPE":"str"},
+        "cdn_image":{"TYPE":"dict"},
+        "big_img":{"TYPE":"str"},
+        "detail_imgs":{"TYPE":"list"},
+        "img":{"TYPE":"str"},
+        "ctime":{"TYPE":"str"},
+        "id":{"TYPE":"int"},
+        "image":{"TYPE":"dict"},
+        "deal_images":{"TYPE":"list"},
+        "isStandard":{"TYPE":"bool"},
+        "isStandard_desc":{"TYPE":"str"},
+        "is_standard":{"TYPE":"bool"},
+        "keywords":{"TYPE":"str"},
+        "name":{"TYPE":"str"},
+        "price":{"TYPE":"str"},
+        "quality_period":{"TYPE":"int"},
+        "source":{"TYPE":"str"},
+        "spec":{"TYPE":"str"},
+        "status":{"TYPE":"int"},
+        "status_desc":{"TYPE":"str"},
+        "stime":{"TYPE":"str"},
+        "unit":{"TYPE":"int"},
+        "unit_desc":{"TYPE":"str"},
+        "hasNext":{"TYPE":"bool"},
+        "totalPage":{"TYPE":"int"},
+        "total":{"TYPE":"int"}
+    }
+}

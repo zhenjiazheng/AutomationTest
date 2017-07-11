@@ -1,0 +1,32 @@
+{
+  "input": {
+    "method": "get",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/v1/boss/setting/storeinfo",
+    "headers": {
+      "token": "{{key.token_boss}}",
+      "storeNo": "{{key.store_id}}"
+    }
+  },
+  "output":{
+    "statusCode":{"EQ":0},
+    "data":{"type":"dict"},
+    "businessDay": {"type":"str"},
+    "deliverTime": {"type":"str"},
+    "deliverFee": {"type":"str","eq":"3.00"},
+    "deliverType": {"type":"int"},
+    "districtsDistance": {"type":"str","eq":"3000"},
+    "serviceTel": {"type":"str"},
+    "storeLogo": {"type":"str"},
+    "storeName": {"type":"str"},
+    "storeQrcode": {"type":"str"},
+    "storeStatus":{"eq":0},
+    "telephone":{"eq":"{{key.tel}}"},
+    "deliverDistricts":{"type":"list"},
+    "platformStore":{"eq":true},
+    "idCard":{"type":"list"},
+    "businessLicense":{"type":"list"},
+    "idCardNo":{"type":"str"},
+    "supportNegstockSale": {"type":"bool"}
+    }
+}

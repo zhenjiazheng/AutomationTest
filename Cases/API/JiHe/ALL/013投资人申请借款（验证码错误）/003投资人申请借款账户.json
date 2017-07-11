@@ -1,0 +1,17 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/account/borrow/register",
+			"headers":{"client": "3",
+                        "Content-Type": "application/json",
+				"token":"{{key.token}}"
+				},
+      "param": {
+        "name": "文翰1","idno":"460001199303230731","code":"1"
+      }
+	},
+  "output":{"code":{"EQ":1},"msg":{"TYPE":"str","eq":"验证码不正确，请重新输入验证码"},"data":{"eq":null}}
+
+}

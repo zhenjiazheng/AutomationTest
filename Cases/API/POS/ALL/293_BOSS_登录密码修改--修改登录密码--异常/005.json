@@ -1,0 +1,18 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}"},
+			"rest": "ja/v1/boss/setting/modifypwd/",
+			"param":{
+				"oldPwd":"654321",
+				"storeNo":"{{key.store_id}}",
+				"newPwd":"123456"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"原密码错误，请重新输入!"},
+		"statusCode":{"EQ":1}
+}
+}

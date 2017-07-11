@@ -1,0 +1,11 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/notice/pub",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+		"param":{"notice":"核力量合理额撒地方三大大苏打似的士大夫大师傅"}
+	},
+
+    "output":{"statusCode":{"EQ":1}}
+}

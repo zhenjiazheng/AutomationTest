@@ -1,0 +1,6 @@
+{
+  "sql":{
+    "db":"waiwang",
+     "command":"delete from users_idcard where user_id ={{key.uid}}"
+  }
+}

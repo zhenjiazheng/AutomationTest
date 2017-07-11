@@ -1,0 +1,16 @@
+{
+  "input":{
+    "method": "POST",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/recharge/rule/mod",
+    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param":{"activityName": "DefineRule222",
+            "giftAmount": "30.00",
+            "rechargeAmount": "100",
+            "id":{{key.ruleId}}}
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"}
+    }
+}

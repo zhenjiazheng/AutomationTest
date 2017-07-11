@@ -1,0 +1,23 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "/ja/v1/boss/purchase/supplier/detail/{{key.new_store_id}}"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"supplierId":{"eq":{{key.new_store_id}}},
+ 		"memberGradeName": {"type":"str"},
+		"categoryName": {"type":"str"},
+		"contactName":{"type":"str"},
+		"contactTel": {"type":"str"},
+		"havePerchased": {"type":"bool"},
+		"discountRate": {"type":"str"},
+		"platformStore": {"type":"bool"},
+		"storeLogo": {"type":"str"},
+		"storeName": {"type":"str"}
+	}
+}

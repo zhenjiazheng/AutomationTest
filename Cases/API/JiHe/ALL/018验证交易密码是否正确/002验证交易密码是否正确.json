@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/validPayPwd",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+       "param": {
+       "oldPayPwd":"111111"
+     }
+    },
+
+    "output":{"code":{"EQ":0},"msg":{"EQ":"验证成功"}}
+
+}

@@ -1,0 +1,14 @@
+{
+  "input":{
+    "method": "get",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/store/refund/list",
+    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param":{"page":1,"limit":10, "startDate":"2017-03-01","endDate":"2017-05-01"}
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"},
+    "data.data":{"type":"list"}
+    }
+}

@@ -1,0 +1,17 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/account/borrow/register",
+			"headers":{"client": "3",
+                        "Content-Type": "application/json",
+				"token":"{{key.token}}"
+				},
+      "param": {
+        "name": "文翰","idno":"460001199303230731","code":"{{key.code}}"
+      }
+	},
+  "output":{"code":{"EQ":1},"msg":{"TYPE":"str","eq":"借款账户已经存在"},"data":{"eq":null}}
+
+}

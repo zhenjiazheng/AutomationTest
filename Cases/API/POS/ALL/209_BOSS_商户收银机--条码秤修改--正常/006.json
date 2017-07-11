@@ -1,0 +1,19 @@
+{
+	"input":{
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/pos/scale",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+    "output":{
+      "statusCode":{"EQ":0},
+      "msg":{"EQ":"成功"},
+	  "id":{"type":"int"},
+      "scaleIp":{"eq":"172.16.0.100"},
+      "scaleName":{"eq":"Scale111"},
+      "scaleType":{"eq":"type1"},
+      "syncStatus":{"type":"bool"},
+      "updateTime":{"type":"str"}
+    },
+    "key":["id"]
+}

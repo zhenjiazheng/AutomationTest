@@ -1,0 +1,29 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/recharge",
+		    "param":{
+				"cashier_id":{{key.store_id}},
+				"cashier_name":"{{key.tel}}",
+				"order_amount":"1000.00",
+				"pay_amount":"1000.00",
+				"order_status":1,
+				"order_no": "{{pre.orderNo}}134",
+				"recharge":{
+					"card_id":{{key.ruleId}},
+					"gift_amount": "0",
+					"member_id":{{key.member_id}},
+					"member_name": "test_member",
+					"member_tel":"{{pre.POS_User}}"}
+			}
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"pay_amount":{"eq":"1000.00"},
+		"order_id":{"type":"int"}
+},
+	"key":{"orderId":"data.order_id"}
+}

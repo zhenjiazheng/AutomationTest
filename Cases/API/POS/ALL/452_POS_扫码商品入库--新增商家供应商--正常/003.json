@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/storage/barcode/supplier"
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"},
+		"address":{"TYPE":"str"},
+		"id":{"TYPE":"int"},
+		"supplier_name":{"TYPE":"str"},
+		"supplier_sort":{"TYPE":"str"},
+		"tel":{"TYPE":"str"}
+	},
+	"key":{"supplier_id":"data.-1.id"}
+}

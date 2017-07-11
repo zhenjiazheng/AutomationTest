@@ -1,0 +1,25 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/market/advertisers/",
+			"param":{
+				"contact_name": "联系人",
+                "address": "思微simplywork(飞扬科技园)",
+                "contact_tel":"{{pre.MUser2}}",
+                "name":"广告主名称"}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+        "id":{"type":"int"},
+        "name":{"eq":"广告主名称"},
+        "contact_name":{"eq":"联系人"},
+        "contact_tel":{"eq":"{{pre.MUser2}}"}
+		},
+	"key":{"ad_holder_id":"data.id"}
+}
+
+

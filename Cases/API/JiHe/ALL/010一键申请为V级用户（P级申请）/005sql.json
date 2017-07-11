@@ -1,0 +1,6 @@
+{
+	"sql": {
+		"db": "waiwang",
+		"command": "delete from recommend_users_level_apply where  user_id=1943"
+	}
+}

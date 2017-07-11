@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/storage/barcode/supplier",
+		    "param":{
+				"address":"翻身地铁站",
+				"contact_name":"李兰珍",
+				"contact_tel":"15623697900",
+				"supplier_name":"猫爷爷的花店"
+			}
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"}
+	}
+}

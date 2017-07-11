@@ -1,0 +1,24 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "post",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/operation/inventory/",
+			"param":{
+				"afterStock":110,
+				"beforeStock": 100,
+				"barcode":"12345678909876",
+				"category":{{key.categoryId}},
+				"category_display":"testhhh",
+				"productId":"{{key.pid}}",
+				"image":"",
+				"name":"忍者",
+				"stock":100,
+				"unit_display":"test"
+			}
+	},
+	"output":{
+		"statusCode":{"EQ":0},
+		"data":{"type":"dict"}}
+}

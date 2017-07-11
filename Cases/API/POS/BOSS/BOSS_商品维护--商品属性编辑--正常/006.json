@@ -1,0 +1,58 @@
+{
+	"input":{
+			"method": "PUT",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/commodity/property/{{key.pid1}}",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{
+				"id": {{key.pid1}},
+				"status": 0,
+				"barcode": "12345678909876",
+				"brand": "test",
+				"category": 510,
+				"desc_common": "This is the test.",
+				"desc_url": "http://www.baidu.com/",
+				"keywords": "测试更新商品",
+				"manufacturer": "测试更新商品",
+				"name": "测试更新商品",
+				"price": "122",
+				"quality_period": 0,
+				"unit": 1,
+				"shortcut": 0,
+				"weighable": false,
+				"source": "测试更新商品",
+				"specs": [
+					{
+						"member_price": "110",
+						"id": {{key.specId1}},
+						"discount_price": "110",
+						"productNumber": 10,
+						"sale_price": "120",
+						"purchase_price": "100",
+						"unit": "100",
+						"stock": "100"
+					}
+				]
+            }
+	      },
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"data":{"TYPE":"dict"},
+		"status":{"TYPE":"int"},
+		"name":{"TYPE":"str","EQ":"测试更新商品"},
+		"brand":{"TYPE":"str"},
+		"barcode":{"TYPE":"str"},
+		"price":{"TYPE":"str"},
+		"source":{"TYPE":"str","EQ":"测试更新商品"},
+		"quality_period":{"TYPE":"int"},
+		"unit":{"TYPE":"str","eq":"100"},
+		"category_display":{"TYPE":"str"},
+		"image":{"TYPE":"str"},
+		"manufacturer":{"TYPE":"str","EQ":"测试更新商品"},
+		"sale_price":{"TYPE":"str","eq":"120.00"},
+		"product_type": {"type":"int"},
+		"id":{"TYPE":"int"},
+		"stock":{"type":"str"},
+		"weighable": {"eq":false}}
+}

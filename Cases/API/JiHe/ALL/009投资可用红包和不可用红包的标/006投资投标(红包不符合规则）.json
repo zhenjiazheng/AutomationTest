@@ -1,0 +1,26 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/invest/tender",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+     "param": {
+       "tenderId":"611",
+       "investMoney": 100,
+       "couponId":"{{key.id3}}",
+       "payPassword": 111111
+     }
+    },
+
+    "output":{
+      "code":{"EQ":1},
+      "msg":{"TYPE":"str","EQ":"您选择的红包不符合使用规则"},
+      "data":{"EQ":null}
+    }
+
+}

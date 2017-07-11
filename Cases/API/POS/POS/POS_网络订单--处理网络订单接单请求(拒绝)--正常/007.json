@@ -1,0 +1,20 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}", "storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/commodity/list"
+	},
+	"output":{
+		"statusCode":{"EQ":0}
+},
+	"key":{
+		"barcode": "data.data.-2.barcode",
+		"categoryId": "data.data.-2.category",
+		"specId":  "data.data.-2.specs.0.id",
+		"purchase_price": "data.data.-2.specs.0.purchase_price",
+		"sale_price": "data.data.-2.specs.0.sale_price",
+		"productId": "data.data.-2.id"
+	}
+}

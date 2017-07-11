@@ -1,0 +1,19 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.zzsh_url}}",
+			"rest": "py/water-supplier/v1/boss/login/logining/",
+			"param":{
+				"username":"{{pre.User1}}", "vcode": "jsjs"
+			}
+	},
+  "output":{
+	  			"statusCode": {"EQ":1},
+			  "msg":{"type":"str"}},
+	"mock":{
+				"data": {
+				},
+				"msg": "失败",
+				"statusCode": 1
+			}
+}

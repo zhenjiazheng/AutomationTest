@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/store/suppliers/",
+			"param":{
+				"address":"Testaddress",
+				"contact_name":"testName",
+				"contact_sex":0,
+				"contact_tel":"13212345678"
+			}
+	},
+	"output": {
+		"store_name": {
+			"EQ": [
+				"This field is required."
+			]
+		}
+	}
+}

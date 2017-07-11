@@ -1,0 +1,28 @@
+{
+  "author": "lancy",
+  "input": {
+    "method": "POST",
+    "url": "{{pre.jh_url}}",
+    "rest": "ja/v1/invest/tender",
+    "headers": {
+      "client": "3",
+      "Content-Type": "application/json",
+      "token": "{{key.token}}"
+    },
+    "param": {
+      "tenderId": "547",
+      "investMoney": 100,
+      "payPassword": 111111,
+      "couponId":"{{key.id2}}"
+    }
+  },
+  "output": {
+    "code": {
+      "EQ": 1
+    },
+    "msg": {
+      "TYPE": "str",
+      "EQ":"该标不支持红包"
+    }
+  }
+}

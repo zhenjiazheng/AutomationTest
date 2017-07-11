@@ -1,0 +1,18 @@
+
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.hyb_url}}",
+			"rest": "ja/memberbao/v1/bindbankcard/step1",
+			"headers":{"Content-Type": "application/json","appId":"{{pre.appId_ZhuZhuJiShi}}",
+				"token":"{{key.token}}"
+			},
+			"param":{
+				"name": "李兰珍", "tel": "13692159330", "bankcard": "6212264000049728088"
+			}
+	},
+
+  "output":{"msg":{"EQ":"银行卡信息"}, "statusCode":{"EQ":0}, "data":{"TYPE":"dict"}}
+
+}

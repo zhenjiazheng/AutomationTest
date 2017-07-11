@@ -1,0 +1,29 @@
+{
+  "input": {
+    "method": "POST",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/set/meal/add",
+    "headers": {
+      "token": "{{key.token_boss}}",
+      "storeNo": "{{key.store_id}}"
+    },
+    "param": {
+      "categoryId": {{key.categoryId}},
+      "categoryName": "{{key.category_name}}",
+      "paramList": [
+        {
+          "to_spec": {{key.specId}},
+          "count": 10
+        }
+      ],
+      "pictureUrl": "http://posstatic-1252095635.file.myqcloud.com/appidposvsdf2f/aefeb6c0611244c091dc45da0aa753da.png",
+      "salePrice": "10",
+      "setMealName": "套餐ABC"
+    }
+  },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"}
+    },
+  "key":{"pid1":"data.id"}
+}

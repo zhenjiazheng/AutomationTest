@@ -1,0 +1,20 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/feedback/",
+			"headers":{
+				"token":"{{key.token}}", "client":"3"
+			},
+		    "param":{
+				"imageUrls":["{{key.data}}"],
+              "content":"3,投资项目建议",
+              "contactPhone":"{{pre.JRUser}}"
+			}
+	},
+  "output":{
+    "msg":{"eq":"请选择反馈类型！"},
+    "code":{"eq":1},
+    "data":{"eq":null}
+  }
+}

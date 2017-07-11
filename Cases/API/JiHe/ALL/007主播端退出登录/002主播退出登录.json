@@ -1,0 +1,13 @@
+{
+  "input":{
+    "method":"POST",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/live/user/logout",
+    "param":{"name":"weidong","password":"123456"}
+  },
+  "output":{
+    "msg":{"eq":"退出登录成功"},
+    "code":{"eq":0},
+    "data":{"eq":null}
+  }
+}

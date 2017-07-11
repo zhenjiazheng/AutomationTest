@@ -1,0 +1,36 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/pos/receipt",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+            "param":{
+				"endnote1":"endnote1",
+				"endnote1Enable":true,
+				"endnote2":"endnote2",
+				"endnote2Enable":true,
+				"endnote3":"endnote1",
+				"endnote3Enable":true,
+				"endnote4":"endnote1",
+				"endnote4Enable":true,
+                "endnotePrintPosition":2,
+				"orderNoToBarcode":false,
+				"payDetail":true,
+				"points":true,
+				"productBarcode":true,
+				"productName":true,
+				"promotionDetails":false,
+				"receiptTitle":"This is the title.",
+				"storeLogo":true,
+				"storeBalance":true,
+				"totalOriginalPrice":true,
+				"totalPoints":true,
+				"totalPromotions":true,
+				"unitPrice":false
+			}
+	},
+    "output":{
+      "statusCode":{"EQ":0},
+      "msg":{"EQ":"成功"}
+    }
+}

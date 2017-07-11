@@ -1,0 +1,16 @@
+{
+   "input": {
+     "author": "lifang",
+     "method": "GET",
+     "url": "{{pre.jh_url}}",
+     "rest": "/ja/v1/user/msg/{{key.subjectID}}/content",
+     "headers": {
+       "client": "3",
+       "Content-Type": "application/json",
+       "token": "{{key.token}}"
+     }
+   },
+  "output":{
+    "msg":{"EQ":"OK"},"code":{"EQ":0},"data.body":{"TYPE":"str"},"data.subjectId":{"TYPE":"int"}
+  }
+}

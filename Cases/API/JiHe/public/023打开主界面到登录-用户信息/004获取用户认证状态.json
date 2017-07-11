@@ -1,0 +1,17 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/idcard/bind/status",
+    "headers":{
+      "client":"3",
+      "token":"{{key.token}}"
+    }
+  },
+  "output":{
+    "msg":{"eq":""},
+    "code":{"eq":0},
+    "data":{"type":"dict"},
+    "idcard_status":{"type":"int"}
+  }
+}

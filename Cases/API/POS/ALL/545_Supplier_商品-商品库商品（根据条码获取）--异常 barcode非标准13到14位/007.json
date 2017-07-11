@@ -1,0 +1,13 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/product/deals/22222222/"
+	},
+	"output":{
+		"msg":{"EQ":"商品条码未找到"},
+		"statusCode":{"EQ":1}
+    }
+}

@@ -1,0 +1,29 @@
+{
+
+  "input":{
+    "method": "GET",
+    "url":"{{pre.jh_url}}",
+
+    "headers":{
+      "client":"3",
+      "Content-Type":"application/json"
+    },
+
+		"rest": "/ja/v1/tender/598/item"
+  },
+
+   "output":{
+     "code":{"EQ":0},
+     "data":{"TYPE":"dict"},
+     "imgs":{"TYPE":"list"},
+     "data.imgs.0.picture":{"TYPE":"list"},
+     "data.imgs.0.title":{"TYPE":"str"},
+     "info":{"TYPE":"list"},
+     "data.info.0.desc":{"TYPE":"str"},
+     "data.info.0.title":{"TYPE":"str"},
+     "data.info.1.desc":{"TYPE":"str"},
+     "data.info.1.title":{"TYPE":"str"},
+     "msg":{"EQ":"成功"}
+   }
+
+}

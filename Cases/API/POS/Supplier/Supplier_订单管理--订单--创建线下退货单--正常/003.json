@@ -1,0 +1,21 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/order/refund-orders/",
+			"param":{
+				"bossDescription":"helloWorld",
+				"memberId":"{{key.store_id}}",
+				"orderId":"{{key.orderId}}",
+				"refundOrderItems":[{"orderItemId": {{key.orderItemId}}, "refundCount": 5, "restock": 5}]
+			}
+
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+	},
+	"key":{"orderNo": "data.orderNo", "orderId":"data.id"}
+}

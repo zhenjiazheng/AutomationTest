@@ -1,0 +1,27 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.pos_url}}",
+    "rest":"/ja/user/v1/store/{{key.store_id}}/product?category_id=0&page=1&limit=200"
+  },
+  "output":{
+    "msg":{"type":"str","eq":"成功"},
+    "count":{"type":"int"},
+    "totalPage":{"type":"int","EQ":1},
+    "hasNext":{"type":"bool"},
+    "total":{"type":"int"},
+    "hasFullReduce":{"type":"bool"},
+    "unit":{"type":"str"},
+    "image":{"type":"str","NF":"http://posstatic-1252095635.file.myqcloud.com/"},
+    "salePrice":{"type":"str"},
+    "discountPrice":{"type":"str"},
+    "number":{"type":"float"},
+    "keywords":{"type":"str"},
+    "specs":{"type":"list"},
+    "category_display":{"type":"str"},
+    "name":{"type":"str"},
+    "storeId":{"type":"int"},
+    "stock":{"re":"[\\d]+"},
+    "statusCode":{"type":"int","eq":0}
+  }
+}

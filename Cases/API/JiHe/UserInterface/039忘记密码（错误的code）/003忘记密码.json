@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/pwd",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+     "param": {
+       "password":"a1234567","setting_token":"1"
+     }
+    },
+
+    "output":{"code":{"EQ":1},"msg":{"EQ":"短信验证已经过期，请重新获取验证码"}}
+
+}

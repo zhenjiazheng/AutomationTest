@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/operation/membergrade"
+	},
+	"output":{
+		"discountRate":{"type":"str"},
+		"enable":{"type":"bool"},
+		"gradeName":{"type":"str"},
+		"id":{"type":"int"},
+		"promotionType":{"type":"int"},
+		"storeNo":{"EQ":{{key.store_id}}},
+		"growthValue":{"type":"int"}
+},
+"key":{"id":"data.0.id"}
+}

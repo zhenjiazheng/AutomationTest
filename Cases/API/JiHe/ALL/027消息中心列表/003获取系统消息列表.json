@@ -1,0 +1,17 @@
+{
+   "input": {
+     "author": "lifang",
+     "method": "GET",
+     "url": "{{pre.jh_url}}",
+     "rest": "/ja/v1/user/msg/subject/S/list?page=1&limit=20",
+     "headers": {
+       "client": "3",
+       "Content-Type": "application/json",
+       "token": "{{key.token}}"
+     }
+   },
+  "output":{
+    "msg":{"TYPE":"str"},"code":{"EQ":0},"data":{"TYPE":"dict"},"data.count":{"TYPE":"int"},"totalpage":{"TYPE":"int"},
+    "hasNext":{"TYPE":"bool"}
+  }
+}

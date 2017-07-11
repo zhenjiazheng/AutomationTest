@@ -1,0 +1,29 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/store/customers/",
+			"param":{
+				"address":"Testaddress",
+				"contact_name":"testName",
+				"contact_sex":0,
+				"contact_tel":"13212345678",
+				"store_name":"test_Store"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"address":{"EQ":"Testaddress"},
+		"contact_name":{"EQ":"testName"},
+		"contact_sex":{"EQ":0},
+		"contact_tel":{"EQ":"13212345678"},
+		"store_name":{"EQ":"test_Store"},
+		"id":{"TYPE":"int"},
+		"platform_store":{"TYPE":"int"},
+		"supply":{"TYPE":"int"}
+    },
+	"key":{"new_store_id":"data.id"}
+}

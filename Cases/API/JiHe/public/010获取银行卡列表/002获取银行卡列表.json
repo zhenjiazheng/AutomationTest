@@ -1,0 +1,31 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/bankcards",
+    "headers":{
+      "client":"3",
+      "token":"{{key.token}}"
+    }
+  },
+  "output":{
+    "data":{"TYPE":"dict"},
+    "msg":{"EQ":"获取成功","TYPE":"str"},
+    "code":{"EQ":0},
+    "bank_name":{"TYPE":"str"},
+    "card_id":{"TYPE":"int"},
+    "card_no":{"TYPE":"str"},
+    "card_type":{"EQ":"储蓄卡","TYPE":"str"},
+    "color":{"TYPE":"str"},
+    "icon":{"TYPE":"str"},
+    "icon_web":{"TYPE":"str"},
+    "icon_white":{"TYPE":"str"},
+    "isCompany":{"TYPE":"bool"},
+    "lastNumber":{"EQ":"7183","TYPE":"str"},
+    "recharge":{"TYPE":"float"},
+    "tip_content":{"EQ":"单笔3万,当日5万","TYPE":"str"},
+    "user_name":{"EQ":"{{key.name}}","TYPE":"str"},
+    "withdraw":{"TYPE":"float"},
+    "withdraw_limit":{"TYPE":"float"}
+  }
+}

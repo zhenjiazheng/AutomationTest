@@ -1,0 +1,17 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/pos/v1/pos_setting",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_pos}}"}
+	},
+
+    "output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"},
+		"data":{"TYPE":"dict"},
+		"boss_reg_qrcode":{"TYPE":"str"},
+		"login_agree_url":{"TYPE":"str"},
+		"login_step_url":{"TYPE":"str"},
+		"staff_step_url":{"TYPE":"str"}}
+}

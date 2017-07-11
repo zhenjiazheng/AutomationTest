@@ -1,0 +1,26 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "/ja/v1/boss/purchase/supplier/list"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data":{"TYPE":"list"},
+		"supplierId":{"type":"int"},
+		"platformStore":{"type":"bool"},
+		"lastOrderTime":{"type":"str"},
+		"storeName":{"type":"str"},
+		"totalOrderAmount":{"type":"str"},
+		"storeLogo":{"type":"str"},
+		"hotSale":{"type":"str"},
+		"contactTel":{"type":"str"},
+		"contactName":{"type":"str"},
+		"orderTimes": {"type":"int"},
+		"supportNetsale":{"type":"bool"},
+		"categoryName":{"type":"str"}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/stsc/reconciliation?saleDate=2017-03-08",
+		    "headers": {"Content-Type": "application/json", "token":"{{key.token}}","storeNo":"{{key.store_id}}"}
+	},
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"data":{"TYPE":"dict"},
+		"cashierList":{"TYPE":"dict"},
+		"date":{"EQ":"2017-03-08"},
+		"netAmount":{"TYPE":"str"},
+		"salesmanList":{"TYPE":"dict"}}
+}

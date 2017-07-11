@@ -1,0 +1,11 @@
+{
+  "input":{
+    "method": "delete",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/fullreducedrule/111111/",
+    "headers": { "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+    },
+  "output":{
+    "statusCode": {"eq":1}
+  }
+}

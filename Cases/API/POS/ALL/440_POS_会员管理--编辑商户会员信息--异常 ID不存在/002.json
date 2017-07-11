@@ -1,0 +1,16 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "ja/pos/v1/member/1111111111",
+		    "param":{
+				"member_name":"test",
+				"sex":"1"
+			}
+	},
+	"output":{
+		"status_code":{"EQ":1}
+}
+}

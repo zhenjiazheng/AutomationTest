@@ -1,0 +1,21 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/loss/{{key.record_id}}"
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"EQ":"商品报损记录查询成功"},
+	    "update_time":{"TYPE":"str"},
+		"specs":{"TYPE":"list"},
+		"barcode":{"eq":"{{key.barcode}}"},
+		"sku_number":{"eq": 1},
+		"count":{"eq":"1.0"},
+		"img_url":{"TYPE":"str"},
+		"id": {"eq":{{key.record_id}}},
+		"product_name":{"TYPE":"str"}
+	}
+}

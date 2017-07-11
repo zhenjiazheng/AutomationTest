@@ -1,0 +1,20 @@
+{
+   "input": {
+     "author": "lifang",
+     "method": "POST",
+     "url": "{{pre.jh_url}}",
+     "rest": "/ja/v1/account/reflect",
+     "headers": {
+       "client": "3",
+       "Content-Type": "application/json",
+       "token": "{{key.token}}"
+     },
+     "param": {
+       "accNo":"1","txnAmt":"10","rechargeSource":4,"accountType":1
+     }
+   },
+  "output":{
+    "code":{"EQ":1},"msg":{"EQ":"非法的操作!!!"},"data":{"eq":null}
+
+  }
+}

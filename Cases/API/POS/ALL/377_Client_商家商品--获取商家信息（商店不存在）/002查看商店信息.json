@@ -1,0 +1,12 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.pos_url}}",
+    "rest":"/ja/user/v1/store/11111111"
+},
+  "output":{
+    "msg":{"type":"str","eq":"商家不存在"},
+    "data":{"eq":null},
+    "statusCode":{"type":"int","eq":1}
+  }
+}

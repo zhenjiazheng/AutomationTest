@@ -1,0 +1,21 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/verifyIdentity4ForgetPayPwd",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+       "param": {
+       "name":"文翰","code":"{{key.id}}"
+     }
+    },
+
+    "output":{"code":{"EQ":1},
+      "msg":{"EQ":"请填写身份证号"},
+      "data":{"eq":null}}
+
+}

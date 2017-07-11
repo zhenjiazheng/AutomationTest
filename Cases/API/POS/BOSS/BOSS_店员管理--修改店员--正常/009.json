@@ -1,0 +1,16 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/employee/mod",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+		    "param":{
+				"id":{{key.employeeId1}},
+				"password": "123456",
+				"employeeRoleId": {{key.id}},
+				"employeeName": "蓝天天",
+				"telephone":"{{pre.User1}}"}
+	},
+
+    "output":{"statusCode":{"EQ":0},"msg":{"EQ":"成功"}}
+}

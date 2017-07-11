@@ -1,0 +1,42 @@
+{
+  "input":{
+    "method":"POST",
+    "url":"{{pre.jh_url}}",
+    "rest": "/ja/v1/bankcard/bind",
+    "headers":{
+      "client":"3",
+      "token":"{{key.token}}"
+    },
+    "param":{
+      "bankId":"54",
+      "bankno":"6212264000055881862",
+      "province":"广东省",
+      "city":"深圳市",
+      "bankBranch":"工商银行",
+      "phone":"13265404902",
+      "isCompany":"false",
+      "userName":"覃小英"
+    }
+  },
+
+  "output":{
+    "msg":{"EQ":"绑定成功","TYPE":"str"},
+    "code":{"EQ":0},
+    "bank_name":{"TYPE":"str"},
+    "card_id":{"TYPE":"int"},
+    "card_no":{"EQ":"**** **** **** 1862","TYPE":"str"},
+    "card_type":{"EQ":"储蓄卡","TYPE":"str"},
+    "color":{"EQ":"#e55b6b","TYPE":"str"},
+    "icon":{"TYPE":"str"},
+    "icon_web":{"TYPE":"str"},
+    "icon_white":{"TYPE":"str"},
+    "isCompany":{"TYPE":"bool"},
+    "lastNumber":{"EQ":"1862","TYPE":"str"},
+    "recharge":{"TYPE":"float"},
+    "tip_content":{"EQ":"单笔3万,当日5万","TYPE":"str"},
+    "user_name":{"EQ":"覃小英","TYPE":"str"},
+    "data":{"TYPE":"dict"},
+    "withdraw":{"TYPE":"float"},
+    "withdraw_limit":{"EQ":null}
+  }
+}

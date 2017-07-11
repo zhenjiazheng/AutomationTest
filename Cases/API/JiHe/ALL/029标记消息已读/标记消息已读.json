@@ -1,0 +1,19 @@
+{
+  "input": {
+     "author": "lifang",
+     "method": "POST",
+     "url": "{{pre.jh_url}}",
+     "rest": "/ja/v1/user/msg/markRead",
+     "headers": {
+       "client": "3",
+       "Content-Type": "application/json",
+       "token": "{{key.token}}"
+     },
+     "param":{"subjectIds":["{{key.subjectID1}}","{{key.subjectID2}}"]
+
+     }
+   },
+  "output":{
+    "msg":{"EQ":"OK"},"code":{"EQ":0}
+  }
+}

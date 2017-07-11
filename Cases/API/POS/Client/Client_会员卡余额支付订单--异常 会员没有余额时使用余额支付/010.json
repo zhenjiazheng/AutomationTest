@@ -1,0 +1,31 @@
+{
+  "input": {
+    "method": "POST",
+    "url": "{{pre.pos_url}}",
+    "rest": "/ja/user/v1/order/commit",
+    "headers": {
+      "token": "{{key.user_token}}"
+    },
+    "param": {
+      "addressId": "{{key.addressId}}",
+      "deliverTimes": "2017-06-05",
+      "desc": "delivery description",
+      "storeId": "{{key.store_id}}",
+      "useBalance": true,
+      "saleType": 1,
+      "table": "5"
+    }
+  },
+  "output": {
+    "msg": {
+      "type": "str"
+    },
+    "statusCode": {
+      "eq": 0
+    }
+  },
+  "key": {
+    "orderId": "data.orderId"
+  }
+}
+

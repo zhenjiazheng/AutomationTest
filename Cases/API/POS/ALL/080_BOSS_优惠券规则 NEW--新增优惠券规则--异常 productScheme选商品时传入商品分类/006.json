@@ -1,0 +1,24 @@
+{
+  "input":{
+    "method": "POST",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/couponrule",
+    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param":{"activityName": "DefineRule",
+            "couponAmount": "150.00",
+            "couponScheme": 0,
+            "endDate": "2017-05-01",
+            "fetchRule": 0,
+            "memberUsed": false,
+            "netstoreUsed": false,
+
+            "productScheme":0,
+            "selectedCategory":[510],
+            "usedAmount":"100",
+            "startDate":"2017-04-01",
+            "storeUsed":true}
+    },
+  "output":{
+    "statusCode":{"EQ":1}
+    }
+}

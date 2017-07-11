@@ -1,0 +1,23 @@
+{ 
+  "public":  
+  [
+	  {  "class": "PublicModule.RunPublic", 
+    "function": "backendLogin" 
+    } ,
+	  {  "class": "PublicModule.RunPublic", 
+    "function": "getStoreIdFromList" 
+    } ,
+	  {
+      "class": "PublicModule.RunPublic",
+      "function": "setPassword"
+    },
+    {
+      "class": "PublicModule.RunPublic",
+      "function": "posLogin"
+    },
+    {
+      "class": "PublicModule.RunPublic",
+      "function": "bossLogin"
+    }
+  ]
+}

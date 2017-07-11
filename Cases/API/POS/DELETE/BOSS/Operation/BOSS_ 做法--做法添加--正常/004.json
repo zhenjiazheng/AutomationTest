@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "/ja/v1/boss/login",
+			"param":{
+				"password":"{{key.password}}",
+				"storeNo":"{{key.store_id}}",
+				"telephone":"{{key.tel}}"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+},
+	"key":{"token_boss":"data.token"}
+}

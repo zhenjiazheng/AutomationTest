@@ -1,0 +1,17 @@
+{
+	"input":{
+			"author":"tester",
+			"method": "GET",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/test/sms/reset_pwd?",
+			"headers":{"client": "lj_android",
+                        "Content-Type": "application/json"
+				},
+			"param":{
+				"phone":"{{pre.User1}}"
+			}
+	},
+  "output":{"code": {"eq":0},"msg":{"TYPE":"str","eq":"添加验证码成功"}, "data":{"TYPE":"dict"}},
+  "key":{"id":"data.code"}
+
+}

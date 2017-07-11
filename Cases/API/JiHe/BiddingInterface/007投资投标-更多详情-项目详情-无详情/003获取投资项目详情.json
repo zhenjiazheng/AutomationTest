@@ -1,0 +1,24 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/tender/611/item",
+			"headers":{
+				"client": "3",
+				"Content-Type": "application/json",
+				"token":"{{key.token}}"
+				}
+
+	},
+     "output":{
+		 "code":{"EQ":0},
+		 "msg":{"TYPE":"str","EQ":"成功"},
+		 "data":{"TYPE":"dict"},
+		 "imgs":{"TYPE":"list"},
+		 "data.imgs.0.picture":{"TYPE":"list","EQ": []},
+		 "data.imgs.0.title":{"EQ":""},
+		 "data.info.0.desc":{"EQ":""},
+		 "data.info.0.title":{"EQ":""}
+	 }
+}

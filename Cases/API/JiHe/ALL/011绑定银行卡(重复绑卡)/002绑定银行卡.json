@@ -1,0 +1,25 @@
+{
+  "input":{
+    "method":"POST",
+    "url":"{{pre.jh_url}}",
+    "rest": "ja/v1/bankcard/bind",
+    "headers":{
+      "client":"3",
+      "token":"{{key.token}}"
+    },
+    "param":{
+      "bankId":"54",
+      "bankno":"6222024000029727183",
+      "province":"广东省",
+      "city":"深圳市",
+      "bankBranch":"工商银行",
+      "phone":"13602553036",
+      "isCompany":"false"
+    }
+  },
+  "output":{
+    "msg":{"EQ":"这张银行卡已被绑定。"},
+    "code":{"EQ":1}
+  }
+
+}

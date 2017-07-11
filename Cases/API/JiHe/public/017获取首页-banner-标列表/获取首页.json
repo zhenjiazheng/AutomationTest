@@ -1,0 +1,43 @@
+{
+	"input":{
+			"method":"GET",
+			"url":"{{pre.jh_url}}",
+			"rest":"/ja/v2/home",
+			"headers":{
+				"client":"3",
+                "Content-Type":"application/json",
+				"token":"{{key.token}}"
+			}
+			
+	},
+	"output":{
+		"msg":{"TYPE":"str"},
+		"code":{"EQ":0},
+		"data":{"TYPE":"dict"},
+		"banners":{"TYPE":"dict"},
+		"floatBanner":{"EQ":null},
+
+		"rewardMoney":{"TYPE":"str"},
+		"userCount":{"TYPE":"str"},
+		"investMoney":{"TYPE":"str"},
+		"tender_count":{"TYPE":"int"},
+		"online_day":{"TYPE":"int"},
+		"repayment_count":{"TYPE":"int"},
+		"now_day":{"TYPE":"str"},
+
+		"data.banners.0.id":{"TYPE":"int"},
+		"data.banners.0.title":{"TYPE":"str"},
+		"data.banners.0.banner_type":{"TYPE":"int"},
+		"data.banners.0.link":{"TYPE":"str"},
+		"data.banners.0.image":{"TYPE":"str"},
+		"data.banners.0.sort":{"TYPE":"int"},
+		"data.banners.0.status":{"TYPE":"int"},
+		"data.banners.0.remark":{"TYPE":"str"},
+		"data.banners.0.updated_at":{"TYPE":"str"},
+		"data.banners.0.system_type":{"TYPE":"int"},
+		"data.banners.0.created_at":{"TYPE":"str"},
+		"data.banners.0.category_id":{"TYPE":"int"}
+
+	}
+
+} 

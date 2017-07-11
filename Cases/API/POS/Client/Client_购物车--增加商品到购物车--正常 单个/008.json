@@ -1,0 +1,12 @@
+{
+  "input":{
+    "method":"POST",
+    "url":"{{pre.pos_url}}",
+    "rest":"ja/user/v1/cart/{{key.store_id}}/clear",
+    "headers":{"token":"{{key.user_token}}"}
+},
+  "output":{
+    "msg":{"type":"str"},
+    "statusCode":{"eq":0}
+    }
+}

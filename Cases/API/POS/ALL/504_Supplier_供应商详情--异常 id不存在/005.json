@@ -1,0 +1,12 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/store/suppliers/100000/"
+	},
+	"output":{
+		"EQ":"Cannot find the page, 404"
+	}
+}

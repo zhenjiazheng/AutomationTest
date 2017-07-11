@@ -1,0 +1,19 @@
+{
+	"input":{
+			"method": "post",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/commodity/unit",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{"name": "test"}
+	      },
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"data":{"TYPE":"dict"},
+		"id":{"TYPE":"int"},
+		"name":{"TYPE":"str"}
+	},
+	"key": {
+		"unit_id":"data.id"
+	}
+}

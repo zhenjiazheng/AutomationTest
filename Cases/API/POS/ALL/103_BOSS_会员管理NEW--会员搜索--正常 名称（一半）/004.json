@@ -1,0 +1,27 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "/ja/pos/v1/login",
+			"param":{
+				"pos_info":{
+					"pos_no":"abcdefghijk",
+					"pos_type":"testType",
+					"pos_version":"testversion",
+					"rom_version":"1.0",
+					"system_version":"1.1"
+				},
+				"pwd":"{{key.password}}",
+				"shop_no":{{key.store_id}},
+				"username":"{{key.tel}}"
+			}
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"shop_pos_number":{"TYPE":"str"},
+		"token":{"TYPE":"str"}
+},
+	"key":{"token_pos":"data.token"}
+}

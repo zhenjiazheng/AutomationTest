@@ -1,0 +1,26 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "/ja/v1/boss/setting/storeaddr",
+			"param":{
+				"cell":"思微simplywork(飞扬科技园)",
+				"city":"深圳市",
+				"contactName":"联系人姓名",
+				"contactSex": 0,
+				"contactTel":"13512345678",
+				"district":"宝安区",
+				"houseNumber":"555",
+				"latitude":22.566,
+				"longitude" :113.899,
+				"province":"广东省"
+			}
+
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+	}
+}

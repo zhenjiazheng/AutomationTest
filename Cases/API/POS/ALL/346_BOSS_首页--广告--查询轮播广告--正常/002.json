@@ -1,0 +1,15 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/banner/6",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"data":{"TYPE":"list"},
+        "data.0.imgUrl":{"re":"http[s]*://[\\s\\S]*.[jpg|png]"},
+		"data.0.url":{"type":"str"}
+	}
+}

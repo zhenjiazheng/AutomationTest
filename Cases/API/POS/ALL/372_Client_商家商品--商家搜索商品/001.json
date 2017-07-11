@@ -1,0 +1,17 @@
+{
+  "input":{
+  "method":"POST",
+  "url":"{{pre.pos_url}}",
+  "rest":"/ja/user/v1/user/login",
+  "param":{
+    "phone":"{{pre.POS_User}}",
+    "code":"1234"
+  }
+},
+  "output":{
+    "msg":{"type":"str","eq":"登录成功"},
+    "data":{"type":"dict"},
+    "username":{"type":"str","eq":"{{pre.POS_User}}"},
+    "statusCode":{"type":"int","eq":0}
+  }
+  }

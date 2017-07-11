@@ -1,0 +1,26 @@
+{
+	"input":{
+			"author":"tester",
+			"method": "POST",
+			"url":"{{pre.sqwm_url}}",
+			"rest": "/py/sqwm/v1/supplier/goods_class/",
+            "headers": {
+               "token": "{{key.token}}"
+            },
+			"param":{
+              "name":"粤菜",
+              "id":"key.id"
+            }
+	},
+  "output":{
+    "statusCode": {"EQ":0},
+    "msg":{"EQ":"成功"},
+    "data":{"TYPE":"dict"},
+    "id": {"EQ":1},
+    "create_time": {"EQ":"1477295587"},
+    "update_time": {"TYPE":"str"},
+    "name": {"EQ":"粤菜"},
+    "supplier": {"EQ":2}
+  },
+  "key":["update_time"]
+}

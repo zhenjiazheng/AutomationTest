@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.hyb_url}}",
+			"rest": "ja/memberbao/v1/mymemberbao",
+			"headers":{"Content-Type": "application/json","appId":"{{pre.appId_ZhuZhuJiShi}}",
+				"token":"{{key.token}}"
+			}
+
+	},
+
+  "output":{"msg":{"EQ":"获取我的会员宝成功"}, "data":{"TYPE":"dict"}, "totalIncome":{"TYPE":"str"},
+            "ranking":{"TYPE":"int"},"realName":{"TYPE":"str"},"yesterdayIncome":{"TYPE":"str"},
+	        "userIncome":{"TYPE":"dict"},"user_id":{"TYPE":"str"},"name":{"TYPE":"str"},
+	        "account_id":{"TYPE":"str"},"income":{"TYPE":"str"},"totalAmount":{"TYPE":"str"},
+            "annualrate":{"TYPE":"str"}}
+
+}

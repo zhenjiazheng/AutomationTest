@@ -1,0 +1,19 @@
+
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "/py/supplier/v1/auth/login/",
+			"param":{
+				"password":"254524",
+				"store_id":"434343",
+				"tel":"{{key.supplier_tel}}"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"帐号不存在或密码错误"},
+		"statusCode":{"EQ":1}
+	}
+}

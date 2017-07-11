@@ -1,0 +1,21 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "put",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/market/ads/{{key.adsId}}/",
+			"param":{
+				"img_url":"http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg",
+                "advertiser_id": {{key.ad_holder_id}},
+				"title":"修改测试广告",
+				"redirect":"www.baidu.com"
+				}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+		}
+}
+
+

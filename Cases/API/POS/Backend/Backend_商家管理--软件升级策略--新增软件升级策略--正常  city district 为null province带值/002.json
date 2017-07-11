@@ -1,0 +1,25 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/store/software-update-strategies/",
+			"param":{
+				"city":null,
+				"district":null,
+				"enforce": true,
+				"province":"广东",
+				"software":"BOSS_APP_IOS",
+				"start_time":"2017-03-22 15:00:00",
+				"url":"http://www.baidu.com/",
+				"version_description":"This is the new version of BOSS",
+				"version_no":"1.0.0"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+},
+	"key":{"updateId":"data.id"}
+}

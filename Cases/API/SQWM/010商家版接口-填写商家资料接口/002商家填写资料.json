@@ -1,0 +1,59 @@
+{
+  "input":{
+			"author":"tester",
+			"method": "POST",
+			"url":"{{pre.sqwm_url}}",
+			"rest": "/py/sqwm/v1/supplier/supplier/",
+            "header":{
+              "token":"{{key.token}}",
+              "id":"{{key.id}}"
+            },
+			"param":{
+              "name": "厨房1",
+              "owner_name": "李乐弦",
+              "sfz_no": "123456789123456789",
+              "shop_hour_start": 930,
+              "shop_hour_end": 2330,
+              "deliver_range": 3.0,
+              "deliver_type": 0,
+              "deliver_free_amount": 50,
+              "deliver_cost": 25,
+              "auto_accept": false,
+              "longitude": 113.942415,
+              "latitude": 22.531107,
+              "detail": "卫星大厦1708",
+              "shop_img": "C:/Users/itservice/Desktop/API_Automation/test1.jpg",
+              "sfz_a_img": "C:/Users/itservice/Desktop/API_Automation/test1.jpg",
+              "sfz_b_img": "C:/Users/itservice/Desktop/API_Automation/test1.jpg"
+			}
+	},
+  "output":{
+    "statusCode": {"EQ":0},
+    "msg":{"EQ":"成功"},
+    "data":{"TYPE":"dict"},
+    "id":{"EQ":2},
+    "geohash": {"EQ":"ws100vdm4wy8"},
+    "create_time":{"TYPE":"str"},
+    "update_time": {"TYPE":"long"},
+    "state": {"TYPE":"str"},
+    "longitude":{"EQ":113.942415},
+    "latitude": {"EQ":22.531107},
+    "detail": {"TYPE":"str"},
+    "name": {"EQ":"厨房1"},
+    "owner_name": {"TYPE":"str"},
+    "sfz_no": {"TYPE":"str"},
+    "shop_hour_start":{"EQ":930},
+    "shop_hour_end": {"TYPE":"str"},
+    "deliver_range": {"TYPE":"str"},
+    "deliver_type": {"EQ":0},
+    "deliver_free_amount":{"TYPE":"str"},
+    "deliver_cost": {"TYPE":"str"},
+    "shop_img": {"TYPE":"str"},
+    "sfz_a_img": {"TYPE":"str"},
+    "sfz_b_img": {"TYPE":"str"},
+    "opened": {"EQ":true},
+    "auto_accept": {"EQ":false},
+    "user": {"EQ":4}
+  },
+	"key":["id"]
+}

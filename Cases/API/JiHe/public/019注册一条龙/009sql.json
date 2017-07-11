@@ -1,0 +1,13 @@
+{
+  "sql":{
+    "db":"waiwang",
+    "command":[
+                "delete from users where id = {{key.uid}}",
+                "delete from users_bankcard where user_id ={{key.uid}}",
+                "UPDATE users SET pay_password='' WHERE id={{key.uid}}",
+		        "delete from users_verified where user_id = {{key.uid}}",
+                "delete from users_idcard where user_id ={{key.uid}}",
+                "delete from users_extend where user_id = {{key.uid}}"
+    ]
+  }
+}

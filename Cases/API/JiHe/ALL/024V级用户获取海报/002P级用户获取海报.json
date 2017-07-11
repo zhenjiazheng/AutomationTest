@@ -1,0 +1,29 @@
+
+{
+  "input":{
+ 			"author":"Alice",
+ 			"method": "GET",
+ 			"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/share/poster",
+ 			"headers": {
+               "client": "3",
+               "Content-Type": "application/json",
+               "token": "{{key.token}}"
+                 }
+  },
+ "output":{
+   "msg":{"TYPE":"str"},
+   "code":{"EQ":0},
+   "data":{"TYPE":"dict"},
+   "url":{"TYPE":"str"},
+   "width":{"TYPE":"int"},
+   "height":{"TYPE":"int"},
+   "data.qrCode": {"TYPE":"dict"},
+   "data.qrCode.margin_right": {"TYPE":"int"},
+   "data.qrCode.margin_bottom": {"TYPE":"int"},
+   "data.qrCode.width": {"TYPE":"int"},
+   "data.qrCode.height": {"TYPE":"int"},
+   "data.qrCode.url": {"TYPE":"str"}
+   }
+ }
+

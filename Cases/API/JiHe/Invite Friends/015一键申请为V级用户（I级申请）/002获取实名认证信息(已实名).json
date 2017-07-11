@@ -1,0 +1,27 @@
+{
+  "input":{
+ 			"author":"Alice",
+ 			"method": "GET",
+ 			"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/idcard",
+ 			"headers": {
+               "client": "3",
+               "Content-Type": "application/json",
+               "token": "{{key.token}}"
+                 }
+  },
+ "output":{
+   "msg":{"EQ":"获取实名认证信息成功","TYPE":"str"},
+   "code":{"EQ":0},
+   "data":{"TYPE":"dict"},
+   "id":{"EQ":425},
+   "idcard":{"EQ":"4403**********46","TYPE":"str"},
+   "realname":{"EQ":"露*","TYPE":"str"},
+   "status":{"EQ":1},
+   "created_at":{"EQ":null},
+   "updated_at":{"EQ":null}
+   }
+ }
+
+
+

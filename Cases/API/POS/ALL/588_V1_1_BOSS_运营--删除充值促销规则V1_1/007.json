@@ -1,0 +1,12 @@
+{
+  "input":{
+    "method": "delete",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/recharge/rule/{{key.ruleId}}",
+    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"充值促销规则删除成功"}
+    }
+}

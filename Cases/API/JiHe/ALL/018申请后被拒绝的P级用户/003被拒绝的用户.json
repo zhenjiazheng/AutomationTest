@@ -1,0 +1,21 @@
+{
+  "input":{
+ 			"author":"Alice",
+ 			"method": "POST",
+ 			"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/friend/apply/A",
+ 			"headers": {
+               "client": "3",
+               "Content-Type": "application/json",
+               "token": "{{key.token}}"
+                 }
+  },
+ "output":{
+   "msg":{"EQ":"很遗憾,您的申请未通过审核,原因:想 您可以于2117-06-07之后再尝试申请","TYPE":"str"},
+   "code":{"EQ":1},
+   "data":{"EQ":null}
+   }
+ }
+
+
+

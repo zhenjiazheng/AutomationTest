@@ -1,0 +1,22 @@
+{
+  "input": {
+    "method": "GET",
+    "url": "{{pre.jh_url}}",
+    "rest": "/ja/v1/idcard/421224198911133718/use",
+    "headers": {
+      "client": "3",
+      "Content-Type": "application/json",
+      "token": "{{key.token}}"
+    }
+  },
+
+  "output":{
+    "code":{"EQ":1},
+    "msg":{
+      "EQ":"身份证号已经被认证了",
+      "TYPE":"str"
+    },
+    "data":{"EQ":null}
+  }
+}
+

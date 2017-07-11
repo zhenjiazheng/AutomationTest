@@ -1,0 +1,40 @@
+        {
+          "input": {
+            "method": "POST",
+            "url": "{{pre.zzkg_merchant_url}}",
+            "rest": "/py/v1/dealserver/deal/deal-info/",
+            "headers": {"token": "{{key.token}}"},
+            "param": {
+              "image": {
+                        "deal_images": [
+                          "http://image.thy360.com/images/deal/deal20151125/B103774.jpg"
+                        ],
+                        "detail_images": [
+                          "http://image.thy360.com/images/deal/deal20151125/D201438.jpg"
+                        ]
+                      },
+                      "barcode": "66662224",
+                      "name": "leo007",
+                      "isStandard": true,
+                      "unit": 1,
+                      "spec": "3000ML",
+                      "special": null,
+                      "keywords": "1",
+                      "source": null,
+                      "ccode": null,
+                      "comments": "B103691",
+                      "desc_content": null,
+                      "code": "B103691",
+                      "price": "4811.00",
+                      "qg_period": null,
+                      "category": 414,
+                      "manufacturer": null
+            }
+          },
+
+                      "output":{
+                        "msg":{"TYPE":"str"},
+                        "statusCode":{"EQ":0},
+                        "data":{"TYPE":"dict"}
+                      }
+        }

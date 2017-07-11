@@ -1,0 +1,26 @@
+{
+  "input": {
+    "method": "get",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/user/v1/user/balance/list?storeId={{key.store_id}}&page=1&limit=20",
+    "headers": {
+      "token": "{{key.user_token}}"
+    }
+  },
+    "output": {
+      "msg": {
+        "type": "str"
+      },
+      "statusCode": {
+        "eq": 0
+      },
+      "overBalance": {
+        "ALLIN": [1000.0, -43.0, 43.0]
+      },
+      "remark": {
+        "ALLIN": ["充值1000.00实得1000.00", "余额消费43.00", "余额退回43.00"]}
+      },
+      "type":{"ALLIN":["退回金额", "储值到账", "余额抵扣"]}
+    }
+  }
+

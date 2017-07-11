@@ -1,0 +1,21 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/store/member-grades/"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data":{"TYPE":"list"},
+		"discountRate":{"TYPE":"str"},
+		"enable":{"TYPE":"bool"},
+        "grade_name":{"TYPE":"str"},
+		"growth_value":{"TYPE":"int"},
+		"id":{"type":"int"},
+		"promotion_type":{"type":"int"}
+    },
+	"key" : {"id":"data.0.id"}
+}

@@ -1,0 +1,5 @@
+{
+  "sql":{"db":"waiwang",
+  "command":
+  ["UPDATE users_extend SET is_borrow=0 WHERE user_id={{key.uid}};"]
+}}

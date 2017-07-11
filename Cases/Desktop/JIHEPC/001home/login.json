@@ -1,0 +1,43 @@
+{
+  "author": "anso",
+  "caseStep": {
+    "1":{
+      "operation":"页面标题",
+      "expectText":"几何金融-专注于供应链金融的P2P投资理财平台_互联网金融领航者"
+    },
+    "2":{
+      "operation":"最大化",
+      "sleep":3
+    },
+    "3":{
+      "operation":"点击控件",
+      "by":"xpath",
+      "value":"/html/body/div[2]/div[1]/div[2]/div[2]/a[2]",
+      "sleep":3
+    },
+    "4": {
+      "operation": "页面标题",
+      "expectText": "几何金融p2p理财平台",
+      "sleep":2
+    },
+    "5":{
+      "operation": "文本输入",
+      "by": "name",
+      "value": "name",
+      "text": "{{pre.JRUser}}"
+    },
+    "6": {
+      "operation": "文本输入",
+      "by": "name",
+      "value": "password",
+      "text": "a1234567",
+      "sleep":2
+    },
+     "7": {
+      "operation": "点击控件",
+      "by": "xpath",
+      "value": "/html/body/div/div/div/form/div[2]/div/div[3]/button",
+       "sleep": 2
+    }
+  }
+}

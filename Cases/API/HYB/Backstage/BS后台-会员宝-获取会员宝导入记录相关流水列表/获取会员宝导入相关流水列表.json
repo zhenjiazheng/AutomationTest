@@ -1,0 +1,16 @@
+{
+  "input":{
+			"method": "GET",
+			"url":"{{pre.zzkg_merchant_url}}",
+			"rest": "/py/v4/admin/member/balance-import-records/<pk>/flows/",
+            "headers":{"token": "{{key.token}}"},
+            "param":{"limit":50,"page":1}
+	},
+  "output":{
+              "msg": {"TYPE":"str"},
+              "statusCode":{"EQ":0},
+              "date":{"date":"list"}
+
+  }
+
+}

@@ -1,0 +1,12 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/login",
+			"headers":{"client":"3"},
+			"param":{
+				"name":"{{pre.InvFriForV}}","password": "a123456789"
+			}
+	},
+  "key":["uid","token"]
+}

@@ -1,0 +1,13 @@
+{
+	"input":{
+			"method": "put",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/table/update",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{"id":111111,"tableNo":"3"}
+	},
+    "output":{
+      	"msg":{"eq":"找不到该桌号！"},
+		"statusCode":{"eq":1}
+    }
+}

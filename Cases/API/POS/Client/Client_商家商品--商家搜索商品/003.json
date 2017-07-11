@@ -1,0 +1,15 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.pos_url}}",
+    "rest":"ja/user/v1/product/search?page=1&limit=20",
+    "param": {
+      "latitude": 22.566,
+      "longitude": 113.899,
+      "key": "面"}
+},
+  "output":{
+    "msg":{"type":"str","eq":"成功"},
+    "data":{"type":"dict"}
+  }
+}

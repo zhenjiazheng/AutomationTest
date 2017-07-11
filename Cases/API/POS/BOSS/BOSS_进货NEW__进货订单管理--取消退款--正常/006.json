@@ -1,0 +1,26 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/order/orders/",
+			"param":{
+				"limit":10,
+				"page":0,
+				"payStatus":0,
+				"status": 0
+			}
+
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data.data":{"ll":1},
+		"data.data.0.id":{"eq":{{key.orderId}}},
+		"data.data.0.memberId":{"eq":{{key.store_id}}},
+		"data.data.0.orderItems.0.productId":{"eq":{{key.pid1}}},
+		"data.data.0.orderItems.0.productNumber":{"eq":"10.000"}
+	},
+	"key":{"itemId":"data.data.0.orderItems.0.id","orderNo":"data.data.0.orderNo","orderNumber":"data.data.0.orderItems.0.productNumber"}
+}

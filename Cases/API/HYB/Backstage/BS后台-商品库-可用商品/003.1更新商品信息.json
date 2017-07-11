@@ -1,0 +1,15 @@
+        {
+          "input": {
+            "method": "PUT",
+            "url": "{{pre.zzkg_merchant_url}}",
+            "rest": "/py/v1/dealserver/deal/deal-info/961965/",
+            "headers": {"token": "{{key.token}}"},
+            "param": {
+                      "name": "leo000"
+            }
+          },
+
+                      "output":{
+                        "name":{"EQ":"leo000"}
+                      }
+        }

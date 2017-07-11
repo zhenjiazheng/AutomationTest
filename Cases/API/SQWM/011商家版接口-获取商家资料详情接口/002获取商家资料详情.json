@@ -1,0 +1,40 @@
+{
+	"input":{
+			"author":"tester",
+			"method": "GET",
+			"url":"{{pre.sqwm_url}}",
+			"rest": "/py/sqwm/v1/supplier/supplier/detail/",
+			"param":{
+              "token":"{{key.token}}",
+              "id":"{{key.id}}"
+			}
+	},
+  "output":{
+    "statusCode": {"EQ":0},
+    "msg":{"EQ":"成功"},
+    "data":{"TYPE":"dict"},
+    "id": {"EQ":2},
+    "geohash": {"EQ":"ws100vdm4wy8"},
+    "create_time": {"TYPE":"long"},
+    "update_time": {"TYPE":"long"},
+    "deliver_type": {"TYPE":"str"},
+    "state": {"TYPE":"str"},
+    "longitude":{"TYPE":"float"},
+    "latitude": {"TYPE":"float"},
+    "detail": {"TYPE":"str"},
+    "name": {"EQ":"厨房1"},
+    "owner_name": {"EQ":"李乐弦"},
+    "sfz_no": {"EQ":"123456789123456789"},
+    "shop_hour_start": {"EQ":930},
+    "shop_hour_end": {"TYPE":"str"},
+    "deliver_range": {"QE":"3.00"},
+    "deliver_free_amount":{"EQ":"50.00"},
+    "deliver_cost": {"EQ":"0.00"},
+    "shop_img": {"TYPE":"str"},
+    "sfz_a_img": {"TYPE":"str"},
+    "sfz_b_img": {"TYPE":"str"},
+    "opened":{"EQ":true},
+    "auto_accept":{"EQ":false},
+    "user": {"EQ":4}
+  }
+}

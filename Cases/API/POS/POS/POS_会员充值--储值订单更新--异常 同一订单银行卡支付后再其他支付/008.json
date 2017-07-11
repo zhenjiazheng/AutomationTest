@@ -1,0 +1,18 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "ja/pos/v1/member/{{key.member_id}}/operatelog"
+	},
+	"output":{
+		"data.count":{"type":"int"},
+		"status_code":{"eq":0},
+		"data.data.0.change_type": {"eq":1},
+		"data.data.0.remarks": {"eq":"充值100.00实得100.00"},
+		"data.data":{"ll":2},
+		"data.data.-1.remarks": {"eq":"新建"},
+		"data.data.1.change_type": {"eq":4}
+		}
+}

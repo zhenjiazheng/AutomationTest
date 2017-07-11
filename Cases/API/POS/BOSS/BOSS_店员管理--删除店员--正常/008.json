@@ -1,0 +1,25 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/employee/list",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+
+    "output":{
+      "statusCode":{"EQ":0},
+      "msg":{"EQ":"成功"},
+      "data":{"LL":1},
+      "employeeRole":{"TYPE":"str"},
+      "activeStatus":{"TYPE":"int","EQ":0},
+      "employeeRoleId":{"TYPE":"int","EQ":{{key.id}}},
+      "telephone":{"EQ":"{{pre.User}}"},
+      "id":{"TYPE":"int"},
+      "storeNo":{"EQ":{{key.store_id}}},
+      "version":{"TYPE":"int"},
+      "password":{"TYPE":"str","EQ":""},
+      "employeeName":{"TYPE":"str","EQ":"TestEmp"}},
+    "key":{"employeeId1":"data.0.id"}
+
+}
+

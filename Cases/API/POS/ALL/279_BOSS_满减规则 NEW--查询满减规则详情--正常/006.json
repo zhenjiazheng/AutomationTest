@@ -1,0 +1,25 @@
+{
+  "input":{
+    "method": "POST",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/fullreducedrule",
+    "headers": { "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param":{
+        "fullReducedAmount": "10",
+        "matchAmount": "100",
+        "activityName": "DefineRule",
+        "endDate": "2017-8-13",
+        "memberUsed": true,
+        "netstoreUsed": true,
+        "productScheme": 0,
+        "selectedSpecs": [76, 15, 3110],
+        "startDate": "2017-6-13",
+        "status": 0,
+        "storeUsed": true
+      }
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"}
+    }
+}

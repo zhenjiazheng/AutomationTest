@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Report_test_suite</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.4"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    
+<style type="text/css" media="screen">
+
+/* -- css div popup ------------------------------------------------------------------------ */
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #99CCFF;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 10pt;
+    width: 850px;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+
+#show_detail_line .label {
+    font-size: 85%;
+    cursor: pointer;
+}
+
+#show_detail_line {
+    margin: 2em auto 1em auto;
+}
+
+#total_row  { font-weight: bold; }
+.hiddenRow  { display: none; }
+.Case   { margin-left: 2em; }
+
+</style>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class="container">
+    <div class='heading'>
+<h1>Report_test_suite</h1>
+<p><strong>Start Time:</strong> 2017-06-20 15:26:35</p>
+<p><strong>Duration:</strong> 0:00:05.296000</p>
+<p><strong>Status:</strong> <span class="text text-danger">Failure <strong>1</strong></span></p>
+
+<p class='description'>D:\Git\API_Automation\Report\Cases_API_POS_ALL\api_Cases_API_POS_ALL_201706201526.html</p>
+</div>
+
+
+    
+<p id='show_detail_line'>
+<span class="label label-primary" onclick="showCase(0)">Summary</span>
+<span class="label label-danger" onclick="showCase(1)">Failed</span>
+<span class="label label-default" onclick="showCase(2)">All</span>
+</p>
+<table id='result_table' class="table">
+    <thead>
+        <tr id='header_row'>
+            <th>Test Group/Test case</td>
+            <th>Count</td>
+            <th>Pass</td>
+            <th>Fail</td>
+            <th>Error</td>
+            <th>View</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr class='text text-danger'>
+    <td>ApiExecutor.API.UnitTest</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='text text-success'>
+    <td class='text text-danger'><div class='Case'>test_372_Client_商家商品--商家搜索商品</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')">
+        fail</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: 
+测试用例开始时间: 2017-06-20 15:26:37
+测试步骤1 : 
+----------------------------------------------------------------------------------------------------
+接口请求地址: 
+http://devtest-pos.thy360.com//ja/user/v1/user/login
+
+The request method is :POST
+
+The request parameter is:
+
+{
+    "phone": "13423412789",
+    "code": "1234"
+}
+****************************************************************************************************
+
+接口请求响应时延为:
+ 0.259000062943
+
+
+接口请求返回值:
+{
+    "msg": "登录成功",
+    "data": {
+        "username": "13423412789",
+        "openId": null,
+        "headimgurl": "www.baidu.com",
+        "birth": "2000-10-10",
+        "superuser": false,
+        "newuser": false,
+        "isSuperuser": false,
+        "dateJoined": 1489060230000,
+        "id": 100609,
+        "registedfrom": "appidposvsdf2f",
+        "token": "df8603a8-abeb-443a-9bac-d113985ba08a",
+        "isStaff": false,
+        "lastLogin": 1497943600835,
+        "pass": "e4ed1877b9d038dc1100535c8f728f83",
+        "active": true,
+        "userKey": "6jjfmsttuhpoc3hakv9ab8qtj2c3iqsn",
+        "sex": 0,
+        "nickname": "helloWorld",
+        "email": "",
+        "isActive": true,
+        "staff": false
+    },
+    "statusCode": 0
+}
+****************************************************************************************************
+
+The Global Context key and value is :
+{}
+
+期望检测的返回值:
+{
+    "msg": {
+        "eq": "登录成功",
+        "type": "str"
+    },
+    "username": {
+        "eq": "13423412789",
+        "type": "str"
+    },
+    "data": {
+        "type": "dict"
+    },
+    "statusCode": {
+        "eq": 0,
+        "type": "int"
+    }
+}
+检查key: msg的返回值通过
+检查key: username的返回值通过
+检查key: data的返回值通过
+检查key: statusCode的返回值通过
+
+所有检查Key值返回通过.
+----------------------------------------------------------------------------------------------------
+
+测试步骤2 : 
+----------------------------------------------------------------------------------------------------
+调用公共函数执行 
+
+运营后台登录：
+请求地址：http://devtest-pos.thy360.com/py/backend/v1/auth/login
+请求参数：
+{
+    "username": "root",
+    "password": "root1234"
+}
+返回：
+{"msg": "\u6210\u529f", "data": {"token": "token:cca9e3a641234ad0d6e59faf25b961aac2925a75", "user": {"username": "root", "first_name": "", "last_name": "", "is_active": true, "email": "", "last_login": "2017-06-20 15:05:08", "groups": [], "id": 1, "date_joined": "2017-04-21 19:45:44"}}, "statusCode": 0}
+
+获取store列表：
+请求地址：http://devtest-pos.thy360.com/py/backend/v1/store/stores/?limit=15&amp;store_category=0
+请求头: 
+{'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75'}
+{'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', 'tel': u'15000000000', 'store_id': 10}
+----------------------------------------------------------------------------------------------------
+
+测试步骤3 : 
+----------------------------------------------------------------------------------------------------
+接口请求地址: 
+http://devtest-pos.thy360.com/ja/user/v1/product/search?page=1&amp;limit=20
+
+The request method is :GET
+
+The request parameter is:
+
+{
+    "latitude": 22.566,
+    "key": "面",
+    "longitude": 113.899
+}
+****************************************************************************************************
+
+接口请求响应时延为:
+ 0.0269999504089
+
+
+接口请求返回值:
+{
+    "msg": "定位失败",
+    "data": null,
+    "statusCode": 1
+}
+****************************************************************************************************
+
+The Global Context key and value is :
+{'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', 'tel': u'15000000000', 'store_id': 10}
+
+期望检测的返回值:
+{
+    "msg": {
+        "eq": "成功",
+        "type": "str"
+    },
+    "data": {
+        "type": "dict"
+    }
+}
+检查key: msg返回值失败。
+
+测试步骤3失败。
+----------------------------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\Git\API_Automation\ApiExecutor\API.py", line 393, in func
+    self.run_case(steps)
+  File "D:\Git\API_Automation\ApiExecutor\API.py", line 384, in run_case
+    self.assertTrue(check_case(self.context, steps), "Test FAIL.")
+AssertionError: Test FAIL.
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+    </tbody>
+    <tfoot>
+        <tr id='total_row'>
+            <td>Total</td>
+            <td>1</td>
+            <td class="text text-success">0</td>
+            <td class="text text-danger">1</td>
+            <td class="text text-warning">0</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tfoot>
+</table>
+
+    <div id='ending'>&nbsp;</div>
+</div>
+
+</body>
+</html>

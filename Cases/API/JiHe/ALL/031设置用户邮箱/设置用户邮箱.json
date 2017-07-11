@@ -1,0 +1,18 @@
+{
+  "input": {
+     "author": "lifang",
+     "method": "POST",
+     "url": "{{pre.jh_url}}",
+     "rest": "/ja/v1/email/bind",
+     "headers": {
+       "client": "3",
+       "Content-Type": "application/json",
+       "token": "{{key.token}}"
+     },
+     "param":{"email":"lifang@126.com"
+     }
+   },
+  "output":{
+    "msg":{"TYPE":"str"},"code":{"EQ":0}
+  }
+}

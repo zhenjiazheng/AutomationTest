@@ -1,0 +1,15 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/storeinfo",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+        "storeLogo": {"TYPE":"str","NEQ":"{{key.logourl}}"},
+		"storeName": {"TYPE":"str","EQ":"Helloworld2"}
+    }
+}

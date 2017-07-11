@@ -1,0 +1,23 @@
+{
+  "input":{
+    "method": "GET",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/pos/v1/storage/operation/splitrule/list",
+    "headers": {"token": "{{key.token_pos}}","storeNo":"{{key.store_id}}"}
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"},
+    "largecommodity_barcode": {"EQ":"12345678909876"},
+    "largecommodity_id": {"EQ":{{key.pid1}}},
+    "largecommodity_name": {"EQ":"largeName"},
+    "largecommodity_spec": {"EQ":"test"},
+    "large_purchase_price": {"EQ":"1000"},
+    "smallcommodity_barcode":{"EQ":"12345687454213"},
+    "smallcommodity_id":{"EQ":{{key.pid2}}},
+    "smallcommodity_name":{"EQ":"smallProduct"},
+    "smallcommodity_spec":{"EQ":"smallSpec"},
+    "small_purchase_price":{"EQ":"333.33"},
+    "split_number":{"EQ":3}
+    }
+}

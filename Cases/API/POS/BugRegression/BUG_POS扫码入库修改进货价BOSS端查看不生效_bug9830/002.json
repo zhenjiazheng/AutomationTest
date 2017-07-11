@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/storage/barcode/supplier",
+		    "param":{
+				"address":"飞扬科技园901",
+				"contact_name":"MissRight",
+				"contact_tel":"15000000000",
+				"supplier_name":"test"
+			}
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"}
+	}
+}

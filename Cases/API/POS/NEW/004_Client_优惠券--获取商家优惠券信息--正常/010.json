@@ -1,0 +1,16 @@
+{
+  "input":{
+    "method":"get",
+    "url":"{{pre.pos_url}}",
+    "rest":"ja/user/v1/coupon/{{key.store_id}}/rule",
+    "headers":{"token":"{{key.user_token}}"}
+},
+  "output":{
+    "msg":{"type":"str"},
+    "statusCode":{"eq":0},
+    "activityName": {"type":"str"},
+    "couponAmount": {"type": "str"},
+    "id":{"type":"int"},
+    "usedAmount":{"type":"str"}
+    }
+}

@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/regist",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+     "param": {
+       "name":"{{pre.User6}}", "password":"a123456","code":"{{key.id}}"
+     }
+    },
+  "output":{
+    "msg":{"EQ":"密码需要为8位到20位字母和数字混合"},"code":{"eq":1}
+  }
+}

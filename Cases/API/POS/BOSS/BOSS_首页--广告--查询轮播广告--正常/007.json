@@ -1,0 +1,15 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/banner/1",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"data":{"TYPE":"list"},
+        "data.0.imgUrl":{"eq":"http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg"},
+		"data.0.url":{"type":"str"}
+	}
+}

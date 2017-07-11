@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/pwd",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+     "param": {
+       "password":"a1234567","setting_token":"{{key.setting_token}}"
+     }
+    },
+
+    "output":{"code":{"EQ":0},"msg":{"EQ":"成功"}}
+
+}

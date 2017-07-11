@@ -1,0 +1,44 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.zzsh_url}}",
+			"rest": "py/water-supplier/v1/boss/shop/{shop_id}/",
+			"headers":{"token":"{{key.token}}"}
+	},
+  "output": {
+	  			"description": {"type": "str"},
+	  			"end_time": {"type": "str"},
+				"full_aviod_expfee": {"type": "int"},
+				"invoice": {"eq": false},
+				"start_time": {"type": "str"},
+				"address":{"eq": "深圳市南山区"},
+				"contacts": {"eq":"测试"},
+				"detail":{"eq":"卫星大厦"},
+				"longitude": {"eq":113.9463043212891},
+				"latitude": {"eq":22.53082466125488},
+				"logo_url":{"type": "str"},
+				"name":{"type": "str"},
+				"range":{"eq":10},
+				"tel":{"eq":17712345678}
+  },
+	"mock":{
+			"data": {
+				"description": "测试内容9e8u",
+				"end_time": "测试内容qe65",
+				"full_aviod_expfee": 48104,
+				"invoice": false,
+				"start_time": "测试内容ui5m",
+				"address":"深圳市南山区",
+				"contacts": "测试",
+				"detail":"卫星大厦",
+				"longitude": 113.9463043212891,
+				"latitude": 22.53082466125488,
+				"logo_url":"http://test",
+				"name":"测试店铺",
+				"range":10,
+				"tel":17712345678
+			},
+			"msg": "成功",
+			"statusCode": 0
+		}
+}

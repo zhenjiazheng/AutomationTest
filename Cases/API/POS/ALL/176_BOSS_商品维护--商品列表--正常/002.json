@@ -1,0 +1,26 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/commodity/list/",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	      },
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"status":{"TYPE":"int"},
+		"category":{"type":"int"},
+		"supplierName":{"type":"str"},
+		"name":{"TYPE":"str"},
+		"brand":{"TYPE":"str"},
+		"barcode":{"TYPE":"str"},
+		"specs":{"TYPE":"list"},
+		"price":{"TYPE":"str"},
+		"source":{"TYPE":"str"},
+		"quality_period":{"TYPE":"int"},
+		"category_display":{"TYPE":"str"},
+		"image":{"TYPE":"str"},
+		"manufacturer":{"TYPE":"str"},
+		"weighable":{"eq":false}
+	}
+}

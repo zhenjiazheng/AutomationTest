@@ -1,0 +1,14 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "ja/pos/v1/member/{{key.member_id}}/operatelog"
+	},
+	"output":{
+		"data.count":{"type":"int"},
+		"status_code":{"eq":0},
+		"data.data.0.remarks": {"eq":"余额消费{{key.sale_price}}"}
+		}
+}

@@ -1,0 +1,15 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/operation/pointrule",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	      },
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"commentPoint": {"EQ":100},
+		"consumePoint": {"EQ":100},
+		"id": {"type":"int"}
+	}
+}

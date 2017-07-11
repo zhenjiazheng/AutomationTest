@@ -1,0 +1,33 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/store/software-update-strategies/{{key.updateId}}/",
+			"param":{
+				"city":"深圳",
+				"district":"宝安区",
+				"enforce": true,
+				"province":"广东",
+				"software":"POS_APP",
+				"start_time":"2017-03-22 15:00:00",
+				"url":"http://www.baidu.com/",
+				"version_description":"This is the new version of POS",
+				"version_no":"1.0.0"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"city":{"EQ":"深圳"},
+		"district":{"EQ":"宝安区"},
+		"enforce": {"EQ":true},
+		"province":{"EQ":"广东"},
+		"software":{"EQ":"POS_APP"},
+		"start_time":{"EQ":"2017-03-22 15:00:00"},
+		"url":{"EQ":"http://www.baidu.com/"},
+		"version_description":{"EQ":"This is the new version of POS"},
+		"version_no":{"EQ":"1.0.0"}
+}
+}

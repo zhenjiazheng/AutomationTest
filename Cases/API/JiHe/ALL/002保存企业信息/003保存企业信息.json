@@ -1,0 +1,26 @@
+{
+  "input":{
+        "method":"POST",
+    	"url":"{{pre.jh_url}}",
+        "rest": "/ja/v1/company/info",
+        "headers":{"client":"3","token":"{{key.token}}"},
+        "param":{"company_name":"文翰集团",
+            "company_code":"001",
+            "id":"{{key.id}}",
+            "company_phone": "110",
+            "description": "",
+            "income": "",
+            "address": "",
+            "total_income": "",
+            "company_area": "",
+            "amount_income": "",
+            "industry_type": "",
+            "company_size": ""}
+  },
+  "output":{
+    "msg":{"type":"str"},
+    "code":{"eq":0},
+    "data":{"type":"dict"},
+    "id":{"type":"int"}
+  }
+}

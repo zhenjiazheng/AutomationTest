@@ -1,0 +1,20 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "/py/supplier/v1/auth/login/",
+			"param":{
+				"password":"{{key.password}}",
+				"store_id":"{{key.supplier_id}}",
+				"tel":"{{key.supplier_tel}}"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"store":{"EQ":{{key.supplier_id}}},
+		"login_tel":{"EQ":"{{key.supplier_tel}}"}
+}
+}

@@ -1,0 +1,21 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/order/orders/",
+			"param":{
+				"limit":10,
+				"page":0,
+				"payStatus":1,
+				"orderStatus": 4
+			}
+
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data.data":{"ll":0}
+	}
+}

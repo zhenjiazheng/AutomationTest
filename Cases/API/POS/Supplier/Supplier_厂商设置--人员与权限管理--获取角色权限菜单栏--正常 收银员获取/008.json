@@ -1,0 +1,17 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/permission/tablelist"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data":{"type":"list"},
+		"status": {"type":"bool"},
+		"id": {"type":"int"},
+		"name": {"type":"str"}
+    }
+}

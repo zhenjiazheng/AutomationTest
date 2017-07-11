@@ -1,0 +1,36 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/commodity/barcod/12345678909876",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	      },
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"data":{"TYPE":"dict"},
+		"category":{"eq":510},
+		"category_display":{"TYPE":"str"},
+		"status":{"TYPE":"int","eq":0},
+
+
+		"name":{"TYPE":"str","eq":"忍者"},
+		"brand":{"TYPE":"str","eq":"test"},
+		"barcode":{"TYPE":"str","EQ":"12345678909876"},
+		"specs":{"TYPE":"dict"},
+		"price":{"TYPE":"str","eq":"122.00"},
+		"source":{"TYPE":"str","eq":"面包"},
+		"quality_period":{"TYPE":"int"},
+		"unit":{"TYPE":"str","eq":"100"},
+		"image":{"TYPE":"str","eq":"http://www.baidu.com/"},
+		"manufacturer":{"TYPE":"str"},
+		"sale_price":{"TYPE":"str","eq":"120.00"},
+		"is_standard":{"eq":false},
+		"purchase_price":{"eq":"100.00"},
+		"member_price":{"eq":"110.00"},
+		"discount_price":{"eq":"110.00"},
+		"stock": {"type":"str"},
+		"data.id":{"TYPE":"int","eq":{{key.pid1}}},
+		"weighable":{"eq":false}
+}
+}

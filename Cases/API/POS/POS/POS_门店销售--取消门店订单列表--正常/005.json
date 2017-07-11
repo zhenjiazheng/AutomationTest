@@ -1,0 +1,17 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "ja/pos/v1/refund",
+			"param":{"page": 1, "limit": 20}
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"data":{"TYPE":"dict"},
+		"msg":{"TYPE":"str"},
+		"data.count":{"ge":1}
+}
+
+}

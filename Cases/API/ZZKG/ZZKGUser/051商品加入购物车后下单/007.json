@@ -1,0 +1,19 @@
+{
+	"input": {
+		"method": "POST",
+		"url": "{{pre.zzkg_url}}",
+		"rest": "ja/user/v3/plus/cart/deal/delete/",
+		"headers": {
+			"token": "{{key.token}}",
+			"region":145
+		},
+		"param":[{
+			"id": {{key.dealId}}
+		}]
+	},
+	"output": {
+		"statusCode": {"type":"int","eq":0},
+		"success": {"type":"bool","eq":true}
+	}
+
+}

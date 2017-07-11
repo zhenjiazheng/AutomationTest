@@ -1,0 +1,15 @@
+{
+  "input": {
+    "method": "get",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/v1/boss/setting/pos/default",
+    "headers": {
+      "token": "{{key.token_boss}}",
+      "storeNo": "{{key.store_id}}"
+    },
+    "param":{"posNo":"{{key.posNo}}"}
+  },
+  "output":{
+    "statusCode":{"EQ":0}
+    }
+}

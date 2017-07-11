@@ -1,0 +1,15 @@
+{
+  "input":{
+    "method":"POST",
+    "url":"{{pre.jh_url}}",
+    "rest": "/ja/v1/borrow/company/info",
+    "headers":{"client":"3","token":"{{key.token}}"},
+    "param":{"borrowType":"1","money":"10000","borrow_time":"12","borrow_time_type":"3","rate":"10.21","repayment_time":"1",
+      "repayment_type":"1","money_purpose":"自动化","tender_purpose":"自动化","repayment_source":"自动化","infoId":"{{key.id}}"}
+  },
+  "output":{
+    "msg":{"eq":"成功","type":"str"},
+    "code":{"eq":0},
+    "data":{"eq":null}
+  }
+}

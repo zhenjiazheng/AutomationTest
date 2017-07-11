@@ -1,0 +1,18 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/login",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            }
+    },
+
+    "output":{"code":{"EQ":9},"msg":{"type":"str","eq":"您需要登陆才能访问，请先登录！"},
+      "data":{"eq":null}
+    }
+
+}

@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/market/advertisers/",
+			"param":{
+				"contact_name": "联系人",
+                "address": "思微simplywork(飞扬科技园)",
+                "contact_tel":"{{pre.MUser2}}"}
+	},
+	"output":{
+    "msg": {"eq":"广告主名称与联系人电话必传"},
+    "statusCode": {"eq": 1}
+		}
+}
+
+

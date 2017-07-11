@@ -1,0 +1,21 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.pos_url}}",
+    "rest":"/ja/user/v1/store/product/{{key.id}}"
+},
+  "output":{
+    "msg":{"type":"str","eq":"成功"},
+    "data":{"type":"dict"},
+    "category":{"type":"list"},
+    "id":{"type":"int"},
+    "name":{"type":"str"},
+    "store":{"type":"dict"},
+    "deliverTime": {"type":"list"},
+    "score": {"type":"float"},
+    "address": {"type":"str"},
+    "phone":{"type":"str"},
+    "logo":{"type":"str"},
+    "products":{"type":"list"}
+  }
+}

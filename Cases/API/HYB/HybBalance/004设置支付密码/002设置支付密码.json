@@ -1,0 +1,18 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.hyb_url}}",
+			"rest": "ja/memberbao/v1/setting/pay/password",
+			"headers":{"Content-Type": "application/json","appId":"{{pre.appId_ZhuZhuJiShi}}",
+				"token":"{{key.token}}"
+			},
+      "param": {
+       "password":"123456"
+     }
+
+	},
+
+  "output":{"msg":{"EQ":"成功"}, "statusCode":{"EQ":0}}
+
+}

@@ -1,0 +1,6 @@
+{
+	"sql": {
+		"db": "waiwang",
+		"command": "UPDATE `waiwang`.`coupon_items` SET `status`=1 WHERE  `id`={{key.CIid}}"
+	}
+}

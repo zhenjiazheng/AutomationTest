@@ -1,0 +1,35 @@
+{
+  "input":{
+  "method":"POST",
+  "url":"{{pre.pos_url}}",
+  "rest":"/ja/user/v1/user/login",
+  "param":{
+    "phone":"{{pre.POS_User}}",
+    "code":"1234"
+  }
+},
+  "output":{
+    "msg":{"type":"str","eq":"登录成功"},
+    "data":{"type":"dict"},
+    "username":{"type":"str","eq":"{{pre.POS_User}}"},
+    "openId":{"EQ":null},
+
+    "superuser":{"type":"bool","eq":false},
+    "newuser":{"type":"bool","eq":false},
+    "isSuperuser":{"type":"bool","eq":false},
+    "id":{"type":"int"},
+    "dateJoined":{"typein":["int","long"]},
+    "registedfrom":{"type":"str"},
+    "token":{"type":"str"},
+    "isStaff":{"type":"bool","eq":false},
+    "lastLogin":{"typein":["int", "long"]},
+    "pass":{"type":"str"},
+    "active":{"type":"bool","eq":true},
+    "userkey":{"type":"str"},
+    "sex":{"type":"int","eq":0},
+    "email":{"eq":"","type":"str"},
+    "isActive":{"type":"bool","eq":true},
+    "staff":{"type":"bool","eq":false},
+    "statusCode":{"type":"int","eq":0}
+  }
+  }

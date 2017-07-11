@@ -1,0 +1,16 @@
+{
+  "input": {
+    "method": "get",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/v1/boss/setting/poslist",
+    "headers": {
+      "token": "{{key.token_boss}}",
+      "storeNo": "{{key.store_id}}"
+    }
+  },
+  "output":{
+    "statusCode":{"EQ":0},
+    "data":{"type":"list"}
+    },
+  "key":{"posNo": "data.0.posNo"}
+}

@@ -1,0 +1,13 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "DELETE",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}","Content-Type":"application/json"},
+			"rest": "py/supplier/v1/store/customers/{{key.new_store_id}}/"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+    }
+}

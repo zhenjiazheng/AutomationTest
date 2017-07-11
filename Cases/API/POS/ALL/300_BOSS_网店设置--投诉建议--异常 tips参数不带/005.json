@@ -1,0 +1,15 @@
+{
+	"input": {
+		"method": "POST",
+		"url": "{{pre.pos_url}}",
+		"rest": "ja/v1/boss/setting/tips",
+		"headers": {
+			"Content-Type": "application/json",
+			"token": "{{key.token_boss}}",
+			"storeNo": "{{key.store_id}}"
+		},
+		"param": {}
+	},
+
+    "output":{"statusCode":{"EQ":1},"msg":{"TYPE":"str"}}
+}

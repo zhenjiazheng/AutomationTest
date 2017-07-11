@@ -1,0 +1,32 @@
+ {
+ 	"input":{
+ 			"author":"anso",
+ 			"method": "GET",
+ 			"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/share/friend",
+ 			"headers": {
+               "client": "3",
+               "Content-Type": "application/json",
+               "token": "{{key.token}}"
+             }
+     },
+
+"output":{
+    "msg":{"type":"str"},
+    "code":{"EQ":0},
+    "data":{"type":"dict"},
+
+  "title":{"type":"str"},
+  "type":{"EQ":2},
+  "content":{"type":"str"},
+    "img":{"type":"str"},
+  "linkurl":{"type":"str"},
+   "appId":{"type":"str"},
+  "timestamp":{"type":"str"},
+  "nonceStr":{"type":"str"},
+  "signature":{"type":"str"},
+
+    "poster":{"EQ":null}
+  }
+
+}

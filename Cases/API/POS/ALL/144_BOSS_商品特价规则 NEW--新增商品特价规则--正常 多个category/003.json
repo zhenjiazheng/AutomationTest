@@ -1,0 +1,20 @@
+{
+  "input":{
+    "method": "POST",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/commodity/category/add",
+    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param":{
+      "id": 0,
+      "isSelect": false,
+      "is_standard": false,
+      "name": "EFG",
+      "parent": 0
+      }
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"}
+    },
+  "key":{"categoryId2":"data.id"}
+}

@@ -1,0 +1,14 @@
+{
+	"input": {
+		"method": "GET",
+		"url": "{{pre.zzkg_url}}",
+		"rest": "ja/user/v3/plus/cart/order",
+		"headers": {
+			"token": "{{key.token}}",
+			"region":145
+		}
+	},
+	"output": {
+	}
+
+}

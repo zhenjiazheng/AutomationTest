@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/stsc/paymethod",
+			"param":{
+				"endDate":"2017-07-01",
+				"startDate":"2017-03-01"
+			}
+	},
+	"output":{
+		"statusCode":{"EQ":0},
+		"data.data":{"type":"dict"},
+		"移动支付":{"type":"float"},
+		"银行卡":{"type":"float"},
+		"现金":{"type":"float"},
+		"其他支付":{"type":"float"},
+		"会员卡支付":{"type":"float"}
+}
+}

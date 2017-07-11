@@ -1,0 +1,9 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.zzkg_admin_url}}",
+			"rest": "supply/product/{{key.id1}}/",
+			"headers": {"token":"{{key.token}}"}
+	},
+  "output":{}
+}

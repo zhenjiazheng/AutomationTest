@@ -1,0 +1,22 @@
+{
+  "input":{
+    "method": "GET",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/couponrule",
+    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"},
+    "activityName": {"EQ":"DefineRule"},
+    "couponAmount": {"EQ":"150.00"},
+    "couponScheme": {"EQ":0},
+    "endDate": {"type":"str"},
+    "usedAmount":{"EQ":"100.00"},
+    "startDate": {"type":"str"},
+    "productNum":{"eq":1},
+    "status":{"eq":3},
+    "id":{"type":"int"},
+    "storeNo":{"type":"int"}
+    }
+}

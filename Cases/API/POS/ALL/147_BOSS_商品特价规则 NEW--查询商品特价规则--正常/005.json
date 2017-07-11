@@ -1,0 +1,24 @@
+{
+  "input":{
+    "method": "get",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/specialoffer/{{key.couId}}",
+    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"},
+    "activityName": {"eq":"DefineRule"},
+    "categoryName": {"type":"str","eq":"EFG"},
+    "discountRate": {"eq":"0.9"},
+    "endDate": {"type":"str"},
+    "productScheme": {"eq":1},
+    "selectedCategory": {"eq":[{{key.categoryId1}}]},
+    "specialOfferType":{"eq":0},
+    "startDate":{"type":"str"},
+    "storeUsed":{"eq":true},
+    "activeStatus": {"eq":true},
+    "netstoreUsed":{"eq":true},
+    "memberUsed":{"eq":true}
+    }
+}

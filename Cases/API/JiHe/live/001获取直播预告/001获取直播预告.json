@@ -1,0 +1,19 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/live/notice/list"
+  },
+  "output":{
+    "msg":{"eq":"成功"},
+    "code":{"eq":0},
+    "data":{"type":"dict"},
+    "push":{"eq":"dev-live-push.jihe365.cn"},
+    "app":{"eq":"jhjr"},
+    "bucket_name":{"eq":"dev-jhjr"},
+    "list":{"type":"dict"},
+    "id":{"type":"int"},
+    "is_live_now":{"eq":0}
+  },
+  "key":["id"]
+}

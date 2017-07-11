@@ -1,0 +1,4 @@
+{
+	"sql":{
+			"command":  "delete from product where user_id={{key.store_id}}", "db": "product"}
+}

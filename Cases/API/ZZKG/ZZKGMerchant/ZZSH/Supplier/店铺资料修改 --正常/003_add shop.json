@@ -1,0 +1,52 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.zzsh_url}}",
+			"rest": "py/water-supplier/v1/boss/shop/",
+			"headers":{"token":"{{key.token}}"},
+			"param":{
+				"address":"深圳市南山区",
+				"contacts": "测试",
+				"detail":"卫星大厦",
+				"longitude": 113.9463043212891,
+				"latitude": 22.53082466125488,
+				"logo_url":"http://test",
+				"name":"测试店铺",
+				"range":10,
+				"tel":17712345678,
+				"legal_person":{
+					"business_license_addr":"深圳市南山区卫星大厦",
+					"business_licence_name":"license",
+					"business_licence_num":"1234567890",
+					"business_licence_url":"gsgsggsgssg",
+					"heath_premit_addr":"深圳市南山区卫星大厦",
+					"heath_premit_life":"test",
+					"heath_premit_name":"teess",
+					"heath_premit_url":"http://hsshs",
+					"heath_premit_num":"23222222",
+					"idcard_cons_url":"sksks",
+					"idcard_name":"test",
+					"idcard_num":"3422222233332222222",
+					"idcard_pros_url":"hhshshshshshs"}
+			}
+	},
+  "output": {
+	  "statusCode": {
+		  "EQ": 0
+	  },
+	  "msg": {
+		  "EQ": "成功"
+	  },
+	  "shop_id": {
+		  "type": "int"
+	  }
+  },
+	"mock":{
+				"data": {
+					"shop_id": 71616
+				},
+				"msg": "成功",
+				"statusCode": 0
+			},
+	"key":["shop_id"]
+}

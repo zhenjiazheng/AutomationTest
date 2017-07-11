@@ -1,0 +1,11 @@
+{
+  "input":{
+			"method": "GET",
+			"url":"{{pre.zzkg_merchant_url}}",
+			"rest": "/py/v4/admin/o2o-user/recommend-users/",
+            "headers":{"token": "{{key.token}}"}
+
+	},
+  "output":{"msg": {"TYPE":"str"} }
+
+}

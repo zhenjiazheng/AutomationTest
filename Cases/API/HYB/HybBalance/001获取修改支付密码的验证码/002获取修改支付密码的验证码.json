@@ -1,0 +1,18 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.hyb_url}}",
+			"rest": "ja/memberbao/v1/setting/pay/password/smscode",
+			"headers":{"Content-Type": "application/json","appId":"{{pre.appId_ZhuZhuJiShi}}",
+				"token":"{{key.token}}"
+			},
+      "param": {
+       "phoneNumber":"{{pre.JRUser}}"
+     }
+
+	},
+
+  "output":{"msg":{"EQ":"测试环境不下发验证码"}, "statusCode":{"EQ":0}}
+
+}

@@ -1,0 +1,15 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/logo",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{"storeLogo":"{{key.logourl}}"}
+	},
+
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+        "storeLogo": {"TYPE":"str"}
+    }
+}

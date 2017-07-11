@@ -1,0 +1,24 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/store/software-update-strategies/",
+			"param":{
+				"city":"深圳",
+				"district":"宝安区",
+				"enforce": true,
+				"province":"广东",
+				"software":"POS_APP",
+				"start_time":"2017-03-22 15:00:00",
+				"url":"http://www.baidu.com/",
+				"version_description":"This is the new version of POS",
+				"version_no":"v1.0.0"
+			}
+	},
+	"output":{
+		"statusCode":{"EQ":101},
+		"msg":{"eq":"版本号格式错误"}
+}
+}

@@ -1,0 +1,19 @@
+{
+  "input":{
+ 			"author":"Alice",
+ 			"method": "POST",
+ 			"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/friend/apply/postA",
+ 			"headers": {
+               "client": "3",
+               "Content-Type": "application/json",
+               "token": "{{key.token}}"
+                 },
+    "param":{"company":"公司","job":"职位","description":"是是是事实上事实上事实上事实上事实上事实上事实上事实上事实上事实上是事实上事实上事实上事实上事实上事实上事实上事实上事实上事实上是是是事实上事实上事实上事实上事实上事实上事实上事实上事实上事实大大的的的"}
+  },
+ "output":{
+   "msg":{"EQ":"个人说明长度超过限制","TYPE":"str"},
+   "code":{"EQ":1},
+   "data":{"EQ":null}
+   }
+ }

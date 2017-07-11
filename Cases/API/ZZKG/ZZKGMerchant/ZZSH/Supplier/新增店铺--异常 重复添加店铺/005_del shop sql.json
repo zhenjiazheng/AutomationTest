@@ -1,0 +1,3 @@
+{
+	"sql":["delete from shop where id = {{key.shop_id}}"]
+}

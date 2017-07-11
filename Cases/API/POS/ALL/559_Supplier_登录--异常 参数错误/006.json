@@ -1,0 +1,16 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "/py/supplier/v1/auth/login/",
+			"param":{
+				"password":"{{key.password}}",
+				"store_id":"{{key.store_id}}"
+			}
+	},
+	"output":{
+	"tel":{"EQ":["This field is required."]}
+	}
+}

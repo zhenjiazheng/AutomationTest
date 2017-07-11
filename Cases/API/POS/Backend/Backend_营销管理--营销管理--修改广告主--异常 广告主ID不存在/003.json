@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "put",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/market/advertisers/10000/",
+			"param":{
+				"contact_name": "联系人222",
+                "address": "思微simplywork(飞扬科技园)",
+                "contact_tel":"{{pre.MUser2}}",
+                "name":"广告主名称"}
+	},
+	"output":{
+		"EQ":"Cannot find the page, 404"
+		}
+}
+
+

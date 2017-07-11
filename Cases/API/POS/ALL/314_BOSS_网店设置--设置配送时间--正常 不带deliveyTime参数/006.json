@@ -1,0 +1,13 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/deliver",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+		    "param":{
+				"businessDay": "[{\"businessDay\":\"星期一\",\"isUsed\":true},{\"businessDay\":\"星期二\",\"isUsed\":true},{\"businessDay\":\"星期三\",\"isUsed\":true},{\"businessDay\":\"星期四\",\"isUsed\":true},{\"businessDay\":\"星期五\",\"isUsed\":true},{\"businessDay\":\"星期六\",\"isUsed\":true},{\"businessDay\":\"星期日\",\"isUsed\":true}]"
+			}
+	},
+
+    "output":{"statusCode":{"EQ":1}}
+}

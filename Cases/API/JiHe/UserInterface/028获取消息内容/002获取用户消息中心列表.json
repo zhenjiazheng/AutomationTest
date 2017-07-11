@@ -1,0 +1,20 @@
+{
+   "input": {
+     "author": "lifang",
+     "method": "GET",
+     "url": "{{pre.jh_url}}",
+     "rest": "/ja/v1/user/msg/subject/U/list?page=1&limit=20",
+     "headers": {
+       "client": "3",
+       "Content-Type": "application/json",
+       "token": "{{key.token}}"
+     }
+   },
+  "output":{
+    "msg":{"EQ":"OK"},"code":{"EQ":0},"data":{"TYPE":"dict"},"data.count":{"TYPE":"int"},"totalpage":{"TYPE":"int"},
+    "hasNext":{"TYPE":"bool"},"currPage":{"TYPE":"int"},"total":{"TYPE":"int"},"data.data":{"TYPE":"dict"},"data.data.0.content":{"TYPE":"str"},
+    "data.data.0.readFlag":{"TYPE":"int"},"data.data.0.createdTime":{"TYPE":"str"},"data.data.0.type":{"TYPE":"int"}
+  },
+  "key":{"subjectID":"data.data.0.id"}
+
+}

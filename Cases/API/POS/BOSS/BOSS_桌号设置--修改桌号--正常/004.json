@@ -1,0 +1,13 @@
+{
+	"input":{
+			"method": "put",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/table/update",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{"tableNo":"21", "id":{{key.tableId}}}
+	},
+    "output":{
+      "statusCode":{"EQ":0},
+      "msg":{"EQ":"成功"}
+    }
+}

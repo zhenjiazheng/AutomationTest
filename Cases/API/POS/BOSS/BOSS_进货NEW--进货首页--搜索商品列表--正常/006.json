@@ -1,0 +1,15 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "/ja/v1/boss/search/suppliers/product",
+			"param":{"keyword":"12345", "page":1, "supplierId":{{key.new_store_id}}}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+    	"data.data": {"type":"list","ge":1}
+	}
+}

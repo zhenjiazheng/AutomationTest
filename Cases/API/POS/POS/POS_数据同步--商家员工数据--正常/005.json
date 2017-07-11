@@ -1,0 +1,27 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/pos/v1/sync/heartbeat",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_pos}}"},
+		    "param":{
+				"sync_data":[{"key":"staff","values":[{
+				"status": 0,
+				"pwd": "e10adc3949ba59abbe56e057f20f883e",
+				"role_id": 1,
+				"role_name": "店长",
+				"store_id": 6,
+				"staff_id": 9,
+				"staff_name": "李店长",
+				"staff_no": "1001"
+			}]}],"sync_server_time":1486978972214
+			}
+
+
+
+	},
+
+    "output":{"status_code":{"EQ":0},"msg":{"EQ":"同步数据获取成功"},"data":{"TYPE":"dict"},
+              "sync_data":{"TYPE":"dict"},"key":{"TYPE":"str"}, "sync_server_time":{"TYPEIN":["int","long"]},
+	          "category_id":{"TYPE":"int"},"category_name":{"TYPE":"str"}, "status":{"TYPE":"int"}}
+}

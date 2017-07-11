@@ -1,0 +1,19 @@
+{
+  "input": {
+     "author": "lifang",
+     "method": "POST",
+     "url": "{{pre.jh_url}}",
+     "rest": "/ja/v1/user/avatars",
+     "headers": {
+       "client": "3",
+       "Content-Type": "application/json",
+       "token": "{{key.token}}"
+     },
+     "param":{"url":"http://img5.duitang.com/uploads/item/201507/14/20150714175013_UZ8VF.jpeg"
+
+     }
+   },
+  "output":{
+    "msg":{"TYPE":"str"},"code":{"EQ":0}
+  }
+}

@@ -1,0 +1,7 @@
+{	   
+"sql":{
+  "command":"select id from store where store_category=1 limit 1",
+  "db": "posdb"
+},
+  "key": ["id"]
+}

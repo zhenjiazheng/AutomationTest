@@ -1,0 +1,15 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/employee/add",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+		    "param":{
+				"employeeName":"TestEmp2",
+				"employeeRoleId":{{key.id2}},
+                "password":"123456",
+                "telephone":"{{pre.User2}}"}
+	},
+
+    "output":{"statusCode":{"EQ":0},"msg":{"EQ":"成功"}}
+}

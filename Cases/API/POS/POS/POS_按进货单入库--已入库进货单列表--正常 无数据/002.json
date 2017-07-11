@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/storage/purchase/finish"
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"EQ":"查询已入库进货单列表成功"},
+		"count":{"TYPE":"int"},
+		"curr_page":{"TYPE":"int"},
+		"data.data":{"type": "list"},
+		"has_next":{"TYPE":"bool"},
+		"total":{"TYPE":"int"},
+		"total_page":{"TYPE":"int"}
+	}
+}

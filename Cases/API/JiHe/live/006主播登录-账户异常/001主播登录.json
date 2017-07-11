@@ -1,0 +1,13 @@
+{
+  "input":{
+    "method":"POST",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/live/user/login",
+    "param":{"name":"w1eidong","password":"123456"}
+  },
+  "output":{
+    "msg":{"eq":"该账号尚未注册,请先注册"},
+    "code":{"eq":1},
+    "data":{"eq":null}
+  }
+}

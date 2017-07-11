@@ -1,0 +1,17 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.hyb_url}}",
+			"rest": "ja/memberbao/v1/balance",
+			"headers":{"Content-Type": "application/json","appId":"{{pre.appId_ZhuZhuJiShi}}",
+				"token":"{{key.token}}"
+			}
+
+	},
+
+  "output":{"msg":{"EQ":"获取余额成功"}, "statusCode":{"EQ":0},"data":{"TYPE":"dict"},
+	        "withDrawalsCount":{"TYPE":"str"},"balance":{"TYPE":"str"},"withdrawQuota":{"TYPE":"str"},
+	        "pwdSetted":{"TYPE":"str"}}
+
+}

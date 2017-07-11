@@ -1,0 +1,22 @@
+{
+	"input":{
+		"author":"test",
+		"method": "POST",
+		"url":"{{pre.pos_url}}",
+		"headers":{"token":"{{key.token_pos}}"},
+		"rest": "ja/pos/v1/storage/barcode",
+		"param":{
+			"operator_id": 13895313385,
+			"operator_name": "院长",
+			"products": [{
+				"purchase_price": "10.00",
+				"product_id": "{{key.pid1}}",
+				"stock": 20
+				}],
+		"supplier_id":"{{key.new_store_id}}",
+		"supplier_name":"test"}
+	},
+	"output":{
+		"status_code":{"EQ":1}
+	}
+}

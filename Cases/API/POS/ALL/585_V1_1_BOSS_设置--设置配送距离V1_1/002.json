@@ -1,0 +1,15 @@
+{
+  "input": {
+    "method": "post",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/v1/boss/setting/deliver/distance",
+    "headers": {
+      "token": "{{key.token_boss}}",
+      "storeNo": "{{key.store_id}}"
+    },
+    "param":{"districtsDistance":"3000"}
+  },
+  "output":{
+    "statusCode":{"EQ":0}
+    }
+}

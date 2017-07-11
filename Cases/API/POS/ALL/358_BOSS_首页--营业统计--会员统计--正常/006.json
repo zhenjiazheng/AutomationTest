@@ -1,0 +1,23 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/member",
+			"param":{
+				"member_name":"Member2",
+				"sex":0,
+				"member_tel":"{{pre.MUser2}}"
+			}
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"member_id":{"TYPE":"int"},
+		"balance":{"TYPE":"str"},
+		"member_name":{"EQ":"Member2"},
+		"reg_date":{"type":"str"},
+		"member_tel":{"eq":"{{pre.MUser2}}"}
+},
+	"key":{"member_id2":"data.member_id","reg_date":"data.reg_date"}
+}

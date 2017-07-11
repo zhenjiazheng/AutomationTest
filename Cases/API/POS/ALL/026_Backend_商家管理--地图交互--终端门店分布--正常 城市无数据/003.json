@@ -1,0 +1,25 @@
+{
+	"input": {
+		"author": "test",
+		"method": "get",
+		"url": "{{pre.pos_url}}",
+		"headers": {
+			"token": "{{key.token}}"
+		},
+		"rest": "py/backend/v1/store/pos-mapping/",
+		"param": {
+			"city": "广州市",
+			"latitude_start": 22.56,
+			"latitude_stop": 22.766,
+			"longitude_start": 113.800,
+			"longitude_stop": 113.900
+		}
+	},
+  	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+        "data": {"type":"list","ll":0}
+	}
+}
+
+

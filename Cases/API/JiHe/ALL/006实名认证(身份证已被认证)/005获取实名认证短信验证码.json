@@ -1,0 +1,22 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/test/sms/idcard?",
+    "headers":{
+      "client": "3",
+      "Content-Type": "application/json"
+    },
+    "param":{
+      "phone":"{{pre.InvFriForV}}","code":"1123"
+    }
+  },
+
+  "output":{
+    "code":{"EQ":0},
+    "msg":{"TYPE":"str"},
+    "data":{"TYPE":"dict"}
+  },
+
+  "key":{"idcode":"data.code"}
+}

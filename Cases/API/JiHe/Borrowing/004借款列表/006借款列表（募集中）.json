@@ -1,0 +1,30 @@
+{
+  "input":{
+    "method":"GET",
+   	"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/borrow/4/list?page=1&limit=20",
+ 			"headers": {
+               "client": "3",
+               "Content-Type": "application/json",
+               "token": "{{key.token}}"
+             }
+  },
+  "output":{
+        "msg":{"type":"str","eq":""},
+        "code":{"type":"int","eq":0},
+        "data":{"type":"dict"},
+        "count":{"type":"int"},
+        "data.data":{"type":"dict"},
+        "borrow_time": {"type":"str"},
+                "create_date": {"type":"str"},
+                "finance_id": {"type":"int"},
+                "money":{"type":"int"},
+                "status_msg":{"type":"str","eq":"募集中"},
+                "rate":{"type":"float"},
+                "borrow_user_type":{"type":"int"},
+                "interest_type_msg":{"type":"str"},
+                "canEdit":{"type":"bool"},
+                "raise_time":{"type":"str","eq":""}
+
+  }
+}

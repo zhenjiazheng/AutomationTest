@@ -1,0 +1,14 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/order/{{key.orderId}}"
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"data":{"TYPE":"dict"},
+		"msg":{"TYPE":"str"}}
+
+}

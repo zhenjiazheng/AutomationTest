@@ -1,0 +1,38 @@
+{
+	"input": {
+		"method": "POST",
+		"url": "{{pre.zzkg_url}}",
+		"rest": "ja/user/v3/plus/cart/deal/",
+		"headers": {
+			"token": "{{key.token}}",
+			"region":145
+		},
+		"param":[{
+			"id": {{key.dealId}},
+			"cartSpecSimples": [{
+				"id": {{key.productId}},
+				"count": 1,
+				"price": {{key.price}}
+			}],
+			"selected": true
+		}]
+	},
+	"output": {
+		"statusCode": {"type":"int"},
+		"cart": {"type":"dict"},
+		"cartDealers": {"type":"list"},
+		"cart.cartDealers.0.cartDeals.0.deal.deal_id": {"EQ":{{key.dealId}}},
+		"cart.cartDealers.0.cartDeals.0.deal.specs.0.id": {"EQ":{{key.productId}}},
+		"name": {"type":"str"},
+		"pic": {"type":"str"},
+		"desc": {"type":"str"},
+		"address": {"type":"str"},
+		"startTime": {"type":"str"},
+		"endTime": {"type":"str"},
+		"openTime": {"type":"str"},
+		"deal_id": {"EQ":{{key.dealId}}},
+		"unitPrice": {"EQ":{{key.price}}},
+		"success": {"type":"bool"}
+	}
+
+}

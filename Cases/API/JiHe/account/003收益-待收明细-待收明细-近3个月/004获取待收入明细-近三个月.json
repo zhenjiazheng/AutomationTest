@@ -1,0 +1,31 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "GET",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/account/wait/income?page=1&limit=20&month=3",
+			"headers":{"client": "3",
+                        "Content-Type": "application/json",
+				"token":"{{key.token}}"
+			}
+
+	},
+  "output":{
+	  "code":{"EQ":0},
+	  "msg":{
+		  "TYPE":"str",
+		  "eq":"获取成功"
+	  },
+	  "data":{"TYPE":"dict"},
+	  "repayment_type":{
+		  "allin":["一次性还本付息(按月)","先息后本","一次性还本付息(按天)","等额本息"]
+	  },
+	  "insterest":{"type":"float"},
+	  "reward_money":{"type":"float"},
+	  "money":{"type":"float"},
+	  "income_date":{"re":"[\\d]{4}-[\\d]{2}-[\\d]{2}"},
+	  "tender_name":{"type":"str"},
+	  "service_money":{"type":"float"}
+  }
+
+}

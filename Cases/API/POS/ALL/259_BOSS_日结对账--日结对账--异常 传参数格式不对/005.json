@@ -1,0 +1,21 @@
+{
+	"input": {
+		"method": "GET",
+		"url": "{{pre.pos_url}}",
+		"rest": "ja/v1/boss/stsc/reconciliation",
+		"headers": {
+			"Content-Type": "application/json",
+			"token": "{{key.token_boss}}",
+			"storeNo": "{{key.store_id}}"
+		},
+		"param": {
+			"saleDate": "HelloTest"
+		}
+	},
+	"output": {
+		"statusCode": {
+			"EQ": 1
+		},
+      "msg":{"EQ":"时间参数格式错误，应为“yyyy-MM-dd”"}
+	}
+}

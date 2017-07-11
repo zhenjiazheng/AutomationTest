@@ -1,0 +1,29 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/member",
+			"param":{
+				"member_name":"Member1",
+				"sex":0,
+				"member_tel":"{{pre.MUser1}}"
+			}
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"member_id":{"TYPE":"int"},
+		"balance":{"TYPE":"str"},
+		"member_name":{"EQ":"Member1"},
+		"reg_date":{"type":"str"},
+		"member_tel":{"eq":"{{pre.MUser1}}"},
+		"total_consume_cnt": {"TYPE":"int"},
+        "total_consume_fee": {"EQ":"0.0"},
+        "point": {"TYPE":"int"},
+        "sex": {"TYPE":"int"},
+        "discount": {"EQ":"100.0"},
+        "promotion_type": {"TYPE":"int"}
+},
+	"key":{"member_id":"data.member_id","reg_date":"data.reg_date","name":"data.member_name"}
+}

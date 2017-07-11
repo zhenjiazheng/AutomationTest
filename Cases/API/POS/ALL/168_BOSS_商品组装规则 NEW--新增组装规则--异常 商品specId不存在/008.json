@@ -1,0 +1,24 @@
+{
+  "input":{
+    "method": "POST",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/packageRule/add",
+    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param":{"largeProductBarcode": "12345678909876",
+            "largeProductId": {{key.pid1}},
+            "largeProductSpecId": 11111111222,
+            "largeProductName": "largeName",
+            "largeProductSpec": "test",
+            "largePurchasePrice": "1000",
+            "smallProductBarcode":"12345687454213",
+            "smallProductId":{{key.pid2}},
+            "smallProductSpecId": 11111111,
+            "smallProductName":"smallProduct",
+            "smallProductSpec":"smallSpec",
+            "smallPurchasePrice":"100",
+            "splitNumber":5}
+    },
+  "output":{
+    "statusCode":{"EQ":1}
+    }
+}

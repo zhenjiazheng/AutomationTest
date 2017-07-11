@@ -1,0 +1,17 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.zzsh_url}}",
+			"rest": "py/water-supplier/v1/boss/shop/123456/",
+			"headers":{"token":"{{key.token}}"}
+	},
+  "output": {
+	  			"msg": {"type": "str"},
+	  			"statusCode": {"type": "int","eq":1}
+  },
+	"mock":{
+			"data": {},
+			"msg": "",
+			"statusCode": 1
+		}
+}

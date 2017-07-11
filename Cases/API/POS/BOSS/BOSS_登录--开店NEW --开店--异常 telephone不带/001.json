@@ -1,0 +1,34 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "/ja/v1/boss/setup/store/",
+			"param":{
+				"businessLicense":[{"businessLicense":"http://www.baidu.com/"}],
+                "city": "深圳市",
+				"contactName": "ContactNameTest",
+                "contactSex": 0,
+                "contactTel": "{{pre.MUser2}}",
+                "district": "宝安区",
+                "houseNumber": "504",
+                "storekeeper": "2号店主",
+                "cell": "思微simplywork(飞扬科技园）",
+                "storeName": "HelloNew",
+                "latitude": 22.566,
+                "idCard":[{"idcardImg":"test"}],
+                "idCardNo": "445635654321345678",
+                "province": "广东省",
+                "storeCategory": 0,
+                "product_categories": [
+                    482
+                ],
+                "address": "广东省深圳市翻身(地铁站)503",
+                "industry": {"id":8, "name": "test"},
+                "longitude": 113.899
+			}
+	},
+	"output":{
+		"statusCode":{"EQ":1}
+}
+}

@@ -1,0 +1,11 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/tips",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+		    "param":{"tips":"我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈我正在提投诉与建议哈超"}
+	},
+
+    "output":{"statusCode":{"EQ":1},"msg":{"TYPE":"str","EQ":"投诉建议内容过长，请重新输入！"}}
+}

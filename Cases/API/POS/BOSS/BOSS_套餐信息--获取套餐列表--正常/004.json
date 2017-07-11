@@ -1,0 +1,19 @@
+{
+  "input":{
+    "method": "get",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/set/meal/list",
+    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"},
+    "data.0.id":{"type":"int"},
+    "data.0.categoryId":{"type":"int"},
+    "data.0.productLists.0.specs.0.id":{"eq":{{key.specId}}},
+    "data.0.productLists.0.specs.0.productNumber":{"eq":10},
+    "data.0.pictureUrl": {"eq":"http://posstatic-1252095635.file.myqcloud.com/appidposvsdf2f/aefeb6c0611244c091dc45da0aa753da.png"},
+    "data.0.productLists.0.specs.0.sale_price": {"eq":"{{key.sale_price}}"},
+    "data.0.setMealName": {"eq":"套餐NEW"}
+    }
+}

@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/store/employees/",
+			"param":{
+				"employee_name":"TestEmployee",
+				"employeerole":"{{key.roleId}}",
+				"login_tel":"{{pre.MUser1}}",
+				"password":"123456"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"不能创建店主"},
+		"statusCode":{"EQ":1}
+    }
+}

@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/order/orders/",
+			"param":{
+				"limit":10,
+				"page":1,
+				"search":"test",
+				"stop_date":"2017-03-12"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"count":{"TYPE":"int"},
+		"currPage":{"TYPE":"int"},
+		"data.data":{"type":"list"}
+    }
+}

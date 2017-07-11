@@ -1,0 +1,16 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/pos/printer",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+            "param":{
+				"printerIp":"172.16.0.101",
+				"printerName":"Printer222"
+			}
+	},
+    "output":{
+      "statusCode":{"EQ":0},
+      "msg":{"EQ":"成功"}
+    }
+}

@@ -1,0 +1,7 @@
+{
+	"sql":{
+		    "command":"select count(*) from store_member where store_id = {{key.store_id}}",
+			"db": "posdb"
+			},
+	"key":["count"]
+}

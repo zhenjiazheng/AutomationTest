@@ -1,0 +1,20 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/stsc/reconciliation",
+			"param":{"orderCategory":0, "saleDate":"2017-06-30"}
+	},
+	"output":{
+		"statusCode":{"EQ":0},
+		"cashierList":{"type":"list"},
+		"date":{"re":"[0-9-]*"},
+		"elemeReconciliation":{"type":"dict"},
+		"meituanReconciliation":{"type":"dict"},
+		"netReconciliation":{"type":"dict"},
+		"salesmanList":{"type":"list"},
+		"storeReconciliation":{"type":"dict"}
+}
+}

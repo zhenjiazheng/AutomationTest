@@ -1,0 +1,25 @@
+{
+  "input": {
+    "method": "get",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/user/v1/user/balance/list?storeId={{key.store_id}}&page=1&limit=20",
+    "headers": {
+      "token": "{{key.user_token}}"
+    }
+  },
+    "output": {
+      "msg": {
+        "type": "str"
+      },
+      "statusCode": {
+        "eq": 0
+      },
+      "data.pageData.data.0.balance": {
+        "eq": -15.0
+      },
+      "data.pageData.data.0.overBalance": {
+        "eq": 985.0
+      }
+      }
+  }
+

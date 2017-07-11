@@ -1,0 +1,23 @@
+{
+	"input":{
+			"author":"tester",
+			"method": "PUT",
+			"url":"{{pre.sqwm_url}}",
+			"rest": "py/sqwm/v1/public/users/{{key.id}}/",
+			"headers":{"token":"{{key.token}}"},
+			"param": {
+				"head_img": "http://www.baidu.com",
+				"nickname": "tester",
+				"sex": 0
+			}
+	},
+  "output":{"statusCode": {"EQ":0},"msg":{"TYPE":"str"}, "data":{"TYPE":"dict"},
+		"id": {"TYPE":"int"},
+		"username": {"TYPE":"str"},
+		"nickname": {"EQ":"tester"},
+		"sex": {"TYPE":"str"},
+		"user_type": {"TYPE":"str"},
+		"token": {"TYPE":"str"},
+	  	"head_img": {"EQ":"http://www.baidu.com"}
+  }
+}

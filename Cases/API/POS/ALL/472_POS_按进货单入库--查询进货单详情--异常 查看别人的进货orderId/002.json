@@ -1,0 +1,7 @@
+{
+	"sql":{
+		    "command":"select id from pos_order where member_id != {{key.store_id}} limit 1",
+			"db": "posorder"
+			},
+	"key": ["id"]
+}

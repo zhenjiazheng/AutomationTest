@@ -1,0 +1,26 @@
+{
+  "input": {
+    "method": "POST",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/recharge/rule/mod",
+    "headers": {
+      "Content-Type": "application/json",
+      "token": "{{key.token_boss}}",
+      "storeNo": "{{key.store_id}}"
+    },
+    "param": {
+      "activityName": "DefineRule222",
+      "giftAmount": "30.00",
+      "giftpoints": 100,
+      "rechargeAmount": 100,
+      "endDate": "2017-05-01",
+      "startDate": "2017-04-01",
+      "id": 535124
+    },
+    "output": {
+      "statusCode": {
+        "EQ": 1
+      }
+    }
+  }
+}

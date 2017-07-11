@@ -1,0 +1,26 @@
+{
+	"input": {
+		"author": "test",
+		"method": "get",
+		"url": "{{pre.pos_url}}",
+		"headers": {
+			"token": "{{key.token}}"
+		},
+		"rest": "py/backend/v1/store/mapping/",
+		"param": {
+			"city": "深圳市",
+			"latitude_start": 32.56,
+			"latitude_stop": 32.766,
+			"longitude_start": 110.800,
+			"longitude_stop": 111.900,
+			"query": "STORE"
+		}
+	},
+  	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+        "data.store": {"type":"list","ll":0}
+	}
+}
+
+

@@ -1,0 +1,14 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/deliver",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+		    "param":{
+				"deliverTime": "[{\"endTime\":\"22:00\",\"isUsed\":true,\"startTime\":\"08:00\"},{\"endTime\":\"15:00\",\"isUsed\":false,\"startTime\":\"13:00\"},{\"endTime\":\"18:00\",\"isUsed\":false,\"startTime\":\"16:00\"}]",
+				"businessDay": "[{\"businessDay\":\"星期一\",\"isUsed\":true},{\"businessDay\":\"星期二\",\"isUsed\":true},{\"businessDay\":\"星期三\",\"isUsed\":true},{\"businessDay\":\"星期四\",\"isUsed\":true},{\"businessDay\":\"星期五\",\"isUsed\":true},{\"businessDay\":\"星期六\",\"isUsed\":true},{\"businessDay\":\"星期日\",\"isUsed\":true}]"
+			}
+	},
+
+    "output":{"statusCode":{"EQ":0},"msg":{"EQ":"成功"}}
+}

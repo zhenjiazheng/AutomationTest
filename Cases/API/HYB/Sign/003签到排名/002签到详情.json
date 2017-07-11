@@ -1,0 +1,18 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.hyb_url}}",
+			"rest": "ja/memberbao/v1/signrank",
+			"headers":{"Content-Type": "application/json","appId":"{{pre.appId_ZhuZhuJiShi}}",
+				"token":"{{key.token}}"
+			}
+	},
+
+  "output":{"msg":{"EQ":""}, "statusCode":{"EQ":0}, "total_count":{"TYPE":"int"},
+	        "currentUserSignRank":{"TYPE":"int"},"rankInfos":{"TYPE":"dict"},"updateTime":{"TYPE":"long"},
+	        "continueCount":{"TYPE":"int"},"userId":{"TYPE":"int"},"createTime":{"TYPE":"long"},
+            "rewardAmount":{"TYPE":"float"},"totalCount":{"TYPE":"int"},"rank":{"TYPE":"int"},
+            "lastTime":{"TYPE":"str"},"id":{"TYPE":"int"},"realName":{"TYPE":"str"}}
+
+}

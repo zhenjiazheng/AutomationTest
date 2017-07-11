@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "PUT",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/modifyPayPwd",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+       "param": {
+       "newPwd":"111111"
+     }
+    },
+
+    "output":{"code":{"EQ":0},"msg":{"EQ":"设置交易密码成功"}}
+
+}

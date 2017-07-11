@@ -1,0 +1,12 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.zzkg_admin_url}}",
+			"rest": "supplier/my/region",
+			"headers": {"token":"{{key.token}}"},
+			"param":{
+				"all":true
+			}
+	},
+  "output":{"id": {"TYPE":"int"},"name":{"TYPE":"str"}}
+}

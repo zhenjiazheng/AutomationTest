@@ -1,0 +1,16 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/store/industries/"
+	},
+	"output":{
+      "children": {"TYPE":"list"},
+      "id": {"TYPE":"int"},
+      "often": {"TYPE":"bool"},
+      "msg": {"EQ":"成功"},
+      "statusCode": {"EQ":0}
+	}
+}

@@ -1,0 +1,10 @@
+{
+  "author": "test",
+  "caseStep": {
+    "1": "input element by id, value com.geometry.posboss:id/et_store_no, text test",
+    "2": "input element by id, value com.geometry.posboss:id/et_user, text test",
+    "3": "input element by id, value com.geometry.posboss:id/et_password, text test",
+    "4": "click element by id, value com.geometry.posboss:id/cb_choose_agreement",
+    "5": "click element by id, value com.geometry.posboss:id/cb_choose_agreement2222"
+  }
+}

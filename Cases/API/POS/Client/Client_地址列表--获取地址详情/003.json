@@ -1,0 +1,29 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.pos_url}}",
+    "rest":"/ja/user/v1/address",
+    "headers":{"token":"{{key.user_token}}"}
+  },
+  "output":{
+    "msg":{"type":"str","eq":"成功"},
+    "data":{"type":"dict"},
+    "count":{"type":"int"},
+    "totalpage":{"type":"int","eq":1},
+    "hasNext":{"type":"bool","eq":false},
+    "currPage":{"type":"int","eq":1},
+    "data.data":{"type":"dict"},
+    "total":{"type":"int"},
+    "statusCode":{"type":"int","eq":0},
+    "userName":{"type":"str"},
+    "district":{"type":"str"},
+    "sex":{"type":"int"},
+    "phone":{"type":"str"},
+    "addressDetail":{"type":"str"},
+    "inRange":{"type":"bool","eq":true},
+    "id":{"type":"int"},
+    "latitude":{"type":"float"},
+    "longitude":{"type":"float"}
+  },
+  "key":{"id":"data.data.0.id"}
+}

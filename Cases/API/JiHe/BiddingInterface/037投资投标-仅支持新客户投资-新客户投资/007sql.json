@@ -1,0 +1,6 @@
+{
+	"sql": {
+		"db": "waiwang",
+		"command": "UPDATE `waiwang`.`users_extend` SET `is_invest`=0 WHERE  `user_id`=2055"
+	}
+}

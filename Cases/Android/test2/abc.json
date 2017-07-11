@@ -1,0 +1,29 @@
+{
+  "author": "test",
+  "caseStep": {
+    "1": "input element by id, value com.geometry.posboss:id/et_store_no, text test",
+    "2": "input element by id, value com.geometry.posboss:id/et_user, text test",
+    "3": "input element by id, value com.geometry.posboss:id/et_password, text test",
+    "4": "click element by id, value com.geometry.posboss:id/cb_choose_agreement",
+    "5": "compare element by id, value com.geometry.posboss:id/et_store_no, attribute text, expected abc",
+    "6": "long press element by id , value com.geometry.posboss:id/xxx, duration 2",
+    "7": "check after delete element by name, vale 登录",
+    "8": "get title, expect hello world",
+    "9": "find element by id, value com.geometry.posboss:id/et_store_no",
+    "10": "long press element by id, value com.geometry.posboss:id/et_store_no, duration 2",
+    "11": "drag driver from x:100 y:100 to x:200 y:200",
+    "12": "drag element by id, value com.geometry.posboss:id/cb_choose_agreement to x:200 y:200",
+    "13": "press system keyEvent:4 sleep 5",
+    "14": "wait for element by id, value com.geometry.posboss:id/et_store_no, time 4",
+    "15": "accept alert",
+    "16": "dismiss alert",
+    "17": "check alert text expect 确定",
+    "18": "get current context",
+    "19": "get current windows",
+    "20": "find elements by id, value com.geometry.posboss:id/et_store_no",
+    "21": "tap location x:100 y:200",
+    "22": "double tap x:100 y:200",
+    "23": "double tap element by id, value com.geometry.posboss:id/et_store_no",
+    "24": "continue touch driver from x:100 y:100 to x:100,200,300,400 y:100,200,300,400"
+  }
+}

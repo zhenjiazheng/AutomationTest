@@ -1,0 +1,42 @@
+{
+  "author":"anso",
+  "caseStep":{
+   "001":{
+     "operation":"移动端窗口",
+     "sleep":3
+   },
+    "002":{
+      "operation":"点击控件",
+      "by":"xpath",
+      "value":"html/body/div[1]/div[1]/div[4]/div/ul/li[4]/a/span",
+      "sleep":1
+    },
+    "003":{
+      "operation":"点击控件",
+      "by":"xpath",
+      "value":"//div[2]/button",
+      "sleep":1
+    },
+    "004":{
+      "operation":"文本输入",
+      "by":"xpath",
+      "value":"html/body/div[1]/div[1]/div[3]/div[2]/div/div/div[1]/div/div[2]/input",
+      "text":"{{pre.JRUser}}"
+    },
+    "005":{
+      "operation":"文本输入",
+      "by":"xpath",
+      "value":"html/body/div[1]/div[1]/div[3]/div[2]/div/div/div[3]/div/div[2]/input",
+      "text":"a1234567",
+      "sleep":2
+    },
+    "006":{
+      "operation":"点击控件",
+      "by":"xpath",
+      "value":"html/body/div[1]/div[1]/div[3]/div[2]/button",
+      "sleep":2
+    }
+  }
+}
+
+

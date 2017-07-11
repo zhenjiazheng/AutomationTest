@@ -1,0 +1,18 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/login",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+     "param": {
+       "password":"a1234567"
+     }
+    },
+
+    "output":{"code":{"EQ":1},"msg":{"EQ":"请输入您的账号"}
+}}

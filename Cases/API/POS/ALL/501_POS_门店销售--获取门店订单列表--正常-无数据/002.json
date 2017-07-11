@@ -1,0 +1,15 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "ja/pos/v1/order?limit=20&page=1&filter="
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"data.count":{"TYPE":"int"},
+		"data.data":{"TYPE":"list","ge":0}
+}
+
+}

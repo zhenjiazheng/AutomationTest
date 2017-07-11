@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/loss",
+		    "param":{
+				"cause_desc": "过期",
+	            "cause_id": 1,
+	            "loss_cnt": 1,
+	            "operator_id": 15623697980,
+	            "operator_name": "袁岳路",
+	            "product_id":"{{key.pid1}}",
+	            "responsibility_id": 15623697980,
+	            "responsibility_name": "袁岳路"
+			}
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"EQ":"商品报损记录提交成功"}}
+}

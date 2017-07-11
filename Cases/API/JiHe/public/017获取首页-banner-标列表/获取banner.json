@@ -1,0 +1,28 @@
+{
+	"input":{
+			"method":"GET",
+			"url":"{{pre.jh_url}}",
+			"rest":"/ja/v1/banner/17/type",
+			"headers":{
+				"client":"3",
+                "Content-Type":"application/json",
+				"token":"{{key.token}}"
+			}
+			
+	},
+	"output":{
+		"msg":{"eq":""},
+		"code":{"EQ":0},
+		"data":{"TYPE":"dict"},
+		"banner_type":{"TYPE":"int","eq":0},
+		"sort":{"eq":0},
+		"status":{"eq":1},
+		"updated_at":{"re":"[\\d]{4}-[\\d]{2}-[\\d]{2} [\\d]{2}:[\\d]{2}"},
+		"link":{"re":"https?://[^,， ]+"},
+		"system_type":{"eq":2},
+		"created_at":{"re":"[\\d]{4}-[\\d]{2}-[\\d]{2} [\\d]{2}:[\\d]{2}"},
+		"category_id":{"type":"int"},
+		"id":{"type":"int"}
+	}
+
+} 

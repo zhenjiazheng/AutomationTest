@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "ja/pos/v1/order/{{key.orderId}}/scanpay",
+			"param": {
+				"auth_code": "12234456666"
+			}
+	},
+	"output": {
+		"status_code": {
+			"EQ": 0
+		},
+		"msg": {
+			"TYPE": "str",
+			"eq": "请求被扫支付成功"
+		}
+	}
+
+}

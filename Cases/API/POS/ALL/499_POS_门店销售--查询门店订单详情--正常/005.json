@@ -1,0 +1,16 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "ja/pos/v1/order/{{key.orderId}}"
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"},
+		"data.order_amount":{"eq":"{{key.orderAmount}}"},
+		"barcode":{"eq":"{{key.barcode}}"}
+
+}
+}

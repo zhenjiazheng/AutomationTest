@@ -1,0 +1,30 @@
+ {
+ 	"input":{
+ 			"author":"anso",
+ 			"method": "GET",
+ 			"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/friend/home/",
+ 			"headers": {
+               "client": "3",
+              "token":"{{key.token}}"
+             }
+
+     },
+   "output":{
+     "msg":{"eq":"获取成功"},
+     "code":{"eq":0},
+     "data":{"type":"dict"},
+     "reward_amount":{"TYPE":"float"},
+     "arrival_reward":{"type":"float"},
+     "un_arrival_reward":{"type":"float"},
+     "reward_money":{"type":"float"},
+     "has_next_role":{"type":"bool","eq":true},
+     "banners":{"type":"dict"},
+     "sort":{"eq":0},
+     "status":{"eq":1},
+     "image":{"type":"str"},
+     "updated_at":{"RE":"[\\d]{4}-[\\d]{2}-[\\d]{2} [\\d]{2}:[\\d]{2}:[\\d]{2}"},
+     "invest_friend_number":{"type":"int"},
+     "friend_number":{"type":"int"}
+   }
+}

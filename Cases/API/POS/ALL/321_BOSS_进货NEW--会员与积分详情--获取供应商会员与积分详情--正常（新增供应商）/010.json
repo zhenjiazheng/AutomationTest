@@ -1,0 +1,14 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "/ja/v1/boss/purchase/supplier/member/detail/",
+			"param":{"supplierId":{{key.new_store_id}}}
+	},
+	"output":{
+		"msg":{"EQ":"该数据不存在！"},
+		"statusCode":{"EQ":1}
+	}
+}

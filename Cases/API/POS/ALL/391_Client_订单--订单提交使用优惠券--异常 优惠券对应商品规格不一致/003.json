@@ -1,0 +1,9 @@
+{ 
+  "public":  
+  [{  "class": "PublicModule.RunPublic", 
+    "function": "addProduct" 
+    } ,
+  {  "class": "PublicModule.RunPublic", 
+    "function": "addProduct2" 
+    } ]
+}

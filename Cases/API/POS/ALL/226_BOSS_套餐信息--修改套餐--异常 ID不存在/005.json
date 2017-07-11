@@ -1,0 +1,17 @@
+{
+  "input":{
+    "method": "put",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/set/meal/update",
+    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param":{"id":1000000,
+            "categoryId":"{{key.categoryId}}",
+            "paramList": [{"to_spec":"{{key.specId}}", "count":10}],
+            "pictureUrl": "http://www.baidu.com/",
+            "salePrice": "10",
+            "setMealName": "套餐NEW"}
+    },
+  "output":{
+    "statusCode":{"EQ":1}
+    }
+}

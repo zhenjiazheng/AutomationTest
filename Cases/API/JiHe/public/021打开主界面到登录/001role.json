@@ -1,0 +1,13 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/user/role",
+    "headers":{"client":"3"}
+  },
+  "output":{
+    "msg":{"eq":"您需要登陆才能访问，请先登录！"},
+    "code":{"eq":9},
+    "data":{"eq":null}
+  }
+}

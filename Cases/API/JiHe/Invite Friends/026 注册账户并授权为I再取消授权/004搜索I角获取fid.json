@@ -1,0 +1,18 @@
+{
+  "input":{
+    "author":"anso",
+    "method": "GET",
+    "url":"{{pre.jh_url}}",
+    "rest": "/ja/v1/friends/?page=1&limit=20&search={{pre.IFriendUser}}",
+    "headers": {"client": "3",
+      "Content-Type": "application/json",
+      "token": "{{key.token}}"
+  }
+},
+  "output":{
+    "msg":{"eq":"获取数据成功"},
+    "code":{"eq":0},
+    "data":{"type":"dict"}
+  },
+  "key":{"fid":"data.data.0.friend_id"}
+}

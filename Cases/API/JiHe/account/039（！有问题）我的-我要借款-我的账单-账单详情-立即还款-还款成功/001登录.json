@@ -1,0 +1,14 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/login",
+			"headers":{"client":"3"},
+			"param":{
+				"name":"{{pre.UserForQuiPayS}}",
+				"password": "a1234567"
+			}
+	},
+ 
+  "key":["uid","token"]
+}

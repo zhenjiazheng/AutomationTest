@@ -1,0 +1,20 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "GET",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/sms/reset_pwd?phone={{pre.JRUser3}}&code=1236",
+			"headers":{"client": "3"
+				}
+
+	},
+	"output":{
+		"msg":{"eq":"验证码不正确，请重新输入验证码"},
+		"code":{"eq":1},
+		"data":{"eq":null}
+
+	}
+
+
+
+}

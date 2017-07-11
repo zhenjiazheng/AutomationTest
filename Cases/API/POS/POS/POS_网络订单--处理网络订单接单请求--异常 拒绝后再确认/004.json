@@ -1,0 +1,16 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "post",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/member",
+			"param":{"member_name":"test_member",
+					"member_tel":"{{pre.POS_User}}",
+					"sex":0}
+	},
+	"output":{
+		"status_code":{"EQ":0}
+},
+	"key":{"member_id":"data.member_id"}
+}

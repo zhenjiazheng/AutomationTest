@@ -1,0 +1,19 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.pos_url}}",
+    "rest":"/ja/user/v1/address",
+    "headers":{"token":"{{key.token}}"}
+  },
+  "output":{
+    "msg":{"type":"str","eq":"成功"},
+    "data":{"type":"dict"},
+    "count":{"type":"int","eq":0},
+    "totalpage":{"type":"int","eq":0},
+    "hasNext":{"type":"bool","eq":false},
+    "currPage":{"type":"int","eq":0},
+    "data.data":{"type":"str","eq":[]},
+    "total":{"type":"int","eq":0},
+    "statusCode":{"type":"int","eq":0}
+  }
+}

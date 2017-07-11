@@ -1,0 +1,57 @@
+{
+	"input": {
+		"author": "lancy",
+		"method": "GET",
+		"url": "{{pre.jh_url}}",
+		"rest": "ja/v1/account/Investor/TotalAssets",
+		"headers": {
+			"client": "3",
+			"Content-Type": "application/json",
+			"token": "{{key.token}}"
+		}
+	},
+	"output": {
+		"code": {
+			"EQ": 0
+		},
+		"msg": {
+			"TYPE": "str"
+		},
+		"data": {
+			"TYPE": "dict"
+		},
+		"waitReward": {
+			"type": "float"
+		},
+		"waitInterest": {
+			"type": "float"
+		},
+		"account": {
+			"type": "float"
+		},
+		"allInterest": {
+			"type": "float"
+		},
+		"friendRewardMoney": {
+			"type": "float"
+		},
+		"penaltiesMoney": {
+			"type": "float"
+		},
+		"investMoney": {
+			"type": "float"
+		},
+		"waitMoney": {
+			"type": "float"
+		},
+		"usableAccount": {
+			"type": "float"
+		},
+		"frozenMoney": {
+			"type": "float"
+		},
+		"allRewardMoney": {
+			"type": "float"
+		}
+	}
+}

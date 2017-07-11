@@ -1,0 +1,18 @@
+{
+	"input":{
+      "author":"tester",
+      "method": "POST",
+      "url":"{{pre.sqwm_url}}",
+      "rest": "/py/sqwm/v1/common_api /files/upload/",
+      "field1":"C:/Users/itservice/Desktop/API_Automation/test1.jpg",
+      "headers":{
+        "token":"{{key.token}}"
+      }
+	},
+  "output":{
+    "statusCode": {"EQ":0},
+     "msg":{"EQ":"成功"},
+    "data":{"TYPE":"dict"},
+    "file1": {"TYPE":"str"}
+  }
+}

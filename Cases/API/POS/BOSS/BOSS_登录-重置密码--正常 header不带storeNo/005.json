@@ -1,0 +1,17 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}"},
+			"rest": "/ja/v1/boss/setting/modifypwd",
+			"param":{
+				"oldPwd":"{{key.password}}",
+				"newPwd":"{{pre.new_password}}"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+}
+}

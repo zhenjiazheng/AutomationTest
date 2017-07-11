@@ -1,0 +1,36 @@
+{
+
+  "input":{
+    "method": "GET",
+    "url":"{{pre.jh_url}}",
+
+    "headers":{
+      "client":"3",
+      "Content-Type":"application/json"
+    },
+
+		"rest": "/ja/v1/tender/598/repaymentPlan"
+  },
+
+   "output":{
+     "code":{"EQ":0},
+     "data":{"TYPE":"dict"},
+     "alreadyMoney":{"TYPE":"int"},
+     "borrowTime":{"TYPE":"int"},
+     "desc4repaymentMode":{"TYPE":"str"},
+     "interestStartTime":{"TYPE":"str"},
+     "list4TenderRepayment":{"TYPE":"dict"},
+     "data.list4TenderRepayment.0.account":{"TYPE":"float"},
+     "data.list4TenderRepayment.0.interest":{"TYPE":"float"},
+     "data.list4TenderRepayment.0.accountAndinterest":{"TYPE":"float"},
+     "data.list4TenderRepayment.0.repayDate":{"TYPE":"str"},
+     "data.list4TenderRepayment.0.type":{"TYPE":"str"},
+     "data.list4TenderRepayment.0.periods":{"TYPE":"int"},
+
+     "waitMoney":{"TYPE":"int"},
+     "repaymentMode":{"TYPE":"int"},
+
+     "msg":{"EQ":"获取成功"}
+   }
+
+}

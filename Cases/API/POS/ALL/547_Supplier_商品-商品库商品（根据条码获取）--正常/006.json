@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/product/deals/",
+			"param":{"category_id":{{key.category_id}},
+						"limit":50,
+						"page":1,
+						"search":""
+					}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+    },
+  "key":{"barcode1":"data.data.-1.barcode"}
+}

@@ -1,0 +1,58 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/commodity/add",
+		    "headers": { "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{
+            	"status": 0,
+				"barcode": "6921294354997",
+				"brand": "test",
+				"category": 550,
+				"is_standard": true,
+            	"desc_url": "http://www.anccnet.com/img/empty_90-90.8.png",
+				"image": "http://www.anccnet.com/img/empty_90-90.8.png",
+            	"manufacturer": "广州顶津食品有限公司",
+				"moList": [],
+				"name": "味全杀菌型乳酸菌饮品（原味）",
+				"quality_period": 730,
+            	"shortcut": 1,
+				"source": "test",
+            	"specs": [{
+					"discount_price": "4.50",
+					"member_price": "4.50",
+					"purchase_price": "4.00",
+					"unit": "100",
+					"stock": "100",
+					"sale_price": "5.00"
+				}],
+            	"sale_net": true,
+				"tag": [],
+				"user_id": "{{key.store_id}}",
+				"weighable": false
+        }
+	      },
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"data":{"TYPE":"dict"},
+		"status":{"TYPE":"int","eq":0},
+		"name":{"TYPE":"str","eq":"味全杀菌型乳酸菌饮品（原味）"},
+		"manufacturer":{"TYPE":"str","eq":"广州顶津食品有限公司"},
+		"barcode":{"TYPE":"str","EQ":"6921294354997"},
+		"specs":{"TYPE":"list"},
+		"price":{"TYPE":"str"},
+		"quality_period":{"TYPE":"int"},
+		"unit":{"TYPE":"str"},
+		"category_display":{"TYPE":"str"},
+		"image":{"TYPE":"str","eq":"http://www.anccnet.com/img/empty_90-90.8.png"},
+		"sale_price":{"TYPE":"str","eq":"5.00"},
+		"is_standard":{"eq":true},
+		"purchase_price":{"eq":"4.00"},
+		"member_price":{"eq":"4.50"},
+		"discount_price":{"eq":"4.50"},
+		"stock": {"type":"str","eq":"100"},
+		"data.id":{"TYPE":"int"},
+		"weighable":{"eq":false}},
+  "key":{"pid1":"data.id"}
+}

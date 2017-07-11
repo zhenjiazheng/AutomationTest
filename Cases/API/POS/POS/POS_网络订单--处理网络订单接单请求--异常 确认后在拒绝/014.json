@@ -1,0 +1,15 @@
+{
+  "input":{
+  "method":"POST",
+  "url":"{{pre.pos_url}}",
+  "rest":"ja/pos/v1/online/order/{{key.orderId}}/handle",
+  "headers":{"token":"{{key.token_pos}}"},
+   "param":{"order_status":1
+   }
+},
+  "output":{
+    "msg":{"type":"str"},
+    "status_code":{"eq":0},
+    "data":{"type":"str"}}
+
+}

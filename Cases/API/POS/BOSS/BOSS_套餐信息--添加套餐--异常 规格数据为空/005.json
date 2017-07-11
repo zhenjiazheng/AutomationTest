@@ -1,0 +1,16 @@
+{
+  "input":{
+    "method": "POST",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/set/meal/add",
+    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param":{"list": [],
+            "pictureUrl": "http://www.baidu.com/",
+            "salePrice": "100",
+            "setMealName": "套餐1",
+            "categoryName": "test"}
+    },
+  "output":{
+    "statusCode":{"EQ":1}
+    }
+}

@@ -1,0 +1,61 @@
+{
+
+  "input":{
+    "method": "GET",
+    "url":"{{pre.jh_url}}",
+
+    "headers":{
+      "client":"3",
+      "Content-Type":"application/json"
+    },
+
+		"rest": "/ja/v1/tender/{{key.id}}"
+  },
+
+   "output":{
+     "code":{"EQ":0},
+     "actual_collect_end_time":{"EQ":null},
+     "borrow_time":{"TYPE":"str"},
+     "borrow_time_Mode":{"TYPE":"int"},
+     "borrow_time_type":{"TYPE":"str"},
+     "can_bid":{"TYPE":"bool"},
+     "can_use_gift":{"TYPE":"bool"},
+     "collect_end_time":{"EQ":null},
+     "color":{"TYPE":"str"},
+     "coupon_count":{"TYPE":"int"},
+     "diffDays":{"TYPE":"int"},
+     "id":{"TYPE":"int"},
+     "interest_start_time":{"EQ":null},
+     "invest_count":{"TYPE":"int"},
+     "is_new":{"TYPE":"bool"},
+     "limit_max_money":{"TYPE":"int"},
+     "limit_min_money":{"TYPE":"int"},
+     "money":{"TYPE":"float"},
+     "data.msg":{"TYPE":"str"},
+     "new_content":{"TYPE":"str"},
+     "new_title":{"TYPE":"str"},
+     "progress":{"TYPE":"float"},
+     "protocolRepayment":{"TYPE":"bool"},
+     "protocolRepaymentDay":{"TYPE":"int"},
+     "raise_time":{"TYPE":"str"},
+     "rate":{"TYPE":"float"},
+     "repayment_mode":{"TYPE":"int"},
+     "repayment_way":{"TYPE":"str"},
+     "reward_interest":{"TYPE":"int"},
+     "reward_msg":{"TYPE":"str"},
+     "service_fee":{"TYPE":"int"},
+     "status":{"TYPE":"int"},
+     "status_msg":{"TYPE":"str"},
+     "surplus_amout":{"TYPE":"float"},
+     "tenderIcons":{"TYPE":"list"},
+
+     "tender_number":{"TYPE":"str"},
+     "title":{"TYPE":"str"},
+     "type":{"TYPE":"int"},
+     "type_msg":{"TYPE":"str"},
+     "msg":{"EQ":"获取成功","TYPE":"str"}
+
+
+   }
+
+}

@@ -1,0 +1,49 @@
+{
+	"input": {
+		"method": "POST",
+		"url": "{{pre.zzkg_url}}",
+		"rest": "v3/setting/address",
+		"headers": {
+			"token": "{{key.token}}",
+			"region":145
+		},
+		"param":{
+			"id": 0,
+			"phone": "15999121212",
+			"room1": "dd",
+			"contact": "hh",
+			"defaultAddr": false,
+			"longitude": 113.9463043212891,
+			"buy_way": 0,
+			"latitude": 22.53082466125488,
+			"isValidate": 0,
+			"regionId": 145,
+			"village": "卫星大厦",
+			"gender": 0
+		}
+	},
+	"output": {
+		"statusCode": {"eq":0},
+		"msg": {"eq":"成功"},
+		"data": {"type":"dict"},
+		"id": {"type":"int"},
+		"phone": {"eq":"15999121212"},
+		"contact": {"eq":"hh"},
+		"gender": {"eq":0},
+		"village": {"eq":"卫星大厦"},
+		"building": {"eq":""},
+		"room": {"eq":""},
+		"address": {"eq":"广东省深圳市卫星大厦dd"},
+		"buy_way": {"eq":0},
+		"defaultAddr": {"eq":true},
+		"regionId": {"eq":145},
+		"city1": {"eq":"广东省深圳市"},
+		"room1": {"eq":"dd"},
+		"latitude": {"eq":22.53082466125488},
+		"longitude": {"eq":113.9463043212891},
+		"isValidate": {"eq":0},
+		"realVillage": {"eq":"卫星大厦"},
+		"success": {"eq":true}
+}
+
+}

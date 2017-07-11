@@ -1,0 +1,17 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/order/orders/{{key.orderId}}/cancel/"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data.id":{"eq":{{key.orderId}}},
+		"data.memberId":{"eq":{{key.store_id}}},
+		"data.orderItems.0.productId":{"eq":{{key.pid1}}},
+		"data.orderItems.0.productNumber":{"eq":"10.000"}
+	}
+}

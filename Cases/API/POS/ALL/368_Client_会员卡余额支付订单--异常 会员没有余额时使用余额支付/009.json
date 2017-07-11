@@ -1,0 +1,23 @@
+{
+  "input": {
+    "method": "get",
+    "url": "{{pre.pos_url}}",
+    "rest": "/ja/user/v1/order/{{key.store_id}}/ready",
+    "headers": {
+      "token": "{{key.user_token}}"
+    },
+    "param": {
+      "useBalance": true,
+      "tableNo": "5"
+    }
+  },
+  "output": {
+    "msg": {
+      "type": "str"
+    },
+    "statusCode": {
+      "eq": 0
+    }
+  }
+}
+

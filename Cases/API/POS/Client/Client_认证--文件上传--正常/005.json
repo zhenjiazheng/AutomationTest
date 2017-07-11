@@ -1,0 +1,18 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.user_token}}"},
+			"rest": "/ja/v1/boss/file/upload",
+			"files":"test1.jpg",
+			"param":{
+				"fileName":"test1.jpg"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data":{"RE":"http://[\\s\\S]+"}
+}
+}

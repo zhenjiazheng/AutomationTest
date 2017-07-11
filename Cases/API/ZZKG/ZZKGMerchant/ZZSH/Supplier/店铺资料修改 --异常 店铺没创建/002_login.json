@@ -1,0 +1,32 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.zzsh_url}}",
+			"rest": "py/water-supplier/v1/boss/login/logining/",
+			"param":{
+				"username":"{{pre.User1}}", "vcode": "{{key.vcode}}"
+			}
+	},
+  "output":{
+	  			"statusCode": {"EQ":0},
+			  "msg":{"EQ":"成功"},
+			  "token":{"TYPE":"str"},
+	  			"nickname":{"TYPE":"str"},
+			  "shop_id":{"type":"int"},
+			  "user_type":{"type":"str"},
+  				"username":{"type":"str"}},
+	"mock":{
+				"data": {
+					"head_img": "测试内容6e8y",
+					"nickname": "李乐弦",
+					"sex": "男",
+					"shop_id": 71616,
+					"token": "b10bfb7c-2b1c-42cc-bdef-1b9a92d8158f",
+					"user_type": "测试内容t847",
+					"username": "15507554489"
+				},
+				"msg": "成功",
+				"statusCode": 0
+			},
+	"key":["token","shop_id"]
+}

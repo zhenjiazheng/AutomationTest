@@ -1,0 +1,13 @@
+{
+  "input":{
+			"method": "GET",
+			"url":"{{pre.zzkg_merchant_url}}",
+			"rest": "/py/v1/dealserver/deal/deal-info/?limit=2&page=1",
+             "headers":{"token":"{{key.token}}"}
+            },
+			  "output":{
+                "msg":{"TYPE":"str"},
+                "statusCode": {"EQ":0},
+                "data":{"TYPE":"list"}
+              }
+}

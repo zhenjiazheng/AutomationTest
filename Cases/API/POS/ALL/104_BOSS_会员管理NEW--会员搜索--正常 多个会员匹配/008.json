@@ -1,0 +1,27 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/member/search",
+			"param":{
+				"keyword":"13798765"
+			}
+	},
+	"output":{
+		"statusCode":{"EQ":0},
+		"data.data":{"LL":2},
+		"firstOrderDate":{"type":"str"},
+		"memberId":{"ALLIN":[{{key.member_id}},{{key.member_id2}}]},
+		"netAmount":{"type":"str"},
+		"netOrderCount":{"type":"int"},
+        "registerDate":{"type":"str"},
+		"source":{"eq":0},
+		"storeAmount":{"type":"str"},
+		"storeOrderCount":{"type":"int"},
+		"telephone":{"ALLIN":["{{pre.MUser1}}","{{pre.MUser2}}"]},
+		"lastOrderDate":{"type":"str"},
+		"totalAmount":{"type":"str"}
+}
+}

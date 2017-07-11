@@ -1,0 +1,22 @@
+{
+  "input":{
+  "method":"POST",
+  "url":"{{pre.pos_url}}",
+  "rest":"ja/user/v1/address/",
+  "headers":{"token":"{{key.user_token}}"},
+  "param": {
+    "addressDetail": "深圳市对酒当歌电子商务有限公司",
+    "district": "深圳市宝安区政府",
+    "latitude": 22.56,
+    "longitude": 113.89,
+    "phone": "{{pre.POS_User}}",
+    "sex": 1,
+    "userName": "test_name",
+    "room":5003
+  }
+},
+  "output":{
+    "msg":{"type":"str"},
+    "statusCode":{"eq":0}
+    }
+}

@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/order/orders/",
+			"param":{
+				"memberId":"{{key.store_id}}",
+				"orderItems":[{"productId": {{key.pid1}}, "productNumber": 5, "salePrice": "10"}],
+				"payStatus":1,
+				"payType": 1,
+                "supplierRemarks": "This is the test."
+			}
+
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0}
+	},
+	"key":{"orderNo": "data.orderNo", "orderId":"data.id", "orderItemId":"data.order_item.id"}
+}

@@ -1,0 +1,16 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.hyb_url}}",
+			"rest": "ja/memberbao/v1/bankinfo",
+			"headers":{"Content-Type": "application/json","appId":"{{pre.appId_ZhuZhuJiShi}}",
+				"token":"{{key.token}}"
+			}
+
+	},
+
+  "output":{"msg":{"EQ":"支持银行卡列表"}, "statusCode":{"EQ":0}, "data":{"TYPE":"dict"},
+            "color":{"TYPE":"str"},"logo":{"TYPE":"str"},"id":{"TYPE":"int"},"name":{"TYPE":"str"}}
+
+}

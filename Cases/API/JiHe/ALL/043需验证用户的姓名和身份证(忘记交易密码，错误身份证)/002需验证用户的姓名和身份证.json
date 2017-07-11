@@ -1,0 +1,21 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/verifyIdentity4ForgetPayPwd",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+       "param": {
+       "name":"文翰","idno":"4600011993032307","code":"{{key.id}}"
+     }
+    },
+
+    "output":{"code":{"EQ":1},
+      "msg":{"EQ":"姓名或身份证号不匹配！"},
+      "data":{"eq":null}}
+
+}

@@ -1,0 +1,19 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/product/category/list",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{
+				"choice": 0
+            }
+	      },
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+		"data":{"TYPE":"list"},
+		"id":{"TYPE":"int"},
+		"is_standard":{"TYPE":"bool"},
+		"name":{"TYPE":"str"}
+	}
+}

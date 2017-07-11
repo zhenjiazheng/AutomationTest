@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "/py/supplier/v1/store/employees/"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"data.data":{"type":"list"},
+		"data.data.0.employee_name":{"eq":"TestEmployee"},
+		"data.data.0.employeerole.id":{"eq":{{key.roleId}}},
+		"data.data.0.id":{"eq":{{key.employeeId1}}},
+		"data.data.0.login_tel":{"eq":"{{pre.MUser1}}"},
+		"data.data.0.store":{"eq":{{key.supplier_id}}}
+}
+}

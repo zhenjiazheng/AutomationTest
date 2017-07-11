@@ -1,0 +1,27 @@
+{
+	"input":{
+			"author":"anso",
+			"method": "GET",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/account/invest/flow?page=1&limit=50&month=6",
+			"headers":{"client": "3",
+                        "Content-Type": "application/json",
+				"token":"{{key.token}}"
+			}
+
+	},
+  "output":{
+	  "code":{"EQ":0},
+	  "msg":{"TYPE":"str"},
+	  "data":{"TYPE":"dict"},
+	  "data.data":{"TYPE":"dict"},
+	  "total":{"type":"int"},
+	  "hasNext":{"type":"bool"},
+	  "money":{"type":"float"},
+	  "create_time":{"re":"[\\d]{4}-[\\d]{2}-[\\d]{2} [\\d]{2}:[\\d]{2}"},
+	  "flow_type":{"type":"int"},
+	  "create_date":{"re":"[\\d]{4}年[\\d]{2}月"}},
+	"icon":{"RE":"https?://[^,, ]+"},
+	"flow_type_msg":{"type":"str"}
+}
+

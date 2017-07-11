@@ -1,0 +1,14 @@
+{
+	"input":{
+			"method": "PUT",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/service/13512341234/",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"},
+        "storeName": {"TYPE":"str"}
+    }
+}

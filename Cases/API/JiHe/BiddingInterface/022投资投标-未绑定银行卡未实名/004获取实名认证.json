@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.jh_url}}",
+			"rest": "/ja/v1/idcard/",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            }
+    },
+
+    "output":{
+      "code":{"EQ":1},
+      "msg":{"TYPE":"str","EQ":"尚未实名认证"},
+      "data":{"EQ":null}
+    }
+}

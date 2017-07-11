@@ -1,0 +1,14 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/deliverscope",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+		    "param":[{"city": "深圳市", "longitude": 113.9, "cell": "洪福雅苑", "latitude": 22.5668,
+				"detailAddress": "宝安创业大道与翻身大道交汇处", "isSelected": true, "province": "广东省"},
+				{"city": "深圳市", "longitude": 113.11, "cell": "洪福雅苑2", "latitude": 22.5645,
+				"detailAddress": "宝安创业大道与翻身大道交汇处", "isSelected": false, "province": "广东省"}]
+	},
+
+    "output":{"statusCode":{"EQ":0},"msg":{"EQ":"成功"}}
+}

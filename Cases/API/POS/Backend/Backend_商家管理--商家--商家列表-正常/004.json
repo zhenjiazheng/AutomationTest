@@ -1,0 +1,24 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/store/stores/",
+	        "param":{"city":"深圳市", "limit":10, "ordering": "store_name", "page": 1, "pos_status":"WORKING"}
+	},
+  	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+        "telephone": {"type":"str"},
+        "business_license": {"type":"str"},
+		"cell": {"type":"str"},
+        "city": {"type":"str"},
+        "contact_name":{"type":"str"},
+        "contact_tel":{"type":"str"},
+        "idcard_no":{"type":"str"},
+        "idcard_set":{"type":"list"}
+	}
+}
+
+

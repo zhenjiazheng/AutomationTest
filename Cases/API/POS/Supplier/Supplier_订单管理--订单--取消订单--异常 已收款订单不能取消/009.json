@@ -1,0 +1,12 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "put",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/order/orders/{{key.orderId}}/get-paid/"
+	},
+	"output":{
+		"statusCode":{"EQ":0}
+    }
+}

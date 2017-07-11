@@ -1,0 +1,15 @@
+{
+  "input":{
+    "method":"get",
+    "url":"{{pre.pos_url}}",
+    "rest":"ja/user/v1/user/member",
+    "headers":{"token":"{{key.user_token}}"}
+},
+  "output":{
+    "data":{"type":"list","ll":1},
+    "data.0.storeId":{"eq":{{key.store_id}}},
+    "data.0.money":{"eq":0.0},
+    "data.0.score":{"eq":0},
+    "discount": {"eq":"折扣率100.0%"}
+  }
+  }

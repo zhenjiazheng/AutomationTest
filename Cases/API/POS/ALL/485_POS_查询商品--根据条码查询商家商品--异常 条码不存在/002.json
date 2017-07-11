@@ -1,0 +1,12 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/barcode/00000"
+	},
+	"output":{
+		"status_code":{"EQ":1},
+		"msg":{"EQ":"条码查询商家商品信息异常"}}
+}

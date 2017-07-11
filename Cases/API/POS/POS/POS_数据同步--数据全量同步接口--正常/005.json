@@ -1,0 +1,41 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/pos/v1/sync",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_pos}}"}
+	},
+
+    "output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"},
+		"data":{"TYPE":"dict"},
+		"sync_data":{"TYPE":"list"},
+		"key":{"TYPE":"str"},
+		"sync_server_time":{"TYPEIN":["int","long"]},
+		"values":{"type":"list"},
+		"category_id":{"TYPE":"int"},
+		"category_name":{"TYPE":"str"},
+		"img_url":{"type":"str"},
+		"product_type":{"type":"int"},
+		"product_id":{"type":"int"},
+		"barcode":{"type":"str"},
+		"weighable":{"type":"int"},
+		"specs":{"type":"list"},
+		"spec_id": {"type":"int"},
+		"pos_base_parameter":{"type":"dict"},
+		"must_selected":{"type":"int"},
+		"eachamount_fractional":{"type":"int"},
+		"totalamount_fractional":{"type":"int"},
+		"pos_receipt_setting": {"type":"dict"},
+		"store_data":{"type":"dict"},
+		"status":{"TYPE":"int"},
+		"staff_id":{"TYPEIN":["int", "long"]},
+		"store_id":{"TYPE":"int"},
+		"staff_name":{"TYPE":"str"},
+		"role_id":{"TYPE":"int"},
+		"staff_no":{"TYPE":"str"},
+		"role_name":{"type":"str"},
+		"pwd":{"TYPE":"str"}
+	}
+}

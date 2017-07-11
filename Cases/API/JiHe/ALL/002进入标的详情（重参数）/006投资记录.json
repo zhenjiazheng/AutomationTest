@@ -1,0 +1,32 @@
+{
+
+  "input":{
+    "method": "GET",
+    "url":"{{pre.jh_url}}",
+
+    "headers":{
+      "client":"3",
+      "Content-Type":"application/json"
+    },
+
+		"rest": "/ja/v1/tender/598/invest"
+  },
+
+   "output":{
+     "code":{"EQ":0},
+     "data":{"TYPE":"dict"},
+     "invests":{"TYPE":"list"},
+     "data.invests.0.invsert_date":{"TYPE":"str"},
+     "data.invests.0.invsert_money":{"TYPE":"str"},
+     "data.invests.0.phone":{"TYPE":"str"},
+
+     "top3_invests":{"TYPE":"list"},
+     "data.top3_invests.0.invsert_date":{"TYPE":"str"},
+     "data.top3_invests.0.invsert_money":{"TYPE":"str"},
+     "data.top3_invests.0.phone":{"TYPE":"str"},
+
+
+     "msg":{"EQ":"获取数据成功"}
+   }
+
+}

@@ -1,0 +1,20 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "post",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/storage/purchase/{{key.orderId}}/handle",
+			"param":{
+                  "operator_id": 13895313385,
+                  "operator_name": "院长",
+                  "order_item": [{
+                      "order_item_id": {{key.id}},
+                      "product_id": {{key.pid1}},
+                      "purchase_cnt": "10"
+                  }]}
+	},
+	"output":{
+		"statusCode":{"EQ":0}
+    }
+}

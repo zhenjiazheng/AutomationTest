@@ -1,0 +1,19 @@
+{
+  "input":{
+ 			"author":"Alice",
+ 			"method": "POST",
+ 			"url":"{{pre.jh_url}}",
+ 			"rest": "/ja/v1/friend/apply/postA",
+ 			"headers": {
+               "client": "3",
+               "Content-Type": "application/json",
+               "token": "{{key.token}}"
+                 },
+    "param":{"company":"公司"}
+  },
+ "output":{
+   "msg":{"EQ":"职务不能为空","TYPE":"str"},
+   "code":{"EQ":1},
+   "data":{"EQ":null}
+   }
+ }

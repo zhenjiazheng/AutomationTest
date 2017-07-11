@@ -1,0 +1,9 @@
+{
+  "sql":{
+    "db":"waiwang",
+    "command":["UPDATE `waiwang`.`users_idcard_check` SET `sex`=2, `status`=2 WHERE  `user_id`={{key.uid}}",
+    "delete from users where id = {{key.uid}}",
+		"delete from users_verified where user_id = {{key.uid}}",
+		"delete from users_extend where user_id = {{key.uid}}"]
+  }
+}

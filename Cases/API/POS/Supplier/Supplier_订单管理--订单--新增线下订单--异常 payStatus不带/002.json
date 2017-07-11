@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/order/orders/",
+			"param":{
+				"memberId":"{{key.store_id}}",
+				"orderItems":[{"productId": {{key.pid1}}, "productNumber": 5, "salePrice": "10"}],
+				"payType": 1,
+                "supplierRemarks": "This is the test."
+			}
+
+	},
+	"output":{
+		"statusCode":{"EQ":1}
+	}
+}

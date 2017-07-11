@@ -1,0 +1,30 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/storage/barcode/supplier"
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"},
+		"address":{"TYPE":"str"},
+		"storeArea":{"type":"int"},
+		"id":{"TYPE":"int"},
+		"storeName":{"TYPE":"str"},
+		"storeStatus":{"TYPE":"int"},
+		"tel":{"TYPE":"str"},
+		"province": {"TYPE":"str"},
+		"updateTime": {"TYPEIN":["int","long"]},
+		"district": {"TYPE":"str"},
+		"deliverType": {"TYPE":"int"},
+		"contactSex": {"TYPE":"int"},
+		"storeCategory": {"TYPE":"int", "eq":1},
+		"applyTime": {"TYPEIN":["int","long"]},
+		"city": {"TYPE":"str"},
+		"longitude": {"TYPE":"float"},
+		"latitude": {"TYPE":"float"},
+		"storeType": {"TYPE":"int"}
+	}
+}

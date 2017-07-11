@@ -1,0 +1,21 @@
+{
+	"input": {
+		"method": "POST",
+		"url": "{{pre.zzkg_url}}",
+		"rest": "ja/user/v3/get/deal/allow/buy",
+		"headers": {
+			"token": "{{key.token}}",
+			"region":145
+		},
+		"param":{
+				"dealId": {{key.dealId}},
+				"dealCount": 1,
+				"specId": {{key.productId}}
+			}
+	},
+	"output": {
+        "msg": {"eq":"允许购买"},
+        "success": {"eq":true},
+        "statusCode": {"eq":0}
+	}
+}

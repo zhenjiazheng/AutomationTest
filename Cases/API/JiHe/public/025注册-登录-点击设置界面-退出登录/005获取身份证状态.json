@@ -1,0 +1,16 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/idcard/",
+    "headers":{
+      "client":"3",
+      "token":"{{key.token}}"
+    }
+  },
+  "output":{
+    "msg":{"eq":"获取实名认证信息成功"},
+    "code":{"eq":0},
+    "data":{"type":"dict"}
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"input":{
+			"method": "PUT",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/operation/mysupplier/{{key.store_id}}",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{"contactName":"modifyName","contactTel":"modifyTel","storeName":"testModify"}},
+    "output":{
+		"statusCode":{"EQ":1},
+		"msg":{"EQ":"平台供应商，不能修改！"}
+	}
+}

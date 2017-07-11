@@ -1,0 +1,19 @@
+{
+   "input": {
+     "author": "lifang",
+     "method": "POST",
+     "url": "{{pre.jh_url}}",
+     "rest": "/ja/v1/account/reflect",
+     "headers": {
+       "client": "3",
+       "Content-Type": "application/json",
+       "token": "{{key.token}}"
+     },
+     "param": {
+       "accNo":"{{key.accNo}}","txnAmt":"1000","rechargeSource":4,"accountType":1
+     }
+   },
+  "output":{
+    "code":{"EQ":0},"msg":{"EQ":"OK"},"data":{"TYPE":"str"}
+  }
+}

@@ -1,0 +1,17 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/store/settings/",
+			"param":{
+				"AUTO_TAKE_ORDER": "0",
+				"ORDER_FORMAT": "2"
+			}
+
+	},
+	"output":{
+		"statusCode":{"EQ":0}
+	}
+}

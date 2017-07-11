@@ -1,0 +1,16 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.pos_url}}",
+    "header":{"client":"jl_android"},
+    "rest":"/ja/user/v1/user/code?",
+    "param":{
+      "phone":"{{pre.POS_User1}}"
+    }
+  },
+  "output": {
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"测试环境不下发验证码"},
+    "data":{"eq":null}
+  }
+}

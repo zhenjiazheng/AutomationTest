@@ -1,0 +1,27 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/member/memberdetail/{{key.member_id}}/"
+	},
+	"output":{
+		"statusCode":{"EQ":0},
+		"firstOrderDate":{"type":"str"},
+		"memberGradeName":{"type":"str"},
+		"memberId":{"eq":{{key.member_id}}},
+		"memberName":{"EQ":"Member1"},
+		"memberPoints":{"type":"int"},
+		"netAmount":{"type":"str"},
+		"netOrderCount":{"type":"int"},
+        "registerDate":{"type":"str"},
+		"source":{"eq":0},
+		"storeAmount":{"type":"str"},
+		"storeOrderCount":{"type":"int"},
+		"telephone":{"eq":"{{pre.MUser1}}"},
+		"lastOrderDate":{"type":"str"},
+		"totalAmount":{"type":"str"},
+		"telephone":{"EQ":"{{pre.MUser1}}"}
+}
+}

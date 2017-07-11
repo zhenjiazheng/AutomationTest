@@ -1,0 +1,15 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "/ja/v1/boss/file/upload",
+			"files":"test1.jpg",
+			"param":{
+				"fileName":"test1.jpg"
+			}
+	},
+	"output":{
+		"statusCode":{"EQ":0}
+}
+}

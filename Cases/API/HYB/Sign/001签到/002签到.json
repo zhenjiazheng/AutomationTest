@@ -1,0 +1,14 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.hyb_url}}",
+			"rest": "ja/memberbao/v1/signin",
+			"headers":{"Content-Type": "application/json","appId":"{{pre.appId_ZhuZhuJiShi}}",
+				"token":"{{key.token}}"
+			}
+	},
+
+  "output":{"msg":{"EQ":"签到成功！"}, "statusCode":{"EQ":0}}
+
+}

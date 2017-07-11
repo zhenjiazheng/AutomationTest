@@ -1,0 +1,25 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "put",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/market/ads/111111/",
+			"param":{
+				"img_url":"http://pic6.huitu.com/res/20130116/84481_20130116142820494200_1.jpg",
+                "advertiser_id": {{key.ad_holder_id}},
+				"banner_type": 1,
+                "end_date":"2017-07-30",
+                "start_date":"2017-03-03",
+				"title":"修改测试广告",
+				"ad_weeks":[3,4],
+				"redirect":"www.baidu.com",
+				"position":1
+				}
+	},
+	"output":{
+		"statusCode":{"EQ":1}
+		}
+}
+
+

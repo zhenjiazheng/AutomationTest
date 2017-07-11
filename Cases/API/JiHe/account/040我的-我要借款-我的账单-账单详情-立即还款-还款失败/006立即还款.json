@@ -1,0 +1,28 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/account/borrow/payOffTheLoan",
+			"headers":{
+				"client": "3",
+				"Content-Type": "application/json",
+				"token":"{{key.token}}"
+
+				},
+
+      "param":{
+			"tenderRepaymentId":"{{key.id1}}",
+			"money":"{{key.pay}}"
+      }
+	},
+
+  "output":{
+	  "code":{"EQ":1},
+	  "msg":{"TYPE":"str","EQ":"账户可用余额不足！"}
+
+  }
+}
+
+
+

@@ -1,0 +1,11 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.pos_url}}",
+    "rest":"/ja/user/v1/address/{{key.id}}",
+    "headers":{"token":"{{key.user_token}}"}
+  },
+  "output":{
+   "msg":{"type":"str","eq":"成功"},"data":{"type":"dict"},"userName":{"type":"str"}
+  }
+}

@@ -1,0 +1,15 @@
+{ 
+  "public":  
+  [
+	  {  "class": "PublicModule.RunPublic", 
+    "function": "backendLogin" 
+    } ,
+	  {  "class": "PublicModule.RunPublic", 
+    "function": "getStoreIdFromList" 
+    } ,
+	  {
+      "class": "PublicModule.RunPublic",
+      "function": "supplierPasswordReset"
+    }
+  ]
+}

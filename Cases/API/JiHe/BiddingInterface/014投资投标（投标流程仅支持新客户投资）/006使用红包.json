@@ -1,0 +1,26 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/invest/tender",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            },
+     "param": {
+       "tenderId":"547",
+       "investMoney": 100,
+       "couponId":"{{key.id2}}",
+       "payPassword": 111111
+     }
+    },
+
+    "output":{
+      "code":{"EQ":1},
+      "msg":{"TYPE":"str","EQ":"此标仅支持新客户投资"},
+      "data":{"EQ":null}
+    }
+
+}

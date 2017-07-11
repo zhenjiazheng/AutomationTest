@@ -1,0 +1,23 @@
+{
+  "input":{
+    "method": "PUT",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/splitrule/mod/11111111",
+    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param":{
+            "largeProductBarcode": "12345687454213",
+            "largeProductId": {{key.pid2}},
+            "largeProductName": "largeNameMM",
+            "largeProductSpec": "testMM",
+            "largePurchasePrice": "1000",
+            "smallProductBarcode":"12345678909876",
+            "smallProductId":{{key.pid1}},
+            "smallProductName":"smallProductMM",
+            "smallProductSpec":"smallSpecMM",
+            "smallPurchasePrice":"100",
+            "splitNumber":3}
+    },
+  "output":{
+    "statusCode":{"EQ":1}
+    }
+}

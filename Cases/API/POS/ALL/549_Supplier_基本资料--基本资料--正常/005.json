@@ -1,0 +1,20 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/store/store/"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"address":{"type":"str"},
+		"contact_name":{"type":"str"},
+		"contact_tel":{"type":"str"},
+		"pic_url":{"type":"str"},
+		"store_logo":{"type":"str"},
+		"store_name":{"type":"str"},
+		"id":{"TYPE":"int"}
+    }
+}

@@ -1,0 +1,23 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "post",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/supplier/order/applyrefund",
+			"param":{
+				"barcode":"{{key.barcode}}",
+				"cause":"退货",
+				"description":"测试描述",
+				"document":"http://www.baidu.com",
+				"orderId":{{key.orderId}},
+				"orderItem":{"id":{{key.itemId}}},
+				"orderNo":"{{key.orderNo}}",
+				"refundAmount":"0.5",
+				"refundCount":5
+			}
+	},
+	"output":{
+		"statusCode":{"EQ":1}
+    }
+}

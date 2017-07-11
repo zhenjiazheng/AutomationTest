@@ -1,0 +1,13 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.pos_url}}",
+    "rest":"/ja/user/v1/store/{{key.store_id}}"
+},
+  "output":{
+    "msg":{"type":"str","eq":"成功"},
+    "data":{"type":"dict"},"categories":{"type":"list"},
+    "id":{"type":"int"},"name":{"type":"str"},"store":{"type":"dict"},
+    "phone":{"type":"str","re":"1"},"logo":{"type":"str"}
+  }
+}

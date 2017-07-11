@@ -1,0 +1,33 @@
+{
+  "author": "test",
+  "caseStep": {
+    "1": {
+      "operation": "文本输入",
+      "by": "id",
+      "value": "com.geometry.posboss:id/et_store_no",
+      "text":"Test"
+    },
+    "2": {
+      "operation": "文本输入",
+      "by": "id",
+      "value": "com.geometry.posboss:id/et_user",
+      "text":"Test"
+    },
+    "3":{
+      "operation": "文本输入",
+      "by": "id",
+      "value": "com.geometry.posboss:id/et_password",
+      "text":"Test"
+    },
+    "4": {
+      "operation": "点击控件",
+      "by": "id",
+      "value": "com.geometry.posboss:id/cb_choose_agreement"
+    },
+    "5":{
+     "operation": "点击控件",
+      "by" : "name",
+      "value": "登录2"
+    }
+  }
+}

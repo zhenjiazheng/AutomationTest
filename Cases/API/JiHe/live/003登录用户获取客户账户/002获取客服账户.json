@@ -1,0 +1,13 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.jh_url}}",
+    "rest":"/ja/v1/live/chat/id",
+    "headers":{"uid":"{{key.uid}}}"}
+  },
+  "output":{
+    "msg":{"eq":"成功"},
+    "code":{"eq":0},
+    "data":{"type":"dict"}
+  }
+}

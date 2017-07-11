@@ -1,0 +1,38 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/commodity/add",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{
+            "status": 0,
+            "barcode": "12345678909876",
+            "brand": "test",
+            "category": 1000000,
+            "is_standard": false,
+            "desc_url": "http://www.baidu.com/",
+            "image": "http://www.baidu.com/",
+            "manufacturer": "manufacturer",
+            "moList": [],
+            "name": "忍者",
+            "price": "122",
+            "quality_period": 0,
+            "shortcut": 1,
+            "source": "面包",
+            "specs": [{
+                "discount_price": "110",
+                "member_price": "110",
+                "purchase_price": "100",
+                "unit": "100",
+                "stock": "100",
+                "sale_price": "120"
+            }],
+            "tag": [],
+            "user_id": {{key.store_id}},
+            "weighable": false
+        }
+	      },
+    "output":{
+		"statusCode":{"EQ":1}
+	}
+}

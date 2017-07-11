@@ -1,0 +1,10 @@
+{
+	"input":{
+			"method": "PUT",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/deliverfee/3",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+
+    "output":{"statusCode":{"EQ":0},"msg":{"EQ":"成功"}}
+}

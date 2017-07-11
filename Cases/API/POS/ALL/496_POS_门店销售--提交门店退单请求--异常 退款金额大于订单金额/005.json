@@ -1,0 +1,27 @@
+{
+	"input": {
+		"author": "lancy",
+		"method": "POST",
+		"url": "{{pre.pos_url}}",
+		"headers": {
+			"token": "{{key.token_pos}}"
+		},
+		"rest": "ja/pos/v1/refund",
+		"param": {
+			"cause_desc": "自用",
+			"operator_id": 13895313385,
+			"operator_name": "院长",
+			"product_id": "{{key.pid}}",
+			"cause_id": 4,
+			"again_sale": 0,
+			"order_id": "{{key.orderId}}",
+			"refund_amount": "{{key.orderAmount}}+5",
+			"refund_count": "{{key.saleCnt}}"
+		}
+	},
+	"output":{
+		"status_code":{"EQ":1},
+		"msg":{"TYPE":"str","eq":"提交门店退货失败"}
+}
+
+}

@@ -1,0 +1,26 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.zzsh_url}}",
+			"rest": "py/water-supplier/v1/boss/login/getvcode/",
+			"param":{
+				"username":"{{pre.User1}}"
+			}
+	},
+  "output": {
+	  "statusCode": {
+		  "EQ": 0
+	  },
+	  "msg": {
+		  "EQ": "成功"
+	  }
+  },
+	"mock":{
+			"data": {
+				"vcode": "1234"
+			},
+			"msg": "成功",
+			"statusCode": 0
+		},
+	"key":["vcode"]
+}

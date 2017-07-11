@@ -1,0 +1,23 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.zzsh_url}}",
+			"rest": "py/water-user/v1/public/sms/voicecode/",
+			"param":{
+				"phone":"{{pre.User1}}"
+			}
+	},
+  "output": {
+	  "statusCode": {
+		  "EQ": 0
+	  },
+	  "msg": {
+		  "EQ": "成功"
+	  }
+  },
+	"mock":{
+			"data": {},
+			"msg": "成功",
+			"statusCode": 0
+		}
+}

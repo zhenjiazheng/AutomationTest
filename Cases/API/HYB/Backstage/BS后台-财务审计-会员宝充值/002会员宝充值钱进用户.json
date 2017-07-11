@@ -1,0 +1,16 @@
+{
+  "input":{
+			"method": "GET",
+			"url":"{{pre.zzkg_merchant_url}}",
+			"rest": "/py/v4/admin/member/balance-import-records/",
+            "headers":{"token":"{{key.token}}"},
+			"param":{
+                      "limit":10, "page":1, "create_date":"2016-11-25", "search":""
+			}
+	},
+  "output":{
+              "msg":{"TYPE":"str"},
+              "statusCode": {"EQ":0},
+              "data":{"TYPE":"dict"}
+  }
+}

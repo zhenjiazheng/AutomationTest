@@ -1,0 +1,23 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.jh_url}}",
+    "rest":"ja/v1/user/investorInfo/",
+    "headers":{
+      "client":"3",
+      "token":"{{key.token}}"
+    }
+  },
+  "output":{
+    "msg":{"eq":"获取成功"},
+    "code":{"eq":0},
+    "data":{"type":"dict"},
+    "username":{"type":"str"},
+    "riskType":{"eq":"保守型"},
+
+    "flag4payPwd":{"type":"int"},
+    "idcard":{"eq":null},
+    "headImageUrl":{"eq":""}
+
+  }
+}

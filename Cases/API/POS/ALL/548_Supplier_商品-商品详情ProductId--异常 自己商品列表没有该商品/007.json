@@ -1,0 +1,13 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/product/products/12345678902584/"
+	},
+	"output":{
+		"msg":{"EQ":"404 Client Error: Not Found for server: product {\"detail\":\"Not found.\"}"},
+		"statusCode":{"EQ":2}
+    }
+}

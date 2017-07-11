@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.jh_url}}",
+			"rest": "/ja/v1/idcard/bind/status",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            }
+    },
+
+    "output":{
+      "code":{"EQ":0},
+      "msg":{"TYPE":"str"},
+       "idcard_status":{"EQ":3}
+    }
+}

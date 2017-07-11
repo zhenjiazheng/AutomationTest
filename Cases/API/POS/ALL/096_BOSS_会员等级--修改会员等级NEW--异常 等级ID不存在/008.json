@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "PUT",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/operation/membergrade/1000",
+			"param":{
+					"discountRate":90.0,
+					"enable":false,
+					"gradeName":"超级VIP",
+					"nextGradeId":100,
+					"promotionType":1,
+					"growthValue":100000}
+	},
+	"output":{
+		"statusCode":{"EQ":1}
+}
+}

@@ -1,0 +1,14 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/operation/inventory/finish/{{key.inventId}}"
+	},
+	"output": {
+		"statusCode": {
+			"EQ": 0
+		}
+	}
+}

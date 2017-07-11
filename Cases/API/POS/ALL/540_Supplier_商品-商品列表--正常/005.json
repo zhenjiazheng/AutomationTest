@@ -1,0 +1,18 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"token:{{key.token_supplier}}"},
+			"rest": "py/supplier/v1/product/categories/standard/"
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"id":{"TYPE":"int"},
+		"is_standard":{"TYPE":"bool"},
+		"name":{"TYPE":"str"},
+		"status":{"TYPE":"int"}
+    },
+	"key":{"category_id":"data.29.id","category_id2":"data.31.id"}
+}

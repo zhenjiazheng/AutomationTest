@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Report_test_suite</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.4"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    
+<style type="text/css" media="screen">
+
+/* -- css div popup ------------------------------------------------------------------------ */
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #99CCFF;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 10pt;
+    width: 850px;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+
+#show_detail_line .label {
+    font-size: 85%;
+    cursor: pointer;
+}
+
+#show_detail_line {
+    margin: 2em auto 1em auto;
+}
+
+#total_row  { font-weight: bold; }
+.hiddenRow  { display: none; }
+.Case   { margin-left: 2em; }
+
+</style>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class="container">
+    <div class='heading'>
+<h1>Report_test_suite</h1>
+<p><strong>Start Time:</strong> 2017-06-20 14:19:50</p>
+<p><strong>Duration:</strong> 0:00:03.493000</p>
+<p><strong>Status:</strong> <span class="text text-warning">Error <strong>1</strong></span></p>
+
+<p class='description'>D:\Git\API_Automation\Report\Cases_API_POS_ALL\api_Cases_API_POS_ALL_201706201419.html</p>
+</div>
+
+
+    
+<p id='show_detail_line'>
+<span class="label label-primary" onclick="showCase(0)">Summary</span>
+<span class="label label-danger" onclick="showCase(1)">Failed</span>
+<span class="label label-default" onclick="showCase(2)">All</span>
+</p>
+<table id='result_table' class="table">
+    <thead>
+        <tr id='header_row'>
+            <th>Test Group/Test case</td>
+            <th>Count</td>
+            <th>Pass</td>
+            <th>Fail</td>
+            <th>Error</td>
+            <th>View</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr class='text text-warning'>
+    <td>ApiExecutor.API.UnitTest</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='text text-success'>
+    <td class='text text-warning'><div class='Case'>test_394_Client_订单--订单结算--获取订单信息（提交订单前）--正常</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')">
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: 
+测试用例开始时间: 2017-06-20 14:19:50
+测试步骤1 : 
+----------------------------------------------------------------------------------------------------
+调用公共函数执行 
+
+运营后台登录：
+请求地址：http://devtest-pos.thy360.com/py/backend/v1/auth/login
+请求参数：
+{
+    "username": "root",
+    "password": "root1234"
+}
+返回：
+{"msg": "\u6210\u529f", "data": {"token": "token:cca9e3a641234ad0d6e59faf25b961aac2925a75", "user": {"username": "root", "first_name": "", "last_name": "", "is_active": true, "email": "", "last_login": "2017-06-20 14:19:12", "groups": [], "id": 1, "date_joined": "2017-04-21 19:45:44"}}, "statusCode": 0}
+
+获取store列表：
+请求地址：http://devtest-pos.thy360.com/py/backend/v1/store/stores/?limit=15&amp;store_category=0
+请求头: 
+{'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75'}
+{'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', 'tel': u'15000000000', 'store_id': 10}
+{'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', 'password': '123456', 'tel': u'15000000000', 'store_id': 10}
+BOSS登录：
+请求地址：http://devtest-pos.thy360.com/ja/v1/boss/login
+请求参数：
+{
+    "password": "123456",
+    "storeNo": 10,
+    "telephone": "15000000000"
+}
+返回：
+{"statusCode":0,"msg":"成功","data":{"token":"4e727979-2c62-4e3a-8627-16339ff3f53e","storeNo":"10","storeCategory":2,"storeName":"HelloWorld"}}
+{'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', 'password': '123456', 'tel': u'15000000000', 'store_id': 10, 'token_boss': u'4e727979-2c62-4e3a-8627-16339ff3f53e'}
+POS机登录：
+请求地址：http://devtest-pos.thy360.com/ja/pos/v1/login
+请求参数：
+{
+    "username": "15000000000",
+    "pos_info": {
+        "pos_version": "1.0",
+        "rom_version": "3.10.0-genymotion-g08e528d",
+        "pos_no": "080027400cba",
+        "system_version": "5.0",
+        "pos_type": "Google Nexus 9 - 5.0.0 - API 21 - 1536x2048"
+    },
+    "pwd": "123456",
+    "shop_no": 10
+}
+返回：
+{"status_code":0,"statusCode":0,"msg":"登录成功","data":{"shop_pos_number":"03","store_type":1,"token":"56ca4f84-8575-4551-94f3-122e49063bf3"}}
+{'token_pos': u'56ca4f84-8575-4551-94f3-122e49063bf3', 'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', 'tel': u'15000000000', 'store_id': 10, 'posNo': '080027400cba', 'password': '123456', 'token_boss': u'4e727979-2c62-4e3a-8627-16339ff3f53e'}
+----------------------------------------------------------------------------------------------------
+
+测试步骤2 : 
+----------------------------------------------------------------------------------------------------
+接口请求地址: 
+http://devtest-pos.thy360.com/ja/v1/boss/commodity/list
+
+The request method is :get
+null
+
+接口请求头文件为:
+{u'token': u'4e727979-2c62-4e3a-8627-16339ff3f53e', u'storeNo': u'10'}
+
+****************************************************************************************************
+
+接口请求响应时延为:
+ 0.0980000495911
+
+
+接口请求返回值:
+{
+    "msg": "成功",
+    "data": {
+        "count": 4,
+        "totalPage": 1,
+        "hasNext": false,
+        "currPage": 1,
+        "total": 4,
+        "data": [
+            {
+                "tag_display": [],
+                "image": "",
+                "tag": [],
+                "specs": [
+                    {
+                        "member_price": "6.00",
+                        "discount_price": "5.50",
+                        "id": 19074,
+                        "sale_price": "6.00",
+                        "purchase_price": "9.00",
+                        "unit": "--",
+                        "stock": "199"
+                    }
+                ],
+                "category": 557,
+                "user_id": "10",
+                "supplierId": 10,
+                "storeLogo": "https://cdn-pos-img.thy360.com/appidposvsdf2f/fb16a9b5b3e449dbb681f82cb0dd0169.png",
+                "id": 18880,
+                "source": "深圳市龙华新区福城大三社区大三村金奥路10号(金奥科技园一栋一至",
+                "category_display": "未分类",
+                "status": 0,
+                "price": "0.00",
+                "barcode": "6923830302608",
+                "is_standard": true,
+                "quality_period": 730,
+                "weighable": false,
+                "manufacturer": "鸿福行保健食品(深圳)有限公司",
+                "product_type": 1,
+                "name": "500ml竹蔗茅根植物饮品(竹节瓶）",
+                "moList": [],
+                "supplierName": "HelloWorld"
+            },
+            {
+                "tag_display": [],
+                "image": "",
+                "tag": [],
+                "specs": [
+                    {
+                        "member_price": "11.00",
+                        "discount_price": "11.00",
+                        "id": 19075,
+                        "sale_price": "12.00",
+                        "purchase_price": "10.00",
+                        "unit": "--",
+                        "stock": "100"
+                    }
+                ],
+                "category": 557,
+                "user_id": "10",
+                "supplierId": 10,
+                "storeLogo": "https://cdn-pos-img.thy360.com/appidposvsdf2f/fb16a9b5b3e449dbb681f82cb0dd0169.png",
+                "id": 18881,
+                "source": "",
+                "category_display": "未分类",
+                "status": 0,
+                "price": "0.00",
+                "barcode": "6923450690642",
+                "is_standard": true,
+                "quality_period": 730,
+                "weighable": false,
+                "manufacturer": "箭牌糖果(中国)有限公司",
+                "product_type": 1,
+                "name": "6923450690642",
+                "moList": [],
+                "supplierName": "HelloWorld"
+            },
+            {
+                "tag_display": [],
+                "image": "",
+                "tag": [],
+                "specs": [
+                    {
+                        "member_price": "2.50",
+                        "discount_price": "2.50",
+                        "id": 19076,
+                        "sale_price": "3.00",
+                        "purchase_price": "2.00",
+                        "unit": "--",
+                        "stock": "190"
+                    }
+                ],
+                "category": 557,
+                "user_id": "10",
+                "supplierId": 10,
+                "storeLogo": "https://cdn-pos-img.thy360.com/appidposvsdf2f/fb16a9b5b3e449dbb681f82cb0dd0169.png",
+                "id": 18882,
+                "source": "广东省广州市海珠区敦和路57号",
+                "category_display": "未分类",
+                "status": 0,
+                "price": "0.00",
+                "barcode": "6908946287063",
+                "is_standard": true,
+                "quality_period": 730,
+                "weighable": false,
+                "manufacturer": "广州百事可乐饮料有限公司",
+                "product_type": 1,
+                "name": "激浪柠檬味可乐型汽水",
+                "moList": [],
+                "supplierName": "HelloWorld"
+            },
+            {
+                "tag_display": [],
+                "image": "http://www.anccnet.com/userfile/ecdata/studio/201704111816398584.jpg",
+                "tag": [],
+                "specs": [
+                    {
+                        "member_price": "1.00",
+                        "discount_price": "1.00",
+                        "id": 19077,
+                        "sale_price": "1.10",
+                        "purchase_price": "0.90",
+                        "unit": "--",
+                        "stock": "100"
+                    }
+                ],
+                "category": 557,
+                "user_id": "10",
+                "supplierId": 10,
+                "storeLogo": "https://cdn-pos-img.thy360.com/appidposvsdf2f/fb16a9b5b3e449dbb681f82cb0dd0169.png",
+                "id": 18883,
+                "source": "广东省江门市新会区会城东侯路65号",
+                "category_display": "未分类",
+                "status": 0,
+                "price": "0.00",
+                "barcode": "6947509910000",
+                "is_standard": true,
+                "quality_period": 730,
+                "weighable": false,
+                "manufacturer": "维达商贸有限公司",
+                "product_type": 1,
+                "name": "得寶迷你紙手巾 7片單包(天然無味)",
+                "moList": [],
+                "supplierName": "HelloWorld"
+            }
+        ]
+    },
+    "statusCode": 0
+}
+****************************************************************************************************
+
+The Global Context key and value is :
+{'tel': u'15000000000', 'token_pos': u'56ca4f84-8575-4551-94f3-122e49063bf3', 'posNo': '080027400cba', u'barcode': u'6923830302608', u'categoryId': 557, 'token_boss': u'4e727979-2c62-4e3a-8627-16339ff3f53e', 'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', u'productId': 18880, u'sale_price': u'6.00', u'specId': 19074, 'password': '123456', u'purchase_price': u'9.00', 'store_id': 10}
+
+期望检测的返回值:
+{
+    "statusCode": {
+        "EQ": 0
+    }
+}
+检查key: statusCode的返回值通过
+
+所有检查Key值返回通过.
+----------------------------------------------------------------------------------------------------
+
+测试步骤3 : 
+----------------------------------------------------------------------------------------------------
+接口请求地址: 
+http://devtest-pos.thy360.com/ja/user/v1/user/login
+
+The request method is :POST
+
+The request parameter is:
+
+{
+    "phone": "13423412789",
+    "code": "1234",
+    "wxCode": "1234567890"
+}
+****************************************************************************************************
+
+接口请求响应时延为:
+ 0.238000154495
+
+
+接口请求返回值:
+{
+    "msg": "登录成功",
+    "data": {
+        "username": "13423412789",
+        "openId": null,
+        "headimgurl": "www.baidu.com",
+        "birth": "2000-10-10",
+        "superuser": false,
+        "newuser": false,
+        "isSuperuser": false,
+        "dateJoined": 1489060230000,
+        "id": 100609,
+        "registedfrom": "appidposvsdf2f",
+        "token": "d90b14bf-77bb-4dbc-9f57-b12ed634e4ee",
+        "isStaff": false,
+        "lastLogin": 1497939595104,
+        "pass": "e4ed1877b9d038dc1100535c8f728f83",
+        "active": true,
+        "userKey": "6jjfmsttuhpoc3hakv9ab8qtj2c3iqsn",
+        "sex": 0,
+        "nickname": "helloWorld",
+        "email": "",
+        "isActive": true,
+        "staff": false
+    },
+    "statusCode": 0
+}
+****************************************************************************************************
+
+The Global Context key and value is :
+{'tel': u'15000000000', 'token_pos': u'56ca4f84-8575-4551-94f3-122e49063bf3', 'posNo': '080027400cba', u'userId': 100609, u'barcode': u'6923830302608', u'categoryId': 557, 'token_boss': u'4e727979-2c62-4e3a-8627-16339ff3f53e', u'user_token': u'd90b14bf-77bb-4dbc-9f57-b12ed634e4ee', 'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', u'productId': 18880, u'user_pass': u'e4ed1877b9d038dc1100535c8f728f83', u'sale_price': u'6.00', u'specId': 19074, 'password': '123456', u'purchase_price': u'9.00', 'store_id': 10}
+
+期望检测的返回值:
+{
+    "username": {
+        "eq": "13423412789",
+        "type": "str"
+    },
+    "token": {
+        "type": "str"
+    },
+    "msg": {
+        "eq": "登录成功",
+        "type": "str"
+    },
+    "data": {
+        "type": "dict"
+    },
+    "id": {
+        "type": "int"
+    },
+    "statusCode": {
+        "eq": 0
+    }
+}
+检查key: username的返回值通过
+检查key: token的返回值通过
+检查key: msg的返回值通过
+检查key: data的返回值通过
+检查key: id的返回值通过
+检查key: statusCode的返回值通过
+
+所有检查Key值返回通过.
+----------------------------------------------------------------------------------------------------
+
+测试步骤4 : 
+----------------------------------------------------------------------------------------------------
+接口请求地址: 
+http://devtest-pos.thy360.com/ja/user/v1/cart/10/clear
+
+The request method is :POST
+null
+
+接口请求头文件为:
+{u'token': u'd90b14bf-77bb-4dbc-9f57-b12ed634e4ee'}
+
+****************************************************************************************************
+
+接口请求响应时延为:
+ 0.029000043869
+
+
+接口请求返回值:
+{
+    "msg": "购物车已经清空",
+    "data": null,
+    "success": true,
+    "statusCode": 0
+}
+****************************************************************************************************
+
+The Global Context key and value is :
+{'tel': u'15000000000', 'token_pos': u'56ca4f84-8575-4551-94f3-122e49063bf3', 'posNo': '080027400cba', u'userId': 100609, u'barcode': u'6923830302608', u'categoryId': 557, 'token_boss': u'4e727979-2c62-4e3a-8627-16339ff3f53e', u'user_token': u'd90b14bf-77bb-4dbc-9f57-b12ed634e4ee', 'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', u'productId': 18880, u'user_pass': u'e4ed1877b9d038dc1100535c8f728f83', u'sale_price': u'6.00', u'specId': 19074, 'password': '123456', u'purchase_price': u'9.00', 'store_id': 10}
+----------------------------------------------------------------------------------------------------
+
+测试步骤5 : 
+----------------------------------------------------------------------------------------------------
+接口请求地址: 
+http://devtest-pos.thy360.com//ja/user/v1/cart/10/18880/19074/add
+
+The request method is :POST
+
+The request parameter is:
+
+{
+    "wxCode": "1234567890"
+}
+
+接口请求头文件为:
+{u'token': u'd90b14bf-77bb-4dbc-9f57-b12ed634e4ee'}
+
+****************************************************************************************************
+
+接口请求响应时延为:
+ 0.0820000171661
+
+
+接口请求返回值:
+{
+    "msg": "成功",
+    "data": {
+        "totalSaleMoney": 6.0,
+        "money": "6.00",
+        "productTotalCount": 1,
+        "totalMoney": "6.00",
+        "productCount": 1,
+        "cartItems": [
+            {
+                "moItem": null,
+                "specId": 19074,
+                "fullReducedRuleId": null,
+                "acctivity_content": null,
+                "addDate": 1497939595367,
+                "price": "6.00",
+                "number": 1.0,
+                "groupItems": null,
+                "productName": "500ml竹蔗茅根植物饮品(竹节瓶）",
+                "productImage": "",
+                "unit": "--",
+                "moItems": null,
+                "priceType": 0,
+                "salePrice": 6.0,
+                "updateDate": 1497939595367,
+                "activity_type": null,
+                "stock": 199.0,
+                "categoryId": 557,
+                "select": true,
+                "productId": 18880
+            }
+        ],
+        "discountMoney": 0.0
+    },
+    "success": true,
+    "statusCode": 0
+}
+****************************************************************************************************
+
+The Global Context key and value is :
+{'tel': u'15000000000', 'token_pos': u'56ca4f84-8575-4551-94f3-122e49063bf3', 'posNo': '080027400cba', u'userId': 100609, u'barcode': u'6923830302608', u'categoryId': 557, 'token_boss': u'4e727979-2c62-4e3a-8627-16339ff3f53e', u'user_token': u'd90b14bf-77bb-4dbc-9f57-b12ed634e4ee', 'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', u'productId': 18880, u'user_pass': u'e4ed1877b9d038dc1100535c8f728f83', u'sale_price': u'6.00', u'specId': 19074, 'password': '123456', u'purchase_price': u'9.00', 'store_id': 10}
+
+期望检测的返回值:
+{
+    "msg": {
+        "type": "str"
+    },
+    "statusCode": {
+        "eq": 0
+    }
+}
+检查key: msg的返回值通过
+检查key: statusCode的返回值通过
+
+所有检查Key值返回通过.
+----------------------------------------------------------------------------------------------------
+
+测试步骤6 : 
+----------------------------------------------------------------------------------------------------
+接口请求地址: 
+http://devtest-pos.thy360.com//ja/user/v1/address/
+
+The request method is :POST
+
+The request parameter is:
+
+{
+    "userName": "test_name",
+    "room": 5003,
+    "district": "宝安区",
+    "longitude": 113.899,
+    "sex": 1,
+    "phone": "13423412789",
+    "addressDetail": "深圳市对酒当歌电子商务有限公司",
+    "latitude": 22.566
+}
+
+接口请求头文件为:
+{u'token': u'd90b14bf-77bb-4dbc-9f57-b12ed634e4ee'}
+
+****************************************************************************************************
+
+接口请求响应时延为:
+ 0.029000043869
+
+
+接口请求返回值:
+{
+    "msg": "成功",
+    "data": null,
+    "success": true,
+    "statusCode": 0
+}
+****************************************************************************************************
+
+The Global Context key and value is :
+{'tel': u'15000000000', 'token_pos': u'56ca4f84-8575-4551-94f3-122e49063bf3', 'posNo': '080027400cba', u'userId': 100609, u'barcode': u'6923830302608', u'categoryId': 557, 'token_boss': u'4e727979-2c62-4e3a-8627-16339ff3f53e', u'user_token': u'd90b14bf-77bb-4dbc-9f57-b12ed634e4ee', 'token': u'token:cca9e3a641234ad0d6e59faf25b961aac2925a75', u'productId': 18880, u'user_pass': u'e4ed1877b9d038dc1100535c8f728f83', u'sale_price': u'6.00', u'specId': 19074, 'password': '123456', u'purchase_price': u'9.00', 'store_id': 10}
+
+期望检测的返回值:
+{
+    "msg": {
+        "type": "str"
+    },
+    "statusCode": {
+        "eq": 0
+    }
+}
+检查key: msg的返回值通过
+检查key: statusCode的返回值通过
+
+所有检查Key值返回通过.
+----------------------------------------------------------------------------------------------------
+
+测试步骤7 : 
+----------------------------------------------------------------------------------------------------
+接口请求地址: 
+http://devtest-pos.thy360.com//ja/user/v1/address?id=10
+
+The request method is :GET
+null
+
+接口请求头文件为:
+{u'token': u'd90b14bf-77bb-4dbc-9f57-b12ed634e4ee'}
+
+****************************************************************************************************
+
+接口请求响应时延为:
+ 0.0299999713898
+
+
+接口请求返回值:
+"Server Internal Error 500"
+****************************************************************************************************
+Traceback (most recent call last):
+  File "D:\Git\API_Automation\ApiExecutor\API.py", line 393, in func
+    self.run_case(steps)
+  File "D:\Git\API_Automation\ApiExecutor\API.py", line 384, in run_case
+    self.assertTrue(check_case(self.context, steps), "Test FAIL.")
+  File "D:\Git\API_Automation\ApiExecutor\API.py", line 356, in check_case
+    if check_data(con, item):
+  File "D:\Git\API_Automation\ApiExecutor\API.py", line 185, in check_data
+    value = get_value(val["key"][each], data)
+  File "D:\Git\API_Automation\Common\util.py", line 114, in get_value
+    temp = temp[k]
+TypeError: string indices must be integers, not unicode
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+    </tbody>
+    <tfoot>
+        <tr id='total_row'>
+            <td>Total</td>
+            <td>1</td>
+            <td class="text text-success">0</td>
+            <td class="text text-danger">0</td>
+            <td class="text text-warning">1</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tfoot>
+</table>
+
+    <div id='ending'>&nbsp;</div>
+</div>
+
+</body>
+</html>

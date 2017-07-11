@@ -1,0 +1,19 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "POST",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/verifyIdentity4ForgetPayPwd",
+			"headers": {
+              "client": "3",
+              "Content-Type": "application/json",
+              "token": "{{key.token}}"
+            }
+
+    },
+
+    "output":{"code":{"EQ":11},
+      "msg":{"EQ":"服务器异常,请稍后再试"},
+      "data":{"eq":null}}
+
+}

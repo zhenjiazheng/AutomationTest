@@ -1,0 +1,3 @@
+{
+	"sql":{"command":["UPDATE product_spec SET stock = 100 WHERE product_id = {{key.pid1}}", "UPDATE product_spec SET stock = 100 WHERE product_id = {{key.pid2}}"],"db":"product"}
+}

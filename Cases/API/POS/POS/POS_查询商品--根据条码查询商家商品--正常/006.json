@@ -1,0 +1,10 @@
+{
+	"public": [
+		      {
+      "class": "PublicModule.RunPublic",
+      "function": "bossLogin"},
+      {
+      "class": "PublicModule.RunPublic",
+      "function": "addProduct"}
+	]
+}

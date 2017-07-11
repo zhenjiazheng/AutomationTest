@@ -1,0 +1,24 @@
+{
+  "input":{
+			"method": "POST",
+			"url":"{{pre.zzkg_merchant_url}}",
+			"rest": "/py/v4/admin/member/redbag/import-records/",
+            "headers":{"token":"{{key.token}}"},
+			"param":{
+                "excel":[{
+            "expire_time": "2016-12-12 23:59:59",
+            "msg": "恭喜获得红包！",
+            "amount": 10.0,
+            "user_id": 74024,
+            "real_name": "李俊平"}],
+                "comments":"测试",
+				"password":"e10adc3949ba59abbe56e057f20f883e"
+			}
+	},
+  "output":{
+              "msg":{"TYPE":"str"},
+              "statusCode":{"EQ":0},
+              "data":{"TYPE":"dict"}
+
+  }
+}

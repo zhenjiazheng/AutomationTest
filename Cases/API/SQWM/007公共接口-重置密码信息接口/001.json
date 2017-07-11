@@ -1,0 +1,18 @@
+{
+  "input":{
+    "author":"tester",
+    "method":"POST",
+    "url":"{{pre.sqwm_release}}",
+    "rest":"/py/sqwm/v1/public/login/reset_password/",
+    "param":{
+      "phoneNumber":"{{pre.User1}}",
+      "code":"123456",
+      "password":"123456",
+      "rep_password":"123456"
+    }
+},
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"TYPE":"str"}
+  }
+}

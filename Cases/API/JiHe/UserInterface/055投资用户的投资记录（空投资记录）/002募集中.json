@@ -1,0 +1,25 @@
+{
+	"input":{
+			"author":"lancy",
+			"method": "GET",
+			"url":"{{pre.jh_url}}",
+			"rest": "ja/v1/user/investRecord/0?page=1&limit=20",
+			"headers":{"client": "lj_android",
+                        "Content-Type": "application/json",
+                         "token": "{{key.token}}"
+				}
+
+	},
+  "output":{
+    "msg":{"eq":"没有数据了"},
+    "code":{"eq":0},
+    "data":{"type":"dict"},
+    "count":{"eq":0},
+    "totalpage":{"eq":0},
+    "hasNext":{"eq":false},
+    "currPage":{"eq":0},
+    "total":{"eq":0},
+    "data.data":{"eq":[]}
+  }
+
+}

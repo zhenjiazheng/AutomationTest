@@ -1,0 +1,19 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/operation/inventory"
+	},
+	"output":{
+		"statusCode":{"EQ":0},
+		"addToStockAmount":{"type":"int"},
+		"addToStockNum":{"type":"int"},
+		"damagedAmount":{"type":"str"},
+		"id":{"type":"int"},
+		"inventorySKUNum":{"type":"int"},
+		"totalInventorySKUNum":{"type":"int"}},
+	"key":{"inventId":"data.id"}
+
+}

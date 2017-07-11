@@ -1,0 +1,14 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "put",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/operation/modusoperandi/111111",
+			"param":{"modusoperandi":"New Operation for product22.", "tags":["Hello World3", "Hello World4"]}
+	},
+	"output":{
+		"statusCode":{"EQ":1},
+		"msg":{"type":"str"}}
+
+}

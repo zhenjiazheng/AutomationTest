@@ -1,0 +1,28 @@
+{
+	"input": {
+		"author": "test",
+		"method": "get",
+		"url": "{{pre.pos_url}}",
+		"headers": {
+			"token": "{{key.token}}"
+		},
+		"rest": "py/backend/v1/market/advertisers/",
+		"param": {
+			"page_size": 1,
+			"search": "广告主"
+		},
+		"output": {
+			"msg": {
+				"EQ": "成功"
+			},
+			"statusCode": {
+				"EQ": 0
+			},
+			"data.data": {
+				"type": "list",
+				"ll": 1
+			}
+		}
+	}
+}
+

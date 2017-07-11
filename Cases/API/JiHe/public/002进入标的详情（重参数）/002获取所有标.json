@@ -1,0 +1,19 @@
+{
+	"input":{
+		"method": "GET",
+		"url":"{{pre.jh_url}}",
+		"rest": "/ja/v1/tender?page=1&limit=20",
+		"headers":{"client":"3","Content-Type":"application/json"}
+},
+	"output":{
+		"code":{"EQ":0},
+		"data":{"TYPE":"dict"},
+		"count":{"TYPE":"int"},
+		"currPage":{"TYPE":"int"},
+		"hasNext":{"TYPE":"bool"},
+		"total":{"TYPE":"int"},
+		"totalpage":{"TYPE":"int"},
+		"msg":{"TYPE":"str"}
+	},
+	"key":{"id":"data.data.0.id"}
+}

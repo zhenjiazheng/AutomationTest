@@ -1,0 +1,23 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "ja/pos/v1/order/{{key.orderId}}/cancel",
+			"param":{
+					"cause_desc": "自用",
+					"operator_id": 13895313385,
+					"operator_name": "院长",
+					"again_sale": 0,
+					"order_item_id": {{key.orderItemId}},
+					"cause_id": 4,
+					"refund_way": 2
+				}
+	},
+	"output":{
+		"status_code":{"EQ":0},
+		"msg":{"TYPE":"str"}
+}
+
+}

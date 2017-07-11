@@ -1,0 +1,22 @@
+{
+  "input":{
+      "method":"PUT",
+      "url":"{{pre.jh_url}}",
+      "rest":"/ja/v1/bankcard/bind",
+      "headers":{
+        "client":"3",
+        "token":"{{key.token}}"
+      },
+      "param":{
+       "cardId":"{{key.card_id}}",
+        "phone":"13602553036",
+        "province":"广东省",
+        "city":"深圳市",
+        "bankBranch":"宝安支行"
+      }
+  },
+  "output":{
+    "msg":{"EQ":"修改成功"},
+    "code":{"EQ":0}
+  }
+}

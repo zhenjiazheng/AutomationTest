@@ -1,0 +1,8 @@
+{
+	"sql":
+      {
+      "command": "select id from orderitem where order_id = {{key.orderId}}",
+      "db": "posorder"
+    },
+    "key":["id"]
+}

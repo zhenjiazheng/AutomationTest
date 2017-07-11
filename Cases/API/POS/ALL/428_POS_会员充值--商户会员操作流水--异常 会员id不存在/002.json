@@ -1,0 +1,12 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "ja/pos/v1/member/11111111/operatelog"
+	},
+	"output":{
+		"status_code":{"eq":1}
+		}
+}

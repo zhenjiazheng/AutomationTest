@@ -1,0 +1,16 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/member/search",
+			"param":{
+				"keyword":"13798565412"
+			}
+	},
+	"output":{
+		"statusCode":{"EQ":0},
+		"data.data":{"type":"list","LL":0}
+}
+}

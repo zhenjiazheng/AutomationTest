@@ -1,0 +1,11 @@
+{
+	"input":{
+			"method": "post",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/modifypwd",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param": {"newPwd":"123456","oldPwd":"{{key.password}}"}
+	},
+
+    "output":{"statusCode":{"EQ":0},"msg":{"EQ":"成功"}}
+}

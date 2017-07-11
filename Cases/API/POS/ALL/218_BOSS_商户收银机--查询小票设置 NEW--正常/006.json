@@ -1,0 +1,34 @@
+{
+	"input":{
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/setting/pos/receipt",
+		    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+	},
+    "output":{
+        "statusCode":{"EQ":0},
+        "msg":{"EQ":"成功"},
+		"endnote1":{"EQ":"endnote1"},
+		"endnote1Enable":{"EQ":true},
+		"endnote2":{"EQ":"endnote2"},
+		"endnote2Enable":{"EQ":true},
+		"endnote3":{"EQ":"endnote1"},
+		"endnote3Enable":{"EQ":true},
+		"endnote4":{"EQ":"endnote1"},
+		"endnote4Enable":{"EQ":true},
+		"endnotePrintPosition":{"EQ":0},
+		"orderNoToBarcode":{"EQ":true},
+		"payDetails":{"EQ":true},
+		"points":{"EQ":true},
+		"productBarcode":{"EQ":true},
+		"productName":{"EQ":true},
+		"promotionDetails":{"EQ":true},
+		"receiptTitle":{"EQ":"This is the title."},
+		"storeLogo":{"EQ":true},
+		"storedBalance":{"EQ":true},
+		"totalOriginalPrice":{"EQ":true},
+		"totalPoints":{"EQ":true},
+		"totalPromotions":{"EQ":true},
+		"unitPrice":{"EQ":true}
+    }
+}

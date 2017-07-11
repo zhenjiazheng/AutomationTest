@@ -1,0 +1,32 @@
+{
+  "input": {
+    "method": "get",
+    "url": "{{pre.pos_url}}",
+    "rest": "ja/v1/boss/setting/overview",
+    "headers": {
+      "token": "{{key.token_boss}}",
+      "storeNo": "{{key.store_id}}"
+    }
+  },
+  "output":{
+    "statusCode":{"EQ":0},
+    "data":{"type":"dict"},
+    "address": {"type":"str"},
+    "cell": {"type":"str"},
+    "city": {"type":"str"},
+    "contactName": {"type":"str"},
+    "contactSex": {"type":"int"},
+    "contactTel": {"type":"str"},
+    "district": {"type":"str"},
+    "houseNumber": {"type":"str"},
+    "picUrl": {"type":"str"},
+    "posNum": {"type":"int"},
+    "productCategory": {"type":"list"},
+    "province": {"type":"str"},
+    "storeCategoryId": {"type":"int"},
+    "storeLogo": {"type":"str"},
+    "storeNo": {"eq":"{{key.store_id}}"},
+    "storekeeperName": {"type":"str"},
+    "telephone": {"type":"str"}
+    }
+}

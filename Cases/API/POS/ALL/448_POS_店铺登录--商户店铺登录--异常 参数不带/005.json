@@ -1,0 +1,25 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "/ja/pos/v1/login",
+			"param":{
+				"pos_info":{
+					"pos_no":"abcdefghijk",
+					"pos_type":"testType",
+					"pos_version":"testversion",
+					"rom_version":"1.0",
+					"system_version":"1.1"
+				},
+				"pwd":"{{key.password}}",
+				"username":"{{key.tel}}"
+			}
+	},
+	"output":{
+		"msg":{"TYPE":"str"},
+		"status_code":{"EQ":1}
+}
+
+}

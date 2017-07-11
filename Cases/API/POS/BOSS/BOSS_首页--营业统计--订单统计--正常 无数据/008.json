@@ -1,0 +1,45 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "GET",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"rest": "ja/v1/boss/stsc/order",
+			"param":{
+				"endDate":"2017-07-01",
+				"startDate":"2017-03-01"
+			}
+	},
+	"output": {
+		"statusCode": {
+			"EQ": 0
+		},
+		"data.data": {
+			"type": "dict"
+		},
+		"dateList": {
+			"type": "list"
+		},
+		"美团订单数": {
+			"type": "list"
+		},
+		"网店订单数": {
+			"type": "list"
+		},
+		"总订单数": {
+			"type": "list"
+		},
+		"饿了么订单数": {
+			"type": "list"
+		},
+		"门店订单数": {
+			"type": "list"
+		},
+		"todayValue": {
+			"type": "int"
+		},
+		"yesterdayValue": {
+			"type": "int"
+		}
+	}
+}

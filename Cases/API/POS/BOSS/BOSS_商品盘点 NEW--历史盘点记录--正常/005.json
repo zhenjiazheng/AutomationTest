@@ -1,0 +1,25 @@
+{
+	"input": {
+		"author": "test",
+		"method": "get",
+		"url": "{{pre.pos_url}}",
+		"headers": {
+			"token": "{{key.token_boss}}",
+			"storeNo": "{{key.store_id}}"
+		},
+		"rest": "ja/v1/boss/operation/inventory/history/list"
+	},
+	"output":{
+		"statusCode":{"EQ":0},
+		"data.0.id":{"type":"int","eq":"{{key.inventId}}"},
+		"status":{"eq":1},
+        "addToStockAmount": {"type":"float"},
+        "addToStockNum": {"type":"int", "eq": 10},
+        "create_time": {"type":"str"},
+        "damagedAmount": {"type":"str"},
+        "damagedNum": {"type":"int","eq": 0},
+        "inventorySKUNum": {"type":"int"},
+        "totalInventorySKUNum": {"type":"int"},
+        "update_time": {"type":"str"}
+	}
+}

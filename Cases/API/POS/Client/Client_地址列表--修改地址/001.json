@@ -1,0 +1,22 @@
+
+{
+  "input":{
+  "method":"POST",
+  "url":"{{pre.pos_url}}",
+  "rest":"ja/user/v1/user/login",
+  "param":{
+    "phone":"{{pre.POS_User}}",
+    "code":"1234",
+    "wxCode": "1234567890"
+  }
+},
+  "output":{
+    "msg":{"type":"str","eq":"登录成功"},
+    "data":{"type":"dict"},
+    "username":{"type":"str","eq":"{{pre.POS_User}}"},
+    "id":{"type":"int"},
+    "token":{"type":"str"},
+    "statusCode":{"eq":0}
+    },
+  "key":{"user_token":"data.token","user_pass":"data.pass","userId":"data.id"}
+  }

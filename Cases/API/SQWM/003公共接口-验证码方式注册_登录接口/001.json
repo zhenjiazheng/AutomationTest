@@ -1,0 +1,20 @@
+{
+	"input":{
+			"author":"tester",
+			"method": "POST",
+			"url":"{{pre.sqwm_url}}",
+			"rest": "py/sqwm/v1/public/register/code/",
+			"param":{
+				"phoneNumber":"{{pre.User1}}","code":"1234"
+			}
+	},
+  "output":{"statusCode": {"EQ":0},"msg":{"TYPE":"str"}, "data":{"TYPE":"dict"},
+    "id": {"TYPE":"int"},
+    "username": {"TYPE":"str"},
+    "nickname": {"TYPE":"str"},
+    "sex": {"TYPE":"str"},
+    "user_type": {"TYPE":"str"},
+    "token": {"TYPE":"str"}
+  },
+	"key":["token"]
+}

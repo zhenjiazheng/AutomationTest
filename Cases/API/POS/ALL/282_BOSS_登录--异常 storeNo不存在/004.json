@@ -1,0 +1,18 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "/ja/v1/boss/login",
+			"param":{
+				"password":"{{key.password}}",
+				"storeNo":11111111,
+				"telephone":"{{key.tel}}"
+			}
+	},
+	"output":{
+		"msg":{"TYPE":"str","EQ":"该店铺编号不存在，请重新输入！"},
+		"statusCode":{"EQ":1}
+}
+}

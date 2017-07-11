@@ -1,0 +1,17 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "ja/v1/boss/operation/mysupplier",
+		    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+			"param":{
+				"contactName": "SupplierContact",
+				"contactTel": "{{pre.POS_User}}",
+	            "storeName": "TestStoreName"
+            }
+	      },
+    "output":{
+		"statusCode":{"EQ":0},
+		"msg":{"EQ":"成功"}
+	}
+}

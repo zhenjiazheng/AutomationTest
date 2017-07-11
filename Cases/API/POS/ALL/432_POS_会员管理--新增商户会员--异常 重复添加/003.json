@@ -1,0 +1,17 @@
+{
+	"input":{
+		    "author":"lancy",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token_pos}}"},
+			"rest": "/ja/pos/v1/member",
+		    "param":{
+				"member_name":"keiskei",
+				"sex":"1",
+				"member_tel":"15623697980"
+			}
+	},
+	"output":{
+		"status_code":{"EQ":1}
+}
+}

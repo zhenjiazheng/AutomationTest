@@ -1,0 +1,26 @@
+{
+  "input":{
+    "method": "POST",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/specialoffer",
+    "headers": {"Content-Type": "application/json", "token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"},
+    "param": {
+              "discountRate": "0.9",
+              "productNum": 0,
+              "specialOfferType": 0,
+              "activityName": "DefineRule",
+              "endDate": "2017-9-13",
+              "memberUsed": true,
+              "netstoreUsed": true,
+              "productScheme": 1,
+              "selectedCategory": [{{key.categoryId}}],
+              "startDate": "2017-6-13",
+              "status": 0,
+              "storeUsed": true
+          }
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"}
+    }
+}

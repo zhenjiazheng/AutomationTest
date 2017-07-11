@@ -1,0 +1,22 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/store/stores/",
+	        "param":{"city":"深圳市", "limit":10, "ordering": "store_name", "page": 1, "pos_status": "NOT_REGISTER", "search":"{{pre.store_name}}"}
+	},
+  	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+        "telephone": {"EQ":"{{pre.MUser2}}"},
+        "business_license": {"EQ":"http://7xjpiw.com1.z0.glb.clouddn.com//appidbossut5hn5/004a0277998442f29c7987dc051677a1.png"},
+        "cell": {"EQ":"思微simplywork(飞扬科技园)"},
+        "city": {"EQ":"深圳市"},
+        "contact_name":{"EQ":"ContactTest"},
+        "contact_tel":{"EQ":"{{pre.MUser2}}"},
+        "idcard_no":{"EQ":"533527198909210238"},
+        "idcard_set":{"EQ":["http://7xjpiw.com1.z0.glb.clouddn.com//appidbossut5hn5/004a0277998442f29c7987dc051677a1.png","http://www.baidu.com/"]}
+		}
+}

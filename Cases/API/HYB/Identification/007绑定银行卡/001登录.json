@@ -1,0 +1,13 @@
+{
+	"input":{
+			"method": "POST",
+			"url":"http://usedgoods-release.thy360.com/",
+			"rest": "sh/ja/v1/regist/code",
+			"param":{
+				"phone":"15013854023","code": "1234"
+			}
+	},
+
+	"output":{"msg":{"EQ":"登录成功"}, "statusCode":{"EQ":0}},
+    "key":["id","token"]
+}

@@ -1,0 +1,10 @@
+{
+  "input":{
+    "method":"GET",
+    "url":"{{pre.jh_url}}",
+    "rest": "/ja/v2/company/param",
+    "headers":{"client":"3","token":"{{key.token}}"}
+  },
+
+  "key":{"id":"data.companyInfo.id"}
+}

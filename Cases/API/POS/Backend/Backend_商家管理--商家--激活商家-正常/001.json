@@ -1,0 +1,26 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "POST",
+			"url":"{{pre.pos_url}}",
+			"rest": "/py/backend/v1/auth/login",
+			"param":{
+				"username":"root", "password":"root1234"
+			}
+	},
+	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+		"user":{"TYPE":"dict"},
+		"username": {"EQ":"root"},
+		"first_name": {"TYPE":"str"},
+		"last_name": {"TYPE":"str"},
+		"is_active": {"TYPE":"bool","EQ":true},
+		"id": {"TYPE":"int"},
+		"groups":{"TYPE":"list"},
+		"email": {"TYPE":"str"},
+		"date_joined": {"RE":"[\\d]{4}-[\\d]{2}-[\\d]{2} [\\d]{2}:[\\d]{2}:[\\d]{2}"},
+		"last_login": {"RE":"[\\d]{4}-[\\d]{2}-[\\d]{2} [\\d]{2}:[\\d]{2}:[\\d]{2}"}
+	},
+    "key":["token"]
+}

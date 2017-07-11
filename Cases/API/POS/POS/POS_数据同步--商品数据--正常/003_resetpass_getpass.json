@@ -1,0 +1,11 @@
+{
+	"public": [
+      {
+      "class": "PublicModule.RunPublic",
+      "function": "getStoreIdFromList"
+    },
+      {
+      "class": "PublicModule.RunPublic",
+      "function": "setPassword"
+    }]
+}

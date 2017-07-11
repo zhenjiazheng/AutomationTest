@@ -1,0 +1,23 @@
+{
+  "input":{
+    "method": "GET",
+    "url":"{{pre.pos_url}}",
+    "rest": "ja/v1/boss/operation/splitrule/detail/{{key.ruleId}}",
+    "headers": {"token": "{{key.token_boss}}","storeNo":"{{key.store_id}}"}
+    },
+  "output":{
+    "statusCode":{"EQ":0},
+    "msg":{"EQ":"成功"},
+    "largeProductBarcode": {"EQ":"12345687454213"},
+    "largeProductId": {"EQ":{{key.pid2}}},
+    "largeProductName": {"EQ":"largeNameMM"},
+    "largeProductSpec": {"EQ":"testMM"},
+    "largePurchasePrice": {"EQ":"1000"},
+    "smallProductBarcode":{"EQ":"12345678909876"},
+    "smallProductId":{"EQ":{{key.pid1}}},
+    "smallProductName":{"EQ":"smallProductMM"},
+    "smallProductSpec":{"EQ":"smallSpecMM"},
+    "smallPurchasePrice":{"EQ":"333.33"},
+    "splitNumber":{"EQ":3}
+    }
+}

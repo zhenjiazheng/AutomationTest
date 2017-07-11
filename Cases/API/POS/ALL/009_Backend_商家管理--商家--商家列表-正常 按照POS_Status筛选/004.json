@@ -1,0 +1,18 @@
+{
+	"input":{
+		    "author":"test",
+			"method": "get",
+			"url":"{{pre.pos_url}}",
+            "headers":{"token":"{{key.token}}"},
+			"rest": "py/backend/v1/store/stores/",
+	        "param":{"city":"深圳市", "limit":10, "ordering": "store_name", "page": 1, "pos_status":"NOT_REGISTER"}
+	},
+  	"output":{
+		"msg":{"EQ":"成功"},
+		"statusCode":{"EQ":0},
+        "data.data": {"ge":1},
+		"pos_status":{"EQ":"NOT_REGISTER"}
+	}
+}
+
+
